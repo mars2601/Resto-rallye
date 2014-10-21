@@ -1,0 +1,33 @@
+/*
+
+	Resto - Rallye
+	Par Marcel Pirnay et Maxime Lefèbvre
+
+*/
+
+// my framework & grid-system
+@import "modules/framework/main.scss";
+
+
+
+// common
+@import "partials/_bases.scss",
+        "partials/_elements.scss",
+        "partials/_header.scss",
+        "partials/_layout.scss",
+        "partials/_footer.scss",
+        "partials/_typography.scss";
+// objects
+@import "partials/objects/_btn.scss",
+        "partials/objects/_forms.scss",
+        "partials/objects/_tables.scss",
+        "partials/objects/_tabs.scss",
+        "partials/objects/_icons.scss",
+        "partials/objects/_fonts.scss";
+
+// pages
+@import "pages/_home.scss";
+@import "pages/_gallery.scss";
+
+// vendor
+    // @import "partials/vendor/_bxslider.scss";

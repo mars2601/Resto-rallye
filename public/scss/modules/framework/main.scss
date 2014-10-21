@@ -1,0 +1,44 @@
+
+
+@import "compass";
+@import "compass/reset";
+@import "susy";
+
+@import "partials/_base.scss";
+@import "partials/_functionsmixins.scss";
+@import "partials/_helpers.scss";
+@import "partials/_print.scss";
+
+
+
+$page-size : 1170px;
+
+$susy: (
+    global-box-sizing: border-box
+  );
+
+
+
+html {
+  font-size: 10px; // pour rem-fix
+}
+
+body{
+  font-size: 1.6em;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
+}
+/* switching box model for all elements */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &:before,
+  &:after, {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Marcel Pirnay   -— Designer & Developer  -- @marss2601
+    Maxime Lefèbvre -- Designer & Developer  -- @mabouka1
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

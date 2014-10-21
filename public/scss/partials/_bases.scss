@@ -1,0 +1,64 @@
+
+
+
+
+//////  //////// VALUES //////////////
+
+// font
+$font-size: 1em;
+$font-context: 10;
+$font-family:  "Proxima Nova", Avenir, "Avenir Next",  Arial ,sans-serif;
+$font-family-2:  "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+
+// text color;
+$text-color: #FFF;
+$link-color: #000;
+$title-color: #606060;
+
+//layout
+$wrapper-width: 1170; //wrapper width in px
+
+$susy: (
+  columns: 12,  // The number of columns in your grid
+  gutters: 3/7, // The size of a gutter in relation to a single column
+);
+
+//color
+//$header-background: #191e28;
+
+// ****************************
+
+.wrapper{
+  @include container(false); 
+  @include rem-fix(max-width, $wrapper-width/$font-context);
+}
+
+.big-title{
+
+  color: #FFF;
+  
+  background-image: url('../img/head.jpg');
+  background-position: bottom center;
+  background-size:cover;
+  overflow: hidden;
+position: relative;
+  
+
+  h2{
+    @include rem-fix(padding-top, 15);
+   
+    @extend .wrapper;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include rem-fix(font-size, 4.6);
+
+
+    
+  }
+ 
+
+
+
+}
+

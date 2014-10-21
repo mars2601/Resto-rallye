@@ -1,0 +1,254 @@
+/* line 5, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* ==========================================================================
+   Base.scss
+   ========================================================================== */
+/* Browse Happy prompt */
+/* line 10, ../../../scss/modules/framework/partials/_base.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 25, ../../../scss/modules/framework/partials/_base.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* line 30, ../../../scss/modules/framework/partials/_base.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 41, ../../../scss/modules/framework/partials/_base.scss */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/* scripts */
+/* line 52, ../../../scss/modules/framework/partials/_base.scss */
+body > script {
+  display: none !important; }
+
+/* orientation iOS font-size fix */
+@media (orientation: landscape) and (max-device-width: 768px) {
+  /* line 58, ../../../scss/modules/framework/partials/_base.scss */
+  html,
+  body {
+    -webkit-text-size-adjust: 100%; } }
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+/* line 10, ../../../scss/modules/framework/partials/_helpers.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+/* line 19, ../../../scss/modules/framework/partials/_helpers.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 35, ../../../scss/modules/framework/partials/_helpers.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/* line 49, ../../../scss/modules/framework/partials/_helpers.scss */
+.invisible {
+  visibility: hidden; }
+
+/* inline-block and table-cell for IE6/IE7 */
+/* warning: .col needs a width on IE6/IE7 */
+/* line 57, ../../../scss/modules/framework/partials/_helpers.scss */
+.ie67 .btn,
+.ie67 .inbl {
+  display: inline;
+  zoom: 1; }
+
+/* line 62, ../../../scss/modules/framework/partials/_helpers.scss */
+.ie8 img {
+  width: auto;
+  /* @bugfix for IE8 */ }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 7, ../../../scss/modules/framework/partials/_print.scss */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  /* line 16, ../../../scss/modules/framework/partials/_print.scss */
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  /* line 21, ../../../scss/modules/framework/partials/_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 25, ../../../scss/modules/framework/partials/_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 34, ../../../scss/modules/framework/partials/_print.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  /* line 39, ../../../scss/modules/framework/partials/_print.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /* line 45, ../../../scss/modules/framework/partials/_print.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  /* line 49, ../../../scss/modules/framework/partials/_print.scss */
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  /* line 54, ../../../scss/modules/framework/partials/_print.scss */
+  img {
+    max-width: 100% !important; }
+
+  /* line 58, ../../../scss/modules/framework/partials/_print.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 65, ../../../scss/modules/framework/partials/_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+/* line 22, ../../../scss/modules/framework/main.scss */
+html {
+  font-size: 10px; }
+
+/* line 26, ../../../scss/modules/framework/main.scss */
+body {
+  font-size: 1.6em;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5; }
+
+/* switching box model for all elements */
+/* line 33, ../../../scss/modules/framework/main.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 38, ../../../scss/modules/framework/main.scss */
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }

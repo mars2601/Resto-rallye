@@ -1,0 +1,62 @@
+.header{
+ 
+    background-color:rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0 ; 
+    left: 0;
+    right: 0;
+    z-index: 10001;
+    
+
+    &__title{
+      @include span(first 5);
+      @include rem-fix(line-height, 6);
+      @include rem-fix(font-size, 3);
+
+
+      a{
+        display:block;
+        @include rem-fix(padding-left, 12);
+        
+        background-image: url('../img/logo-header.png');
+        .svg & {
+            background-image: url('../img/logo-header.svg');
+
+        }
+        background-repeat: no-repeat;
+        @include rem-fix(background-position, 0, 1);
+
+        color:white;
+        text-transform: uppercase;
+        text-decoration:none;
+        span{
+         
+          font-weight:100;
+        }
+        span+span{
+          font-weight:500;
+        }
+      }
+    }
+
+    &__nav{
+      @include span(last 6);
+      @include container;
+      text-align: right;
+      li{
+        display: inline-block;
+        a{
+          @include rem-fix(padding, 0, 2);
+          display:block;
+          @include rem-fix(font-size, 1.6);
+          
+          color: #FFF;
+          text-transform:uppercase;
+          text-decoration:none;
+          line-height:60px;
+        }
+      }
+    }
+
+
+}
