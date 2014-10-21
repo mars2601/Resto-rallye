@@ -26,11 +26,11 @@
 			  	<nav class="header__nav">
 			  		<h1 class="visuallyhidden">Navigation principale</h1>
 					<ul>
-						<li><a href="">Acceuil</a></li>
-						<li><a href="">Concept</a></li>
-						<li><a href="">Events</a></li>
-						<li><a href="">Galerie</a></li>
-						<li><a href="">Contact</a></li>
+						<li>{{ link_to_route('homepage', 'Accueil')}}</li>
+						<li>{{ link_to_route('about', 'A propos')}}</li>
+						<li>{{ link_to_route('events', 'Evenements')}}</li>
+						<li>{{ link_to_route('gallery', 'Galerie')}}</li>
+						<li>{{ link_to_route('contact', 'Contact')}}</li>
 					</ul>
 				</nav>
 			</div>
