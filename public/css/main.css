@@ -341,7 +341,7 @@ blockquote {
   z-index: 10001; }
   /* line 11, ../scss/partials/_header.scss */
   .header__title {
-    width: 40.17094%;
+    width: 31.62393%;
     float: left;
     margin-right: 2.5641%;
     line-height: 60px;
@@ -371,7 +371,7 @@ blockquote {
         font-weight: 500; }
   /* line 42, ../scss/partials/_header.scss */
   .header__nav {
-    width: 48.71795%;
+    width: 65.81197%;
     float: right;
     margin-right: 0;
     max-width: 100%;
