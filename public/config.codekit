@@ -106,17 +106,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/head.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 179837,
-		"inputAbbreviatedPath": "\/img\/head.jpg",
-		"outputAbbreviatedPath": "\/img\/head.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/logo-header.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -536,7 +525,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Maxime Lefebvre",
+"lastSavedByUser": "marcel",
 "manualImportLinks": {
 	},
 "projectAttributes": {
