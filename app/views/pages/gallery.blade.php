@@ -6,9 +6,7 @@
     <section class="gallery">
     	<div class="gallery__title big-title">
     		<h2>Galerie</h1>
-    		<svg class="decor" height="100px" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-				  <path d="M0 100 L100 0 L100 100" stroke-width="0"  fill="#FFF"></path>
-			</svg>
+
     	</div>
 
 
@@ -93,12 +91,18 @@
     	</section>
 
     	<section class="gallery__videos">
-    			<svg class="decor" height="100px" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg">
-				  <path d="M0 0 L50 100 L100 0" stroke-width="0"  fill="#FFF"></path>
-
-    	</svg>
-    			<h3 class="gallery__videos__title">Videos</h3>
-    		
+    	<div class="wrapper">
+    		<h3 class="gallery__videos__title">Videos</h3>
+    		<section class="gallery__videos__video" >
+    				<img src="../img/gal_1.png" alt="">
+	    				<figcaption>
+	    				<div>
+	    					<h4>Theux</h4>
+	    					<span>Le 25 octobre 2014</span>
+	    				</div>
+	    			</figcaption>
+    		</section>
+    	</div>
     	</section>
     </section>
 @stop

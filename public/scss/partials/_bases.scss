@@ -39,15 +39,24 @@ $susy: (
   color: #FFF;
   
   background-image: url('../img/head.jpg');
-  background-position: bottom center;
+    background-position: 0 90%;
   background-size:cover;
   overflow: hidden;
-position: relative;
-  
+  position: relative;  
+  &:after{
+    content: '';
+    position:absolute; 
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    @include rem-fix(height, 10);
+    background-image: ($triangle-1);
+    display: block;
+  }
 
   h2{
     @include rem-fix(padding-top, 15);
-   
+    @include rem-fix(padding-bottom, 10);
     @extend .wrapper;
     font-weight: 700;
     text-transform: uppercase;

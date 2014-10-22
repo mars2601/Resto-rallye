@@ -149,7 +149,26 @@
 
 	}
 	&__videos{
+
+		height: 600px; //TEMP
+		background-color: #D8D8D8;
+		position: relative;
+
 		@include rem-fix(margin-top, 6);
+		@include rem-fix(padding-top, 10);
+		&:before{
+			content: '';
+			position:absolute; 
+			top: 0;
+			left: 0; 
+			right: 0;
+			@include rem-fix(height, 10);
+			background-image: ($triangle-2);
+			display: block;
+
+		}
+
+
 		&__title{
 			@include rem-fix(font-size, 4);
 			font-weight: 200;
@@ -160,8 +179,27 @@
 			position: relative;
 			z-index: 9999;
 		}
-		height: 600px; //TEMP
-		background-color: #D8D8D8;
-		position: relative;
+
+		&__video{
+			@include span(12);
+			position: relative;
+			img{
+				width : 100%;
+				height : auto;	
+			}
+
+			figcaption{
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				overflow: hidden;
+			}
+
+
+
+		}
+		
 	}
 }
