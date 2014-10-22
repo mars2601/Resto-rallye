@@ -1,5 +1,67 @@
 .home{
 	&__introduction{
-		
+		height:800px;
+		background-image: url('../img/head.jpg');
+		background-size:cover;
+		position:relative;
+		top:0;
+		padding:0;
+		width:100%;
+		.decor{
+
+		}
+		&__logo{
+			position:relative;
+			bottom:0;
+			text-align:center;
+			&__image{
+				border-radius:100%;
+				border:2px solid #FFF;
+				background-color:#FFF;
+				@include rem-fix(padding, 1);
+				@include rem-fix(margin-top, 15);
+			}
+		}
+		&__event{
+			@extend .wrapper;
+			font-weight:bold;
+			&__wrapper{
+				@include span(5);
+				&__title{
+					@include rem-fix(padding-top, 20);
+					@include rem-fix(font-size, 4);
+					@include rem-fix(line-height, 4.3);
+					@include rem-fix(margin-bottom, 1);
+					font-family:"Proxima nova";
+					color:white;
+				}
+				&__date{
+					@include rem-fix(font-size, 2);
+					font-weight:normal;
+					color:#FFF;
+					display:block;
+					font-style:italic;
+				}
+				&__link{
+					@include rem-fix(font-size, 1.8);
+					@include rem-fix(margin-top, 2);
+					@include rem-fix(padding, 0.7, 2);
+					display:inline-block;
+					font-family:$font-family-2;
+					font-weight:normal;
+					border: 2px solid white;
+					background-color:rgba(0, 0, 0, 0.5);
+					color:#FFF;
+					text-decoration:none;
+					&:hover{
+						color:black;
+						background-color:#FFFFFF;
+					}
+				}
+			}
+		}
+	}
+	&__presentation{
+		height:500px;
 	}
 }
