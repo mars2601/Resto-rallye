@@ -11,7 +11,9 @@
 
 
 // common
-@import "partials/_bases.scss",
+
+@import "partials/_svg.scss",
+        "partials/_bases.scss",
         "partials/_elements.scss",
         "partials/_header.scss",
         "partials/_layout.scss",

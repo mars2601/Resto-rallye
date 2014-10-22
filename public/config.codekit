@@ -97,17 +97,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/head.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 179837,
-		"inputAbbreviatedPath": "\/img\/head.jpg",
-		"outputAbbreviatedPath": "\/img\/head.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/logo-header.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -364,6 +353,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/scss\/partials\/_svg.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/partials\/_svg.scss",
+		"outputAbbreviatedPath": "\/css\/_svg.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/scss\/partials\/_typography.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -495,7 +500,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Maxime Lefebvre",
+"lastSavedByUser": "marcel",
 "manualImportLinks": {
 	},
 "projectAttributes": {
