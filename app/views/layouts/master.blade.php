@@ -22,7 +22,7 @@
 
 		<header class="header">
 			<div class="wrapper">
-			  	<h1 class="header__title"><a class="header__title__link" href=""><span>resto</span> <span>rallye</span></a></h1>
+			  	<h1 class="header__title"><a class="header__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
 			  	<nav class="header__nav">
 			  		<h1 class="visuallyhidden">Navigation principale</h1>
 					<ul>
@@ -34,13 +34,13 @@
 					</ul>
 				</nav>
 			</div>
-			
+
 		</header>
 
         @yield('content')
 
         <footer>
-        	
+
         </footer>
 
 
@@ -49,7 +49,7 @@
 
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
-        
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>
