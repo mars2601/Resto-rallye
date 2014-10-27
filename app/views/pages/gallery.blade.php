@@ -28,7 +28,7 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-       			
+
        			<section class="gallery__photos__album">
 	    			<a href="#">
 	    				<img src="../img/gal_2.png" alt="">
@@ -40,7 +40,7 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-    	   		
+
     	   		<section class="gallery__photos__album gallery__photos__album--last">
 	    			<a href="#">
 	    				<img src="../img/gal_3.png" alt="">
@@ -52,7 +52,7 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-    	   		
+
     	   		<section class="gallery__photos__album">
 	    			<a href="#">
 	    				<img src="../img/gal_4.png" alt="">
@@ -64,7 +64,7 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-    	   		
+
     	   		<section class="gallery__photos__album ">
 	    			<a href="#">
 	    				<img src="../img/gal_5.png" alt="">

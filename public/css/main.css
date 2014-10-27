@@ -260,14 +260,14 @@ body {
     box-sizing: border-box; }
 
 /* line 32, ../scss/partials/_bases.scss */
-.wrapper, .big-title h2, .home__introduction__event, .gallery__photos {
+.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
   max-width: 117rem; }
   /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
-  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .gallery__photos:after {
+  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after {
     content: " ";
     display: block;
     clear: both; }
@@ -289,7 +289,7 @@ body {
     right: 0;
     height: 100px;
     height: 10rem;
-    background-image: url('data:image/svg+xml;utf8,<svg class="decor" height="100px" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 100 L100 0 L100 100" stroke-width="0"  fill="#FFF"></path></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 100 L100 0 L100 100" stroke-width="0"  fill="#FFF"></path></svg>');
     display: block; }
   /* line 57, ../scss/partials/_bases.scss */
   .big-title h2 {
@@ -353,7 +353,7 @@ blockquote {
   z-index: 10001; }
   /* line 11, ../scss/partials/_header.scss */
   .header__title {
-    width: 40.17094%;
+    width: 31.62393%;
     float: left;
     margin-right: 2.5641%;
     line-height: 60px;
@@ -383,7 +383,7 @@ blockquote {
         font-weight: 500; }
   /* line 42, ../scss/partials/_header.scss */
   .header__nav {
-    width: 48.71795%;
+    width: 65.81197%;
     float: right;
     margin-right: 0;
     max-width: 100%;
@@ -428,77 +428,197 @@ fieldset {
 
 /* line 2, ../scss/pages/_home.scss */
 .home__introduction {
-  height: 800px;
+  height: 600px;
+  height: 60rem;
   background-image: url("../img/head.jpg");
   background-size: cover;
   position: relative;
   top: 0;
   padding: 0;
   width: 100%; }
-  /* line 13, ../scss/pages/_home.scss */
-  .home__introduction__logo {
-    position: relative;
+  /* line 10, ../scss/pages/_home.scss */
+  .home__introduction:after {
+    content: '';
+    position: absolute;
     bottom: 0;
-    text-align: center; }
-    /* line 17, ../scss/pages/_home.scss */
+    left: 0;
+    right: 0;
+    height: 100px;
+    height: 10rem;
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L0 100 L100 100" stroke-width="0"  fill="#FFF"></path></svg>');
+    display: block; }
+  /* line 20, ../scss/pages/_home.scss */
+  .home__introduction__logo {
+    position: absolute;
+    bottom: -60px;
+    bottom: -6rem;
+    text-align: center;
+    z-index: 999;
+    left: 50%;
+    margin-left: -105px;
+    margin-left: -10.5rem; }
+    /* line 27, ../scss/pages/_home.scss */
     .home__introduction__logo__image {
       border-radius: 100%;
       border: 2px solid #FFF;
       background-color: #FFF;
       padding: 10px;
-      padding: 1rem;
-      margin-top: 150px;
-      margin-top: 15rem; }
-  /* line 25, ../scss/pages/_home.scss */
+      padding: 1rem; }
+  /* line 34, ../scss/pages/_home.scss */
   .home__introduction__event {
     font-weight: bold; }
-    /* line 28, ../scss/pages/_home.scss */
+    /* line 37, ../scss/pages/_home.scss */
     .home__introduction__event__wrapper {
       width: 40.17094%;
       float: left;
       margin-right: 2.5641%; }
-      /* line 30, ../scss/pages/_home.scss */
+      /* line 39, ../scss/pages/_home.scss */
       .home__introduction__event__wrapper__title {
         padding-top: 200px;
         padding-top: 20rem;
         font-size: 40px;
         font-size: 4rem;
-        line-height: 43px;
-        line-height: 4.3rem;
+        line-height: 1.2em;
         margin-bottom: 10px;
         margin-bottom: 1rem;
-        font-family: "Proxima nova";
         color: white; }
-      /* line 38, ../scss/pages/_home.scss */
+      /* line 46, ../scss/pages/_home.scss */
       .home__introduction__event__wrapper__date {
         font-size: 20px;
         font-size: 2rem;
-        font-weight: normal;
+        font-weight: 400;
         color: #FFF;
         display: block;
         font-style: italic; }
-      /* line 45, ../scss/pages/_home.scss */
+      /* line 53, ../scss/pages/_home.scss */
       .home__introduction__event__wrapper__link {
-        font-size: 18px;
-        font-size: 1.8rem;
+        font-size: 20px;
+        font-size: 2rem;
         margin-top: 20px;
         margin-top: 2rem;
         padding: 7px 20px;
         padding: 0.7rem 2rem;
         display: inline-block;
         font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-        font-weight: normal;
-        border: 2px solid white;
-        background-color: rgba(0, 0, 0, 0.5);
+        font-weight: 400;
+        border: 4px solid white;
+        background-color: rgba(0, 0, 0, 0.7);
         color: #FFF;
         text-decoration: none; }
-        /* line 56, ../scss/pages/_home.scss */
+        /* line 64, ../scss/pages/_home.scss */
         .home__introduction__event__wrapper__link:hover {
           color: black;
           background-color: #FFFFFF; }
-/* line 64, ../scss/pages/_home.scss */
-.home__presentation {
-  height: 500px; }
+/* line 75, ../scss/pages/_home.scss */
+.home__presentation__title {
+  display: block;
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+  font-size: 38px;
+  font-size: 3.8rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  line-height: 60px;
+  line-height: 6rem; }
+/* line 82, ../scss/pages/_home.scss */
+.home__presentation__paragraph {
+  display: block;
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.5em; }
+/* line 88, ../scss/pages/_home.scss */
+.home__presentation__image {
+  margin-top: 100px;
+  margin-top: 10rem; }
+/* line 93, ../scss/pages/_home.scss */
+.home__interview {
+  margin-top: 20px;
+  margin-top: 2rem;
+  height: 600px;
+  height: 60rem;
+  background-image: url("../img/interview.png");
+  background-position: 0 -100px;
+  background-size: cover;
+  position: relative; }
+  /* line 100, ../scss/pages/_home.scss */
+  .home__interview:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    height: 10rem;
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L100 0 L100 100" stroke-width="0"  fill="#FFF"></path></svg>');
+    display: block; }
+  /* line 110, ../scss/pages/_home.scss */
+  .home__interview:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    height: 10rem;
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L0 100 L100 100" stroke-width="0"  fill="#FFF"></path></svg>');
+    display: block; }
+  /* line 120, ../scss/pages/_home.scss */
+  .home__interview__wrapper {
+    position: relative;
+    top: 30%; }
+    /* line 124, ../scss/pages/_home.scss */
+    .home__interview__wrapper__image {
+      width: 14.52991%;
+      float: left;
+      margin-right: 2.5641%;
+      border-radius: 100%;
+      height: 200px;
+      height: 20rem;
+      width: 200px;
+      width: 20rem;
+      border: 3px solid #FFF; }
+    /* line 131, ../scss/pages/_home.scss */
+    .home__interview__wrapper__paragraph {
+      color: #FFF;
+      font-size: 20px;
+      font-size: 2rem;
+      width: 65.81197%;
+      float: left;
+      margin-right: 2.5641%;
+      margin-top: 40px;
+      margin-top: 4rem; }
+    /* line 137, ../scss/pages/_home.scss */
+    .home__interview__wrapper__author {
+      width: 48.71795%;
+      float: right;
+      margin-right: 0;
+      text-align: right;
+      color: #FFF;
+      font-size: 30px;
+      font-size: 3rem;
+      margin-top: 20px;
+      margin-top: 2rem;
+      padding-top: 20px;
+      padding-top: 2rem;
+      text-transform: uppercase;
+      border-top: 1px solid white;
+      font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
+  /* line 149, ../scss/pages/_home.scss */
+  .home__interview__logo {
+    bottom: -20px;
+    bottom: -2rem; }
+/* line 155, ../scss/pages/_home.scss */
+.home__gallery__title {
+  font-size: 38px;
+  font-size: 3.8rem;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  line-height: 60px;
+  line-height: 6rem; }
 
 /* line 6, ../scss/pages/_gallery.scss */
 .gallery__photos__title {
@@ -673,7 +793,7 @@ fieldset {
     right: 0;
     height: 100px;
     height: 10rem;
-    background-image: url('data:image/svg+xml;utf8,<svg class="decor" height="100px" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L50 100 L100 0" stroke-width="0"  fill="#FFF"></path></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L50 100 L100 0" stroke-width="0"  fill="#FFF"></path></svg>');
     display: block; }
   /* line 172, ../scss/pages/_gallery.scss */
   .gallery__videos__title {

@@ -1,15 +1,15 @@
 .header{
- 
+
     background-color:rgba(0, 0, 0, 0.7);
     position: fixed;
-    top: 0 ; 
+    top: 0 ;
     left: 0;
     right: 0;
     z-index: 10001;
-    
+
 
     &__title{
-      @include span(first 5);
+      @include span(first 4);
       @include rem-fix(line-height, 6);
       @include rem-fix(font-size, 3);
 
@@ -17,7 +17,7 @@
       a{
         display:block;
         @include rem-fix(padding-left, 12);
-        
+
         background-image: url('../img/logo-header.png');
         .svg & {
             background-image: url('../img/logo-header.svg');
@@ -30,7 +30,7 @@
         text-transform: uppercase;
         text-decoration:none;
         span{
-         
+
           font-weight:100;
         }
         span+span{
@@ -40,7 +40,7 @@
     }
 
     &__nav{
-      @include span(last 6);
+      @include span(last 8);
       @include container;
       text-align: right;
       li{
@@ -49,7 +49,7 @@
           @include rem-fix(padding, 0, 2);
           display:block;
           @include rem-fix(font-size, 1.6);
-          
+
           color: #FFF;
           text-transform:uppercase;
           text-decoration:none;
