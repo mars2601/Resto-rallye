@@ -17,6 +17,7 @@
     				<a href="#">Thèmes</a>
     			</div>
 
+
        			
        		   	<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">
@@ -32,11 +33,6 @@
 		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
 		    					Le 25 octobre 2014
 		    					</time>
-	    					</div>
-
-	    				</div>
-	    			</a>
-    			</section>
 
     			<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">
@@ -55,9 +51,8 @@
 	    					</div>
 
 	    				</div>
-	    			</a>
-    			</section>
-    	   		
+
+
     	   		<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link gallery__photos__album__link--last">
 
@@ -78,6 +73,7 @@
 	    			</a>
     			</section>
 
+
     			<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">
 
@@ -92,11 +88,7 @@
 		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
 		    					Le 25 octobre 2014
 		    					</time>
-	    					</div>
 
-	    				</div>
-	    			</a>
-    			</section>
 
     			<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">
