@@ -6,7 +6,6 @@
     <section class="gallery">
     	<div class="gallery__title big-title">
     		<h2>Galerie</h1>
-
     	</div>
 
 
@@ -17,77 +16,128 @@
     				<a href="#">évenements</a>
     				<a href="#">Thèmes</a>
     			</div>
-    			<section class="gallery__photos__album">
-	    			<a href="#">
-	    				<img src="../img/gal_1.png" alt="">
-	    				<figcaption>
-		    				<div>
-		    					<h4>Centre de Liège</h4>
-		    					<span>Le 25 octobre 2014</span>
-		    				</div>
-	    				</figcaption>
-	    			</a>
-    			</section>
+
        			
-       			<section class="gallery__photos__album">
-	    			<a href="#">
-	    				<img src="../img/gal_2.png" alt="">
-	    				<figcaption>
-	    				<div>
-	    					<h4>Tournai</h4>
-	    					<span>Le 25 octobre 2014</span>
+       		   	<section class="gallery__photos__album">
+	    			<a href="#" class="gallery__photos__album__link">
+
+	    				<img src="../img/gal_1.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Centre de Liège
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
 	    					</div>
-	    				</figcaption>
+
+	    				</div>
 	    			</a>
     			</section>
-    	   		
-    	   		<section class="gallery__photos__album gallery__photos__album--last">
-	    			<a href="#">
-	    				<img src="../img/gal_3.png" alt="">
-	    				<figcaption>
-		    				<div>
-		    					<h4>Sablon (Bruxelles)</h4>
-		    					<span>Le 25 octobre 2014</span>
-		    				</div>
-	    				</figcaption>
+
+    			<section class="gallery__photos__album">
+	    			<a href="#" class="gallery__photos__album__link">
+
+	    				<img src="../img/gal_2.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Tournai
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
+	    					</div>
+
+	    				</div>
 	    			</a>
     			</section>
     	   		
     	   		<section class="gallery__photos__album">
-	    			<a href="#">
-	    				<img src="../img/gal_4.png" alt="">
-	    				<figcaption>
-	    					<div>
-	    						<h4>Le pays de Herve</h4>
-	    						<span>Le 25 octobre 2014</span>
+	    			<a href="#" class="gallery__photos__album__link gallery__photos__album__link--last">
+
+	    				<img src="../img/gal_3.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Sablon (Bruxelles)
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
 	    					</div>
-	    				</figcaption>
+
+	    				</div>
+	    			</a>
+    			</section>
+
+    			<section class="gallery__photos__album">
+	    			<a href="#" class="gallery__photos__album__link">
+
+	    				<img src="../img/gal_4.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Le pays de Herve
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
+	    					</div>
+
+	    				</div>
+	    			</a>
+    			</section>
+
+    			<section class="gallery__photos__album">
+	    			<a href="#" class="gallery__photos__album__link">
+
+	    				<img src="../img/gal_5.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Marche-en-famenne
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
+	    					</div>
+
+	    				</div>
 	    			</a>
     			</section>
     	   		
     	   		<section class="gallery__photos__album ">
-	    			<a href="#">
-	    				<img src="../img/gal_5.png" alt="">
-	    				<figcaption>
-	    					<div>
-	    						<h4>Marche-en-famenne</h4>
-	    						<span class="gallery__photos__album__date">Le 25 octobre 2014</span>
-	    					</div>
-	    				</figcaption>
-	    			</a>
-    			</section>
+	    			<a href="#" class="gallery__photos__album__link gallery__photos__album__link--last">
 
-    	   		<section class="gallery__photos__album gallery__photos__album--last">
-	    			<a href="#">
-	    				<img src="../img/gal_1.png" alt="">
-	    				<figcaption>
-	    				<div>
-	    					<h4>Theux</h4>
-	    					<span>Le 25 octobre 2014</span>
+	    				<img src="../img/gal_1.png" alt="" class="gallery__photos__album__link__image">
+	    				
+	    				<div class="gallery__photos__album__link__text">
+	    					<div class="gallery__photos__album__link__text__container">
+
+		    					<h4 class="gallery__photos__album__link__text__title">
+		    					Theux
+		    					</h4>
+		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
+		    					Le 25 octobre 2014
+		    					</time>
+	    					</div>
+
 	    				</div>
-	    				</figcaption>
 	    			</a>
     			</section>
+    	   		
     	</section>
 
     	<section class="gallery__videos">

@@ -9,6 +9,7 @@
 			text-align: center;
 			text-transform: uppercase;
 			@include rem-fix(margin-bottom, 3);
+
 			span{
 				position: relative;
 				&:after{
@@ -46,102 +47,119 @@
 		}
 
 		&__album{
-
-
-			@include rem-fix(margin-top, 3);
-			@include span(4);
-			position: relative;
-			&:hover figcaption {
-				h4:after{
-		
-						@include transform(translate3d(0,0,0));
-				}
-				span {
-					@include transform(translate3d(0,0,0));
-				}
-			}
 			
-			figcaption{
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				bottom: 0;
+			&__link{
+				position: relative;
+				@include rem-fix(margin-top, 3);
+				@include span(4);
 				overflow: hidden;
 
-				&:after{
-					content:"";
-					
-					background-color: rgba(0,0,0,.5);
-					width: 300%;
-					height: 1000px;
-					display: block;
-					position: absolute ;
+				&--last{
+					@include span(4 last);
+				}
+
+
+
+				&__image{
+					width: 100%;
+					height: auto;
+
+					@include transition(transform 0.35s);
+					@include transform(scale3d(1,1,1));;
+	
+				}
+				
+				&__text{
+					position: absolute;
 					top: 0;
+					right: 0;
 					left: 0;
-					@include transition(.35s);
-					@include transform(rotate(-10deg) translate3d(0,-98%,0));
-
-				}
-				@include transition(background-color .3s);	
-				&:hover{
-					background-color: #000;
-					background-color: rgba(0,0,0,.75);		
-					&:after{
-						@include transform(rotate(-10deg) translate3d(0,-10%,0));
-					}			
-				}
-			
-				@include rem-fix(padding, 2);
-				div{
-					position:relative;
-					z-index: 11;
-					overflow: hidden;
-				}
-				h4{
+					bottom: 0;
+					@include transition(background-color .3s);	
 					
-					@include rem-fix(font-size, 2.2);
-					color: #FFF;
-					text-transform: uppercase;
-					font-weight: 700;
-					position: relative;
-					&:after{
-						content: "";
-						display: block;
-						position: relative;
-						left: 0;
-						right: 0;
-						height: 2px;
-						background-color: #FFF;
+					padding: 2rem;
+					overflow: hidden;
 
+					&__container{
+						
+						overflow: hidden;
+						z-index: 50;
+						position: relative;
+
+					}
+
+					&__title{
+											
+
+						@include rem-fix(font-size, 2.2);
+						color: #FFF;
+						text-transform: uppercase;
+						font-weight: 700;
+						letter-spacing: 1px;
+						position: relative;
+
+						&:after{
+							content: "";
+							display: block;
+							position: relative;
+							left: 0;
+							right: 0;
+							height: 2px;
+							background-color: #FFF;
+
+							@include transition( transform 0.35s);
+							@include transform(translate3d(-100%,0,0));
+						}
+					}
+
+					&__date{
+
+						font-family: $font-family-2;
+						color: #C5C5C5;
+						font-style: italic;
+
+						display: block;
+						@include rem-fix(margin-top, 0.8);
 						@include transition( transform 0.35s);
-						@include transform(translate3d(-100%,0,0));
-			
+						@include transform(translate3d(200%,0,0));
+					}
+
+					&:after{
+						content:"";
+						background-color: rgba(0,0,0,.5);
+						width: 300%;
+						height: 1000px;
+						display: block;
+						position: absolute ;
+						top: 0;
+						left: 0;
+						@include transition(.35s);
+						@include transform(rotate(-10deg) translate3d(0,-98%,0));
+						z-index: 10;
 					}
 				}
 
-				span{
-					@include rem-fix(margin-top, 0.8);
-					display: block;
+				&:hover &__text {				
+					background-color: #000;
+					background-color: rgba(0,0,0,.75);	
 
-					@include transition( transform 0.35s);
-					@include transform(translate3d(100%,0,0));
+					&:after{
+						@include transform(rotate(-10deg) translate3d(0,-10%,0));
+					}
+
+					&__title:after{
+						@include transform(translate3d(0,0,0));
+					}
+
+					&__date{
+						@include transform(translate3d(0,0,0));
+					}
 					
-
-					font-family: $font-family-2;
-					color: #C5C5C5;
-					font-style: italic;
-
 				}
-			}
 
-			&--last{
-				@include span(4 last);
-			}
-
-			img{ 
-				width: 100%;
-				height: auto;
+				&:hover &__image{
+						@include transform(scale3d(1.5,1.5,1.5));;
+				}
 			}
 		}
 

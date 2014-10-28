@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*
 
 	Resto - Rallye
 	Par Marcel Pirnay et Maxime Lefèbvre
 
 */
-/* line 5, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,38 +26,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -266,7 +267,7 @@ body {
   margin-right: auto;
   max-width: 1170px;
   max-width: 117rem; }
-  /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+  /* line 12, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
   .wrapper:after, .big-title h2:after, .home__introduction__event:after, .gallery__photos:after {
     content: " ";
     display: block;
@@ -353,7 +354,7 @@ blockquote {
   z-index: 10001; }
   /* line 11, ../scss/partials/_header.scss */
   .header__title {
-    width: 40.17094%;
+    width: 31.62393%;
     float: left;
     margin-right: 2.5641%;
     line-height: 60px;
@@ -383,14 +384,14 @@ blockquote {
         font-weight: 500; }
   /* line 42, ../scss/partials/_header.scss */
   .header__nav {
-    width: 48.71795%;
+    width: 65.81197%;
     float: right;
     margin-right: 0;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     text-align: right; }
-    /* line 12, ../../../../../../Library/Ruby/Gems/1.8/gems/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+    /* line 12, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
     .header__nav:after {
       content: " ";
       display: block;
@@ -509,10 +510,10 @@ fieldset {
   text-transform: uppercase;
   margin-bottom: 30px;
   margin-bottom: 3rem; }
-  /* line 12, ../scss/pages/_gallery.scss */
+  /* line 13, ../scss/pages/_gallery.scss */
   .gallery__photos__title span {
     position: relative; }
-    /* line 14, ../scss/pages/_gallery.scss */
+    /* line 15, ../scss/pages/_gallery.scss */
     .gallery__photos__title span:after {
       content: "";
       position: absolute;
@@ -522,99 +523,77 @@ fieldset {
       right: 0.7em;
       height: 1px;
       background-color: #000; }
-/* line 28, ../scss/pages/_gallery.scss */
+/* line 29, ../scss/pages/_gallery.scss */
 .gallery__photos__sort {
   text-align: center; }
-  /* line 30, ../scss/pages/_gallery.scss */
+  /* line 31, ../scss/pages/_gallery.scss */
   .gallery__photos__sort a {
     text-transform: uppercase;
     font-size: 24px;
     font-size: 2.4rem; }
-    /* line 33, ../scss/pages/_gallery.scss */
+    /* line 34, ../scss/pages/_gallery.scss */
     .gallery__photos__sort a:before {
       content: "|";
       padding: 1em; }
-    /* line 39, ../scss/pages/_gallery.scss */
+    /* line 40, ../scss/pages/_gallery.scss */
     .gallery__photos__sort a:first-child:before {
       content: "";
       padding: 0; }
-/* line 48, ../scss/pages/_gallery.scss */
-.gallery__photos__album {
+/* line 51, ../scss/pages/_gallery.scss */
+.gallery__photos__album__link {
+  position: relative;
   margin-top: 30px;
   margin-top: 3rem;
   width: 31.62393%;
   float: left;
   margin-right: 2.5641%;
-  position: relative; }
-  /* line 55, ../scss/pages/_gallery.scss */
-  .gallery__photos__album:hover figcaption h4:after {
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  /* line 59, ../scss/pages/_gallery.scss */
-  .gallery__photos__album:hover figcaption span {
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  /* line 64, ../scss/pages/_gallery.scss */
-  .gallery__photos__album figcaption {
+  overflow: hidden; }
+  /* line 57, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link--last {
+    width: 31.62393%;
+    float: right;
+    margin-right: 0; }
+  /* line 63, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link__image {
+    width: 100%;
+    height: auto;
+    -moz-transition: -moz-transform 0.35s;
+    -o-transition: -o-transform 0.35s;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  /* line 72, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link__text {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    overflow: hidden;
     -moz-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
-    padding: 20px;
-    padding: 2rem; }
-    /* line 72, ../scss/pages/_gallery.scss */
-    .gallery__photos__album figcaption:after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.5);
-      width: 300%;
-      height: 1000px;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      -moz-transition: 0.35s;
-      -o-transition: 0.35s;
-      -webkit-transition: 0.35s;
-      transition: 0.35s;
-      -moz-transform: rotate(-10deg) translate3d(0, -98%, 0);
-      -ms-transform: rotate(-10deg) translate3d(0, -98%, 0);
-      -webkit-transform: rotate(-10deg) translate3d(0, -98%, 0);
-      transform: rotate(-10deg) translate3d(0, -98%, 0); }
-    /* line 87, ../scss/pages/_gallery.scss */
-    .gallery__photos__album figcaption:hover {
-      background-color: #000;
-      background-color: rgba(0, 0, 0, 0.75); }
-      /* line 90, ../scss/pages/_gallery.scss */
-      .gallery__photos__album figcaption:hover:after {
-        -moz-transform: rotate(-10deg) translate3d(0, -10%, 0);
-        -ms-transform: rotate(-10deg) translate3d(0, -10%, 0);
-        -webkit-transform: rotate(-10deg) translate3d(0, -10%, 0);
-        transform: rotate(-10deg) translate3d(0, -10%, 0); }
-    /* line 96, ../scss/pages/_gallery.scss */
-    .gallery__photos__album figcaption div {
-      position: relative;
-      z-index: 11;
-      overflow: hidden; }
-    /* line 101, ../scss/pages/_gallery.scss */
-    .gallery__photos__album figcaption h4 {
+    padding: 2rem;
+    overflow: hidden; }
+    /* line 83, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__container {
+      overflow: hidden;
+      z-index: 50;
+      position: relative; }
+    /* line 91, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__title {
       font-size: 22px;
       font-size: 2.2rem;
       color: #FFF;
       text-transform: uppercase;
       font-weight: 700;
+      letter-spacing: 1px;
       position: relative; }
-      /* line 108, ../scss/pages/_gallery.scss */
-      .gallery__photos__album figcaption h4:after {
+      /* line 101, ../scss/pages/_gallery.scss */
+      .gallery__photos__album__link__text__title:after {
         content: "";
         display: block;
         position: relative;
@@ -630,32 +609,70 @@ fieldset {
         -ms-transform: translate3d(-100%, 0, 0);
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0); }
-    /* line 123, ../scss/pages/_gallery.scss */
-    .gallery__photos__album figcaption span {
+    /* line 115, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__date {
+      font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+      color: #C5C5C5;
+      font-style: italic;
+      display: block;
       margin-top: 8px;
       margin-top: 0.8rem;
-      display: block;
       -moz-transition: -moz-transform 0.35s;
       -o-transition: -o-transform 0.35s;
       -webkit-transition: -webkit-transform 0.35s;
       transition: transform 0.35s;
-      -moz-transform: translate3d(100%, 0, 0);
-      -ms-transform: translate3d(100%, 0, 0);
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-      font-family: "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
-      color: #C5C5C5;
-      font-style: italic; }
-  /* line 138, ../scss/pages/_gallery.scss */
-  .gallery__photos__album--last {
-    width: 31.62393%;
-    float: right;
-    margin-right: 0; }
+      -moz-transform: translate3d(200%, 0, 0);
+      -ms-transform: translate3d(200%, 0, 0);
+      -webkit-transform: translate3d(200%, 0, 0);
+      transform: translate3d(200%, 0, 0); }
+    /* line 127, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 300%;
+      height: 1000px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -moz-transition: 0.35s;
+      -o-transition: 0.35s;
+      -webkit-transition: 0.35s;
+      transition: 0.35s;
+      -moz-transform: rotate(-10deg) translate3d(0, -98%, 0);
+      -ms-transform: rotate(-10deg) translate3d(0, -98%, 0);
+      -webkit-transform: rotate(-10deg) translate3d(0, -98%, 0);
+      transform: rotate(-10deg) translate3d(0, -98%, 0);
+      z-index: 10; }
   /* line 142, ../scss/pages/_gallery.scss */
-  .gallery__photos__album img {
-    width: 100%;
-    height: auto; }
-/* line 151, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link:hover .gallery__photos__album__link__text {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75); }
+    /* line 146, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text:after {
+      -moz-transform: rotate(-10deg) translate3d(0, -10%, 0);
+      -ms-transform: rotate(-10deg) translate3d(0, -10%, 0);
+      -webkit-transform: rotate(-10deg) translate3d(0, -10%, 0);
+      transform: rotate(-10deg) translate3d(0, -10%, 0); }
+    /* line 150, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text__title:after {
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    /* line 154, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text__date {
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  /* line 160, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link:hover .gallery__photos__album__link__image {
+    -moz-transform: scale3d(1.5, 1.5, 1.5);
+    -ms-transform: scale3d(1.5, 1.5, 1.5);
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale3d(1.5, 1.5, 1.5); }
+/* line 169, ../scss/pages/_gallery.scss */
 .gallery__videos {
   height: 600px;
   background-color: #D8D8D8;
@@ -664,7 +681,7 @@ fieldset {
   margin-top: 6rem;
   padding-top: 100px;
   padding-top: 10rem; }
-  /* line 159, ../scss/pages/_gallery.scss */
+  /* line 177, ../scss/pages/_gallery.scss */
   .gallery__videos:before {
     content: '';
     position: absolute;
@@ -675,7 +692,7 @@ fieldset {
     height: 10rem;
     background-image: url('data:image/svg+xml;utf8,<svg class="decor" height="100px" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 L50 100 L100 0" stroke-width="0"  fill="#FFF"></path></svg>');
     display: block; }
-  /* line 172, ../scss/pages/_gallery.scss */
+  /* line 190, ../scss/pages/_gallery.scss */
   .gallery__videos__title {
     font-size: 40px;
     font-size: 4rem;
@@ -686,18 +703,18 @@ fieldset {
     padding: 5rem 0rem;
     position: relative;
     z-index: 9999; }
-  /* line 183, ../scss/pages/_gallery.scss */
+  /* line 201, ../scss/pages/_gallery.scss */
   .gallery__videos__video {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     position: relative; }
-    /* line 186, ../scss/pages/_gallery.scss */
+    /* line 204, ../scss/pages/_gallery.scss */
     .gallery__videos__video img {
       width: 100%;
       height: auto; }
-    /* line 191, ../scss/pages/_gallery.scss */
+    /* line 209, ../scss/pages/_gallery.scss */
     .gallery__videos__video figcaption {
       position: absolute;
       top: 0;
