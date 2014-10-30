@@ -6,10 +6,7 @@
     <section class="gallery">
     	<div class="gallery__title big-title">
     		<h2>Galerie</h1>
-
     	</div>
-
-
     	<section class="gallery__photos">
     			<h3 class="gallery__photos__title"><span>Photos</span></h3>
     			<div class="gallery__photos__sort">
@@ -28,7 +25,6 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-
        			<section class="gallery__photos__album">
 	    			<a href="#">
 	    				<img src="../img/gal_2.png" alt="">
@@ -40,7 +36,6 @@
 	    				</figcaption>
 	    			</a>
     			</section>
-
     	   		<section class="gallery__photos__album gallery__photos__album--last">
 	    			<a href="#">
 	    				<img src="../img/gal_3.png" alt="">

@@ -4,18 +4,14 @@
 
 		@extend .wrapper;
 		&__title{
-			@include rem-fix(font-size, 4);
-			font-weight: 200;
-			text-align: center;
-			text-transform: uppercase;
-			@include rem-fix(margin-bottom, 3);
+			@extend .center-title;
 			span{
 				position: relative;
 				&:after{
 					content: "";
 					position: absolute;
 					@include rem-fix(bottom, -2);
-				
+
 					left: 0.7em;
 					right: 0.7em;
 					height: 1px;
@@ -33,7 +29,7 @@
 				&:before{
 					content: "|";
 					padding: 1em;
-			
+
 				}
 				&:first-child{
 					&:before{
@@ -53,14 +49,13 @@
 			position: relative;
 			&:hover figcaption {
 				h4:after{
-		
 						@include transform(translate3d(0,0,0));
 				}
 				span {
 					@include transform(translate3d(0,0,0));
 				}
 			}
-			
+
 			figcaption{
 				position: absolute;
 				top: 0;
@@ -71,7 +66,7 @@
 
 				&:after{
 					content:"";
-					
+
 					background-color: rgba(0,0,0,.5);
 					width: 300%;
 					height: 1000px;
@@ -83,15 +78,15 @@
 					@include transform(rotate(-10deg) translate3d(0,-98%,0));
 
 				}
-				@include transition(background-color .3s);	
+				@include transition(background-color .3s);
 				&:hover{
 					background-color: #000;
-					background-color: rgba(0,0,0,.75);		
+					background-color: rgba(0,0,0,.75);
 					&:after{
 						@include transform(rotate(-10deg) translate3d(0,-10%,0));
-					}			
+					}
 				}
-			
+
 				@include rem-fix(padding, 2);
 				div{
 					position:relative;
@@ -99,12 +94,8 @@
 					overflow: hidden;
 				}
 				h4{
-					
-					@include rem-fix(font-size, 2.2);
-					color: #FFF;
-					text-transform: uppercase;
-					font-weight: 700;
-					position: relative;
+					@extend .list-title;
+					color:#FFF;
 					&:after{
 						content: "";
 						display: block;
@@ -116,7 +107,7 @@
 
 						@include transition( transform 0.35s);
 						@include transform(translate3d(-100%,0,0));
-			
+
 					}
 				}
 
@@ -126,7 +117,7 @@
 
 					@include transition( transform 0.35s);
 					@include transform(translate3d(100%,0,0));
-					
+
 
 					font-family: $font-family-2;
 					color: #C5C5C5;
@@ -139,7 +130,7 @@
 				@include span(4 last);
 			}
 
-			img{ 
+			img{
 				width: 100%;
 				height: auto;
 			}
@@ -158,9 +149,9 @@
 		@include rem-fix(padding-top, 10);
 		&:before{
 			content: '';
-			position:absolute; 
+			position:absolute;
 			top: 0;
-			left: 0; 
+			left: 0;
 			right: 0;
 			@include rem-fix(height, 10);
 			background-image: ($triangle-2);
@@ -185,7 +176,7 @@
 			position: relative;
 			img{
 				width : 100%;
-				height : auto;	
+				height : auto;
 			}
 
 			figcaption{
@@ -200,6 +191,6 @@
 
 
 		}
-		
+
 	}
 }
