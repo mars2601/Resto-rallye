@@ -6,6 +6,10 @@
       <div class="events__title big-title">
         <h2>Evénements</h2>
       </div>
+      @foreach($nextEvents as $next)
+        <h3>{{$next->title}}</h3>
+      @endforeach
+
       <section class="events__next">
           <h3 class="events__next__title">A venir</h3>
           <ol class="events__next__list">
@@ -22,6 +26,9 @@
             </li>
           </ol>
       </section>
+      @foreach($lastEvents as $last)
+        <h3>{{$last->title}}</h3>
+      @endforeach
       <section class="events__past">
           <div class="events__past__wrapper">
             <h3 class="events__past__wrapper__title">Passé</h3>
