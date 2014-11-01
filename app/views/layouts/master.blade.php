@@ -24,7 +24,7 @@
 			<div class="wrapper">
 			  	<h1 class="header__title"><a class="header__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
 			  	<nav class="header__nav">
-			  		<h1 class="visuallyhidden">Navigation principale</h1>
+			  		<h2 class="visuallyhidden">Navigation principale</h2>
 					<ul>
 						<li>{{ link_to_route('homepage', 'Accueil')}}</li>
 						<li>{{ link_to_route('about', 'A propos')}}</li>
@@ -39,8 +39,30 @@
 
         @yield('content')
 
-        <footer>
+        <footer class="footer">
+            <div class="footer__social-network">
+                <a href="#" class="footer__social-network__link footer__social-network__link--facebook">Notre page Facebook</a>
+                <a href="#" class="footer__social-network__link footer__social-network__link--twitter">Notre profil Twitter</a>
+                <a href="#" class="footer__social-network__link footer__social-network__link--rss">Flux RSS</a>
+            </div>
 
+            <div class="footer__social-network">
+                {{ Form::open(array('url' => 'foo/bar')) }}
+                    {{Form::text('email', 'example@gmail.com')}}
+                    {{Form::submit('S’inscrire')}}
+                {{ Form::close() }}
+            </div>
+
+            <div class="footer__end-line">
+                <span class="footer__end-line__copyright">
+                    ® 2014 Resto-Rallye
+                </span>
+                <span class="footer__end-line__separation"> - </span>
+                <span class="footer__end-line__credits">
+                    Fait par <a href="http://www.marcel-pirnay.be">Marcel Pirnay</a> et <a href="http://www.maxime-lefebvre.be">Maxime Lefèbvre</a>
+                </span>
+
+            </div>
         </footer>
 
 
@@ -50,6 +72,8 @@
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
 
+		<script src="//use.typekit.net/vey2mcx.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--<script>

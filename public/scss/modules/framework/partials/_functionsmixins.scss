@@ -100,3 +100,48 @@
   animation:         $name $time $type;
 }
 
+
+////////////////////////////////////////////////////////////////////////////////////
+// Génération de triangle SVG
+////////////////////////////////////////////////////////////////////////////////////
+
+@mixin triangle-svg( $color: FFF, $height: 10, $direction: bottom-left,$position: top, $pseudoElement: after ){
+  &:#{$pseudoElement}{
+  content: '';
+  position:absolute;
+
+  @if unquote( $position ) == top{
+    top:0;
+  }
+
+
+  @if unquote( $position ) == bottom{
+    bottom:0;
+  }
+
+  left: 0;
+  right: 0;
+  @include rem-fix(height, $height);
+  background-size: 100% 100%;
+  display: block;
+  $path : 'M0 100 L0 0 L100 0';
+  @if unquote( $direction ) == top-left{
+    $path : 'M0 100 L0 0 L100 0';
+  }
+  @else if unquote( $direction ) == top-right{
+    $path : 'M0 0 L100 0 L100 100';
+  }
+  @else if unquote( $direction ) == bottom-left{
+    $path : 'M0 0 L0 100 L100 100';
+  }
+  @else if unquote( $direction ) == bottom-right{
+    $path : 'M0 100 L100 0 L100 100';
+  }
+  @else if unquote( $direction ) == bottom-center{
+    $path : 'M0 0 L50 100 L100 0';
+  }
+
+  background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='#{$path}' fill='%23#{$color}'></path></svg>");
+
+}
+}

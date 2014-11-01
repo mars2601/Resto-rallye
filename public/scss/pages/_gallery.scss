@@ -147,13 +147,9 @@
 						@include transform(rotate(-10deg) translate3d(0,-10%,0));
 					}
 
-					&__title:after{
-						@include transform(translate3d(0,0,0));
-					}
+					&__title:after{ @include transform(translate3d(0,0,0)); }
 
-					&__date{
-						@include transform(translate3d(0,0,0));
-					}
+					&__date{ @include transform(translate3d(0,0,0)); }
 					
 				}
 
@@ -174,17 +170,11 @@
 
 		@include rem-fix(margin-top, 6);
 		@include rem-fix(padding-top, 10);
-		&:before{
-			content: '';
-			position:absolute; 
-			top: 0;
-			left: 0; 
-			right: 0;
-			@include rem-fix(height, 10);
-			background-image: ($triangle-2);
-			display: block;
-
-		}
+        @include triangle-svg(  $color: FFF,
+                                $height: 10,
+                                $direction: bottom-center,
+                                $position: top,
+                                $pseudoElement: before );
 
 
 		&__title{

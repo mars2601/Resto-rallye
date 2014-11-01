@@ -33,20 +33,6 @@ code{
   line-height: 1.8;
 }
 
-blockquote{
-  border-left: 4px solid #019bb1;;
-  padding: 0.5em 2em;
-  color: #4B4B4B;
 
-  p{
-    display: inline;
-    line-height: 1.6;
-  }
-
-  &:before, &:after{
-    content: " “ ";
-
-  }
-}
 
 

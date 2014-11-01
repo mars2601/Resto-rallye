@@ -1,3 +1,12 @@
 .footer{
+  background-color: #000000;
+  color: #FFFFFF;
+  @include rem-fix(padding-top,10) ;
+  position: relative;
 
+  @include triangle-svg(  $color: FFF,
+                          $height: 10,
+                          $direction: top-left,
+                          $position: top,
+                          $pseudoElement: before );
 }
