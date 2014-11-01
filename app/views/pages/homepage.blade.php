@@ -2,6 +2,8 @@
 
 
 @section('content')
+
+<?php //dd($quote); ?>
     <section class="home__introduction">
       <div class="home__introduction__event">
           <div class="home__introduction__event__wrapper">

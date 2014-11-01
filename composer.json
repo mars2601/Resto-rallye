@@ -10,11 +10,15 @@
 		"classmap": [
 			"app/commands",
 			"app/controllers",
+			"app/views",
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php"
-		]
+		],
+		"psr-0": {
+			"root" : "app/root"
+		}
 	},
 	"scripts": {
 		"post-install-cmd": [

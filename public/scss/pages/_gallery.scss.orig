@@ -13,7 +13,7 @@
 					content: "";
 					position: absolute;
 					@include rem-fix(bottom, -2);
-				
+
 					left: 0.7em;
 					right: 0.7em;
 					height: 1px;
@@ -31,7 +31,7 @@
 				&:before{
 					content: "|";
 					padding: 1em;
-			
+
 				}
 				&:first-child{
 					&:before{
@@ -44,6 +44,7 @@
 		}
 
 		&__album{
+<<<<<<< HEAD
 			
 			&__link{
 				position: relative;
@@ -81,6 +82,65 @@
 						
 						overflow: hidden;
 						z-index: 50;
+=======
+
+
+			@include rem-fix(margin-top, 3);
+			@include span(4);
+			position: relative;
+			&:hover figcaption {
+				h4:after{
+						@include transform(translate3d(0,0,0));
+				}
+				span {
+					@include transform(translate3d(0,0,0));
+				}
+			}
+
+			figcaption{
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				overflow: hidden;
+
+				&:after{
+					content:"";
+
+					background-color: rgba(0,0,0,.5);
+					width: 300%;
+					height: 1000px;
+					display: block;
+					position: absolute ;
+					top: 0;
+					left: 0;
+					@include transition(.35s);
+					@include transform(rotate(-10deg) translate3d(0,-98%,0));
+
+				}
+				@include transition(background-color .3s);
+				&:hover{
+					background-color: #000;
+					background-color: rgba(0,0,0,.75);
+					&:after{
+						@include transform(rotate(-10deg) translate3d(0,-10%,0));
+					}
+				}
+
+				@include rem-fix(padding, 2);
+				div{
+					position:relative;
+					z-index: 11;
+					overflow: hidden;
+				}
+				h4{
+					@extend .list-title;
+					color:#FFF;
+					&:after{
+						content: "";
+						display: block;
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 						position: relative;
 
 					}
@@ -118,6 +178,7 @@
 						display: block;
 						@include rem-fix(margin-top, 0.8);
 						@include transition( transform 0.35s);
+<<<<<<< HEAD
 						@include transform(translate3d(200%,0,0));
 					}
 
@@ -133,6 +194,10 @@
 						@include transition(.35s);
 						@include transform(rotate(-10deg) translate3d(0,-98%,0));
 						z-index: 10;
+=======
+						@include transform(translate3d(-100%,0,0));
+
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 					}
 				}
 
@@ -140,9 +205,15 @@
 					background-color: #000;
 					background-color: rgba(0,0,0,.75);	
 
+<<<<<<< HEAD
 					&:after{
 						@include transform(rotate(-10deg) translate3d(0,-10%,0));
 					}
+=======
+					@include transition( transform 0.35s);
+					@include transform(translate3d(100%,0,0));
+
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 
 					&__title:after{ @include transform(translate3d(0,0,0)); }
 
@@ -150,9 +221,15 @@
 					
 				}
 
+<<<<<<< HEAD
 				&:hover &__image{
 						@include transform(scale3d(1.5,1.5,1.5));;
 				}
+=======
+			img{
+				width: 100%;
+				height: auto;
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 			}
 		}
 
@@ -167,11 +244,25 @@
 
 		@include rem-fix(margin-top, 6);
 		@include rem-fix(padding-top, 10);
+<<<<<<< HEAD
         @include triangle-svg(  $color: FFF,
                                 $height: 10,
                                 $direction: bottom-center,
                                 $position: top,
                                 $pseudoElement: before );
+=======
+		&:before{
+			content: '';
+			position:absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@include rem-fix(height, 10);
+			background-image: ($triangle-2);
+			display: block;
+
+		}
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 
 
 		&__title{
@@ -190,7 +281,11 @@
 			position: relative;
 			img{
 				width : 100%;
+<<<<<<< HEAD
 				height : auto;	
+=======
+				height : auto;
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 			}
 
 			figcaption{
@@ -205,6 +300,10 @@
 
 
 		}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> 19832a859ac3cdc36457219a958897bf2738c4e1
 	}
 }

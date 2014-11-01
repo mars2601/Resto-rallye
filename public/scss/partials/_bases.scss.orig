@@ -58,11 +58,14 @@ $susy: (
   background-size:cover;
   overflow: hidden;
   position: relative;
+
   @include triangle-svg(  $color: FFF,
-          					 $height: 10,
-           					$direction: bottom-right,
-           					$position: bottom,
-           					$pseudoElement: after );
+                          $height: 10,
+                          $direction: bottom-right,
+                          $position: bottom,
+                          $pseudoElement: after );
+
+
 
   h2{
     @include rem-fix(padding-top, 15);
@@ -75,8 +78,4 @@ $susy: (
 
 
   }
-
-
-
-
 }

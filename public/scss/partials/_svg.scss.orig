@@ -1,11 +1,6 @@
 
-
-
 $triangle-1-bottom-right :  url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L100 0 L100 100' fill='%23FFF'></path></svg>");
 $triangle-1-top-left :  url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23FFF'></path></svg>");
 
 $triangle-1-bottom-left:  url("data:image/svg+xml;utf8,<svg   preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100'  xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L0 100 L100 100'  fill='%23FFF'></path></svg>");
 $triangle-1-top-right:  url("data:image/svg+xml;utf8,<svg  preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100'  xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L100 0 L100 100'  fill='%23FFF'></path></svg>");
-
-
-$triangle-2 :  url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L50 100 L100 0'  fill='%23FFF'></path></svg>");

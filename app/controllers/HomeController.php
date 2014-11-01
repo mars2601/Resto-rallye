@@ -1,5 +1,8 @@
 <?php
 
+namespace root\Controllers;
+use root\Models as model;
+
 class HomeController extends BaseController {
 
 	/*
@@ -15,10 +18,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function index()
 	{
-		return View::make('hello');
-	}
+		$quote = model\Quote::all();
 
+		return \View::make('pages.homepage', array( 'quote' => $quote ));
+	}
 }
-F
+
