@@ -11,16 +11,9 @@
 |
 */
 
-
-
-Route::get('/', array('as' => 'homepage', function()
-{
-    return View::make('pages.homepage');
-}));
-
 Route::get('/', array(
   'as' => 'homepage',
-  'uses' => 'root\Controllers\HomeController@index'
+  'uses' => 'HomeController@index'
 ));
 
 Route::get('/contact', array('as' => 'contact', function()
@@ -33,10 +26,17 @@ Route::get('/galerie', array('as' => 'gallery', function()
     return View::make('pages.gallery');
 }));
 
-Route::get('/evenements', array(
-  'as' => 'events',
-  'uses' => 'root\Controllers\EventsController@index'
+Route::get('/rallyes', array(
+  'as' => 'rallyes',
+  'uses' => 'RallyeController@index'
 ));
+
+Route::get('/showEvent{id}', array(
+  'as' => 'showEvent',
+  'uses' => 'RallyeController@show'
+), function ($id){
+		return $id;
+	});
 
 Route::get('/a-propos', array('as' => 'about', function()
 {

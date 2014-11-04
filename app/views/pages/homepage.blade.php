@@ -27,8 +27,8 @@
       <h2 class="visuallyhidden">Témoignages</h2>
       <blockquote  class="home__interview__wrapper">
         <img src="./img/interviewer.jpg" height="200" width="200" alt="" class="home__interview__wrapper__image">
-        <p class="home__interview__wrapper__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <cite class="home__interview__wrapper__author">Le soir</cite>
+        <p class="home__interview__wrapper__paragraph">{{$quote->content}}</p>
+        <cite class="home__interview__wrapper__author">{{$quote->author}}</cite>
       </blockquote>
     </section>
 

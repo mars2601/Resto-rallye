@@ -1,7 +1,5 @@
 <?php
 
-use root\Models as model;
-
 class QuoteTableSeeder extends Seeder {
 
   /**
@@ -12,7 +10,7 @@ class QuoteTableSeeder extends Seeder {
   public function run()
   {
     DB::table('quotes')->delete();
-    model\Quote::create([
+    Quote::create([
         'author'            => 'Le soir',
         'content'          => 'L\'article',
       ]);

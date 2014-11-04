@@ -1,10 +1,6 @@
 <?php
 
-namespace root\Models;
-
-
-
-class Quote extends \Eloquent {
+class Quote extends Eloquent {
 
 
   /**

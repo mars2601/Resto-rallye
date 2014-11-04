@@ -1,10 +1,6 @@
 <?php
 
-namespace root\Models;
-
-
-
-class Event extends \Eloquent {
+class Rallye extends Eloquent {
 
 
 	/**
@@ -12,7 +8,7 @@ class Event extends \Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'events';
+	protected $table = 'rallyes';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
