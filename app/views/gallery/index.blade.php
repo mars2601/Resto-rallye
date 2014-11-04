@@ -1,8 +1,15 @@
 
-@extends('layouts.master')
+@extends('...layouts.master')
 
 
 @section('content')
+
+
+
+
+
+
+
     <section class="gallery">
     	<div class="gallery__title big-title">
     		<h2>Galerie</h2>
@@ -18,17 +25,17 @@
     			</div>
 
 
-       			
+       	@foreach($albums as $album)
        		   	<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">
 
-	    				<img src="../img/gal_1.png" alt="" class="gallery__photos__album__link__image">
+	    				<img src="{{ $album['file']  }}" alt="" class="gallery__photos__album__link__image">
 	    				
 	    				<div class="gallery__photos__album__link__text">
 	    					<div class="gallery__photos__album__link__text__container">
 
 		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Centre de Liège
+		    					{{ $album['name'] }}
 		    					</h4>
 		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
 		    					Le 25 octobre 2014
@@ -37,6 +44,7 @@
 	    				</div>
 	    			</a>
     			</section>
+    	@endforeach
 
     			<section class="gallery__photos__album">
 	    			<a href="#" class="gallery__photos__album__link">

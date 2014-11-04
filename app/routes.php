@@ -13,32 +13,48 @@
 
 
 
-Route::get('/', array('as' => 'homepage', function()
-{
-    return View::make('pages.homepage');
-}));
+/*-- Homepage ----------------------------------------------------------*/
+Route::get(     '/',
+                array(
+                        'as' => 'homepage',
+                        'uses' => 'HomeController@index'
+                )
+);
 
-Route::get('/', array(
-  'as' => 'homepage',
-  'uses' => 'root\Controllers\HomeController@index'
-));
 
-Route::get('/contact', array('as' => 'contact', function()
-{
-    return View::make('pages.contact');
-}));
+/*-- About ----------------------------------------------------------*/
+Route::get(     '/a-propos',
+                array(
+                        'as' => 'about',
+                        function() {
+                            return View::make('pages.about');
+                        }
+                )
+);
 
-Route::get('/galerie', array('as' => 'gallery', function()
-{
-    return View::make('pages.gallery');
-}));
+/*-- Event ----------------------------------------------------------*/
+Route::get(     '/evenements',
+                array(
+                    'as' => 'events',
+                    'uses' => 'RallyeController@index'
+                )
+);
 
-Route::get('/evenements', array(
-  'as' => 'events',
-  'uses' => 'root\Controllers\EventsController@index'
-));
 
-Route::get('/a-propos', array('as' => 'about', function()
-{
-    return View::make('pages.about');
-}));
+/*-- Gallery ----------------------------------------------------------*/
+Route::get(     '/galerie',
+                array(
+                        'as'    => 'gallery',
+                        'uses'  => 'GalleryController@index',
+
+                )
+);
+
+
+/*-- Contact  ----------------------------------------------------------*/
+Route::get(     '/contact',
+                array('as' => 'contact',
+                function(){
+                    return View::make('pages.contact');
+                })
+);

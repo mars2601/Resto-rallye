@@ -1,8 +1,7 @@
 <?php
 
-use root\Models as model;
 
-class EventTableSeeder extends Seeder {
+class RallyeTableSeeder extends Seeder {
 
   /**
    * Run the database seeds.
@@ -11,8 +10,8 @@ class EventTableSeeder extends Seeder {
    */
   public function run()
   {
-    DB::table('events')->delete();
-    model\Event::create([
+    DB::table('rallyes')->delete();
+    Rallye::create([
         'title'           => 'Découverte de la cuisine moléculaire',
         'town'            => 'Bruxelles',
         'street'          => 'Rue de la loi',
@@ -20,7 +19,7 @@ class EventTableSeeder extends Seeder {
         'date'            => "2014-01-15 19:00:00",
         'description'     => 'Venez décourvir le cuisine moléculaire et toute sa magie dans le centre de bruxelles.'
       ]);
-    model\Event::create([
+      Rallye::create([
         'title'           => 'Repas au centre historique de Liège',
         'town'            => 'Liège',
         'street'          => 'Place saint Lambert',
@@ -28,7 +27,7 @@ class EventTableSeeder extends Seeder {
         'date'            => "2015-01-15 18:30:00",
         'description'     => 'Une dégustation qui vous plaira dans le centre historique de Litch'
       ]);
-    model\Event::create([
+      Rallye::create([
         'title'           => 'Cuisine du terroir dans le pays de herve',
         'town'            => 'Herve',
         'street'          => 'Rue de l\'église',
