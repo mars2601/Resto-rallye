@@ -12,8 +12,14 @@ class RallyeController extends BaseController {
 
     $date = date('Y-m-d H:i:s');
 
-    $nextEvents = DB::table('rallyes')->where( 'date', '>', $date )->get();
-    $lastEvents = DB::table('rallyes')->where( 'date', '<', $date )->get();
-    return View::make('pages.events', array( 'nextEvents' => $nextEvents, 'lastEvents' => $lastEvents ));
+    $nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
+    $lastRallyes = DB::table('rallyes')->where( 'date', '<', $date )->get();
+    return View::make('pages.rallyes', array( 'nextRallyes' => $nextRallyes, 'lastRallyes' => $lastRallyes ));
+  }
+  public function show($id)
+  {
+    $rallye = Rallye::find($id);
+
+    return View::make('pages.showRallye', array( 'rallye' => $rallye ));
   }
 }

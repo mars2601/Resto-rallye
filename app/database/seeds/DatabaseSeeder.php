@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 		$this->call('RallyeTableSeeder');
-        $this->command->info('Event tables seeded!');
+        $this->command->info('Rallye tables seeded!');
 		$this->call('QuoteTableSeeder');
         $this->command->info('Quote tables seeded!');
         $this->call('AlbumTableSeeder');

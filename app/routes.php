@@ -33,12 +33,20 @@ Route::get(     '/a-propos',
 );
 
 /*-- Event ----------------------------------------------------------*/
-Route::get(     '/evenements',
+Route::get(     '/rallyes',
                 array(
                     'as' => 'events',
                     'uses' => 'RallyeController@index'
                 )
 );
+
+Route::get('/rallye/{id}', array(
+  'as' => 'showEvent',
+  'uses' => 'RallyeController@show'
+), function ($id){
+		return $id;
+	});
+
 
 
 /*-- Gallery ----------------------------------------------------------*/

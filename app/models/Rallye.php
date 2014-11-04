@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Rallye extends Eloquent {
 
 

@@ -1,6 +1,5 @@
 <?php
 
-
 class QuoteTableSeeder extends Seeder {
 
   /**

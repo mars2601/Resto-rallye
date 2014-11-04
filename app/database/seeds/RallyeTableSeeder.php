@@ -1,6 +1,5 @@
 <?php
 
-
 class RallyeTableSeeder extends Seeder {
 
   /**
@@ -19,7 +18,7 @@ class RallyeTableSeeder extends Seeder {
         'date'            => "2014-01-15 19:00:00",
         'description'     => 'Venez décourvir le cuisine moléculaire et toute sa magie dans le centre de bruxelles.'
       ]);
-      Rallye::create([
+    Rallye::create([
         'title'           => 'Repas au centre historique de Liège',
         'town'            => 'Liège',
         'street'          => 'Place saint Lambert',
@@ -27,7 +26,7 @@ class RallyeTableSeeder extends Seeder {
         'date'            => "2015-01-15 18:30:00",
         'description'     => 'Une dégustation qui vous plaira dans le centre historique de Litch'
       ]);
-      Rallye::create([
+    Rallye::create([
         'title'           => 'Cuisine du terroir dans le pays de herve',
         'town'            => 'Herve',
         'street'          => 'Rue de l\'église',

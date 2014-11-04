@@ -28,7 +28,7 @@
 					<ul>
 						<li>{{ link_to_route('homepage', 'Accueil')}}</li>
 						<li>{{ link_to_route('about', 'A propos')}}</li>
-						<li>{{ link_to_route('events', 'Evenements')}}</li>
+						<li>{{ link_to_route('rallyes', 'Evenements')}}</li>
 						<li>{{ link_to_route('gallery', 'Galerie')}}</li>
 						<li>{{ link_to_route('contact', 'Contact')}}</li>
 					</ul>

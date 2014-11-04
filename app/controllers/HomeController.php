@@ -1,6 +1,5 @@
 <?php
 
-
 class HomeController extends BaseController {
 
 	/*
@@ -24,4 +23,3 @@ class HomeController extends BaseController {
 		return View::make('pages.homepage', array( 'quote' => $quote ));
 	}
 }
-
