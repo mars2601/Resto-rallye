@@ -11,38 +11,90 @@
 |
 */
 
-Route::get('/', array(
-  'as' => 'homepage',
-  'uses' => 'HomeController@index'
-));
 
-Route::get('/contact', array('as' => 'contact', function()
-{
-    return View::make('pages.contact');
-}));
 
-Route::get('/galerie', array('as' => 'gallery', function()
-{
-    return View::make('pages.gallery');
-}));
+/*-- Homepage ----------------------------------------------------------*/
+Route::get(     '/',
+                array(
+                        'as' => 'homepage',
+                        'uses' => 'HomeController@index'
+                )
+);
 
-Route::get('/rallyes', array(
-  'as' => 'rallyes',
-  'uses' => 'RallyeController@index'
-));
 
-Route::get('/showEvent{id}', array(
+/*-- About ----------------------------------------------------------*/
+Route::get(     '/a-propos',
+                array(
+                        'as' => 'about',
+                        function() {
+                            return View::make('pages.about');
+                        }
+                )
+);
+
+/*-- Event ----------------------------------------------------------*/
+Route::get(     '/rallyes',
+                array(
+                    'as' => 'rallyes',
+                    'uses' => 'RallyeController@index'
+                )
+);
+
+Route::get('/rallye/{id}', array(
   'as' => 'showEvent',
   'uses' => 'RallyeController@show'
 ), function ($id){
-	return $id;
+		return $id;
+	});
+
+
+
+/*-- Gallery ----------------------------------------------------------*/
+Route::get(     '/galerie',
+                array(
+                        'as'    => 'gallery',
+                        'uses'  => 'GalleryController@index',
+
+                )
+);
+
+
+Route::get('/galerie/{slug}', array(
+    'as' => 'album',
+    'uses' => 'GalleryController@show'
+), function ($slug){
+    return $slug;
 });
 
-Route::get('/a-propos', array('as' => 'about', function()
-{
-    return View::make('pages.about');
-}));
 
+/*-- Contact  ----------------------------------------------------------*/
+Route::get(     '/contact',
+                array('as' => 'contact',
+                function(){
+                    return View::make('pages.contact');
+                })
+);
+
+/*-- 404  ----------------------------------------------------------*/
+Route::get(     '/404',
+    array('as' => '404',
+        function(){
+            return '404';
+        })
+);
+
+
+/*-- Admin  ----------------------------------------------------------*/
+
+Route::get(     '/admin',
+    array(
+        'as'    => 'admin',
+        'uses'  => 'AdminController@index',
+
+    )
+);
+
+/*-- Authentication  ----------------------------------------------------------*/
 Route::post('/login', array(
   'as' => 'login',
   'uses' => 'AuthController@login'
@@ -58,10 +110,14 @@ Route::get('/register', array('as' => 'register', function()
     return View::make('pages.register');
 }));
 
+/*-- user  ----------------------------------------------------------*/
+
 Route::post('/store', array(
   'as' => 'store',
   'uses' => 'UserController@store'
 ));
+
+/*-- rallye  ----------------------------------------------------------*/
 
 Route::get('/reserve{id}{way}', array(
   'as' => 'reserve',
@@ -70,17 +126,14 @@ Route::get('/reserve{id}{way}', array(
   return $id;
   return $way;
 });
-
 Route::post('/confirm', array(
   'as' => 'confirm',
   'uses' => 'RallyeController@confirm'
 ));
-
 Route::any('/storeReservation', array(
   'as' => 'storeReservation',
     'uses' => 'RallyeController@storeReservation'
 ));
-
 Route::any('/myReservation', array(
   'as' => 'myReservation',
     'uses' => 'RallyeController@myReservation'

@@ -17,6 +17,7 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+
 		$quote = Quote::first();
 
 		return View::make('pages.homepage', array( 'quote' => $quote ));

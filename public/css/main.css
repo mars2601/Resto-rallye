@@ -1225,44 +1225,88 @@ input[type="submit"] {
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__goto {
         opacity: 1; }
 
-/* line 2, ../scss/pages/showRallye.scss */
+/* line 1, ../scss/pages/_admin.scss */
+.admin {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+  /* line 6, ../scss/pages/_admin.scss */
+  .admin__menu {
+    width: 160px;
+    width: 16rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #24252c; }
+    /* line 16, ../scss/pages/_admin.scss */
+    .admin__menu__title {
+      padding: 20px 10px 0px 10px;
+      padding: 2rem 1rem 0rem 1rem;
+      text-transform: uppercase;
+      color: #D2D2D2;
+      background: #24252c;
+      font-size: 14px;
+      font-size: 1.4rem;
+      letter-spacing: 2px; }
+    /* line 26, ../scss/pages/_admin.scss */
+    .admin__menu__link {
+      color: #D8D8D8;
+      background: #24252c;
+      display: block;
+      padding: 8px 16px 8px 16px;
+      padding: 0.8rem 1.6rem 0.8rem 1.6rem; }
+      /* line 32, ../scss/pages/_admin.scss */
+      .admin__menu__link:hover {
+        background-color: #333;
+        color: #FFF; }
+  /* line 39, ../scss/pages/_admin.scss */
+  .admin__view {
+    margin-left: 180px;
+    margin-left: 18rem; }
+    /* line 42, ../scss/pages/_admin.scss */
+    .admin__view h1 {
+      text-transform: uppercase;
+      color: #6c6159; }
+
+/* line 2, ../scss/pages/_showRallye.scss */
 .events__show {
   margin-top: 30px;
   margin-top: 3rem; }
-  /* line 5, ../scss/pages/showRallye.scss */
+  /* line 5, ../scss/pages/_showRallye.scss */
   .events__show__image {
     width: 31.62393%;
     float: left;
     margin-right: 2.5641%; }
-  /* line 8, ../scss/pages/showRallye.scss */
+  /* line 8, ../scss/pages/_showRallye.scss */
   .events__show__infos {
     width: 65.81197%;
     float: right;
     margin-right: 0; }
-    /* line 10, ../scss/pages/showRallye.scss */
+    /* line 10, ../scss/pages/_showRallye.scss */
     .events__show__infos__title {
       font-size: 2em;
       margin-bottom: 30px;
       margin-bottom: 3rem; }
-    /* line 14, ../scss/pages/showRallye.scss */
+    /* line 14, ../scss/pages/_showRallye.scss */
     .events__show__infos__place {
       width: 40.17094%;
       float: left;
       margin-right: 2.5641%;
       font-size: 1.2em; }
-      /* line 17, ../scss/pages/showRallye.scss */
+      /* line 17, ../scss/pages/_showRallye.scss */
       .events__show__infos__place span {
         padding: 10px; }
-    /* line 21, ../scss/pages/showRallye.scss */
+    /* line 21, ../scss/pages/_showRallye.scss */
     .events__show__infos__date {
       width: 40.17094%;
       float: left;
       margin-right: 2.5641%;
       font-size: 1.2em; }
-      /* line 24, ../scss/pages/showRallye.scss */
+      /* line 24, ../scss/pages/_showRallye.scss */
       .events__show__infos__date span {
         padding: 10px; }
-    /* line 28, ../scss/pages/showRallye.scss */
+    /* line 28, ../scss/pages/_showRallye.scss */
     .events__show__infos__paragraph {
       width: 100%;
       float: left;
@@ -1270,7 +1314,7 @@ input[type="submit"] {
       font-size: 1.2em;
       padding: 20px 0px;
       padding: 2rem 0rem; }
-  /* line 35, ../scss/pages/showRallye.scss */
+  /* line 35, ../scss/pages/_showRallye.scss */
   .events__show__link {
     padding: 10px 0px;
     padding: 1rem 0rem;
@@ -1278,11 +1322,11 @@ input[type="submit"] {
     margin-top: 2rem;
     color: blue;
     text-decoration: underline; }
-    /* line 40, ../scss/pages/showRallye.scss */
+    /* line 40, ../scss/pages/_showRallye.scss */
     .events__show__link:hover {
       text-decoration: none; }
 
-/* line 2, ../scss/pages/reserve.scss */
+/* line 2, ../scss/pages/_reserve.scss */
 .reserve {
   /* Si le user n'est pas logué, affichage des formulaires d'inscription/authentification
   *
@@ -1290,7 +1334,7 @@ input[type="submit"] {
   *  et
   *  Register
   */ }
-  /* line 9, ../scss/pages/reserve.scss */
+  /* line 9, ../scss/pages/_reserve.scss */
   .reserve__do {
     margin-top: 30px;
     margin-top: 3rem;
@@ -1304,55 +1348,55 @@ input[type="submit"] {
     */
     /* Infos */
     /* Suscribe */ }
-    /* line 13, ../scss/pages/reserve.scss */
+    /* line 13, ../scss/pages/_reserve.scss */
     .reserve__do__login {
       width: 48.71795%;
       float: left;
       margin-right: 2.5641%;
       border-right: 1px solid black; }
-      /* line 16, ../scss/pages/reserve.scss */
+      /* line 16, ../scss/pages/_reserve.scss */
       .reserve__do__login__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 22, ../scss/pages/reserve.scss */
+    /* line 22, ../scss/pages/_reserve.scss */
     .reserve__do__register {
       width: 48.71795%;
       float: right;
       margin-right: 0; }
-      /* line 24, ../scss/pages/reserve.scss */
+      /* line 24, ../scss/pages/_reserve.scss */
       .reserve__do__register__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 37, ../scss/pages/reserve.scss */
+    /* line 37, ../scss/pages/_reserve.scss */
     .reserve__do__infos {
       width: 100%;
       float: left;
       margin-left: 0;
       margin-right: 0; }
-      /* line 39, ../scss/pages/reserve.scss */
+      /* line 39, ../scss/pages/_reserve.scss */
       .reserve__do__infos__title {
         font-size: 2em;
         margin-bottom: 30px;
         margin-bottom: 3rem; }
-      /* line 43, ../scss/pages/reserve.scss */
+      /* line 43, ../scss/pages/_reserve.scss */
       .reserve__do__infos__place {
         width: 40.17094%;
         float: left;
         margin-right: 2.5641%;
         font-size: 1.2em; }
-        /* line 46, ../scss/pages/reserve.scss */
+        /* line 46, ../scss/pages/_reserve.scss */
         .reserve__do__infos__place span {
           padding: 10px; }
-      /* line 50, ../scss/pages/reserve.scss */
+      /* line 50, ../scss/pages/_reserve.scss */
       .reserve__do__infos__date {
         width: 40.17094%;
         float: left;
         margin-right: 2.5641%;
         font-size: 1.2em; }
-        /* line 53, ../scss/pages/reserve.scss */
+        /* line 53, ../scss/pages/_reserve.scss */
         .reserve__do__infos__date span {
           padding: 10px; }
-    /* line 59, ../scss/pages/reserve.scss */
+    /* line 59, ../scss/pages/_reserve.scss */
     .reserve__do__suscribe {
       width: 100%;
       float: left;

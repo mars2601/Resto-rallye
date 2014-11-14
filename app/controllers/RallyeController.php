@@ -1,5 +1,6 @@
 <?php
 
+
 class RallyeController extends BaseController {
 
   // public function __construct()
@@ -8,7 +9,7 @@ class RallyeController extends BaseController {
 
   public function index()
   {
-    $rallyes = Rallye::all();
+
     $date = date('Y-m-d H:i:s');
 
     $nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
