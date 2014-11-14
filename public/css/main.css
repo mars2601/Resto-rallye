@@ -1169,3 +1169,47 @@ fieldset {
       /* line 209, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__goto {
         opacity: 1; }
+
+/* line 1, ../scss/pages/_admin.scss */
+.admin {
+  position: absolute;
+  top: 0;
+  bottom: 0; }
+  /* line 6, ../scss/pages/_admin.scss */
+  .admin__menu {
+    width: 160px;
+    width: 16rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #24252c; }
+    /* line 16, ../scss/pages/_admin.scss */
+    .admin__menu__title {
+      padding: 20px 10px 0px 10px;
+      padding: 2rem 1rem 0rem 1rem;
+      text-transform: uppercase;
+      color: #D2D2D2;
+      background: #24252c;
+      font-size: 14px;
+      font-size: 1.4rem;
+      letter-spacing: 2px; }
+    /* line 26, ../scss/pages/_admin.scss */
+    .admin__menu__link {
+      color: #D8D8D8;
+      background: #24252c;
+      display: block;
+      padding: 8px 16px 8px 16px;
+      padding: 0.8rem 1.6rem 0.8rem 1.6rem; }
+      /* line 32, ../scss/pages/_admin.scss */
+      .admin__menu__link:hover {
+        background-color: #333;
+        color: #FFF; }
+  /* line 39, ../scss/pages/_admin.scss */
+  .admin__view {
+    margin-left: 180px;
+    margin-left: 18rem; }
+    /* line 42, ../scss/pages/_admin.scss */
+    .admin__view h1 {
+      text-transform: uppercase;
+      color: #6c6159; }

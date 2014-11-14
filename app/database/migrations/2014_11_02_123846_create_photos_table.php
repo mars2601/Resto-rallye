@@ -15,8 +15,8 @@ class CreatePhotosTable extends Migration {
         Schema::create('photos', function(Blueprint $table)
         {
             $table->increments('id');
+            $table->string('sizes');
             $table->string('alt');
-            $table->string('url');
             $table->integer('album_id')->unsigned();
             $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
 

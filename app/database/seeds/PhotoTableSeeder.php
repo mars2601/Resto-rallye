@@ -13,19 +13,32 @@ class PhotoTableSeeder extends Seeder {
         $herve = Album::whereName('Herve')->first();
         Photo::create(array(
             'alt' => 'Un beau repas',
-            'url' => 'herve-repas.jpg',
+            'sizes' => json_encode(array(
+                'full'     => 'herve-repas.jpg',
+                '200x400'  => '200x400-herve-repas.jpg',
+                '800x600'  => '800x600-herve-repas.jpg',
+            )),
             'album_id' => $herve->id
         ));
 
         Photo::create(array(
             'alt' => 'La vue du restaurant',
-            'url' => 'herve-vue.jpg',
+            'sizes' => json_encode(array(
+                'full' => 'herve-vue.jpg',
+                '200x400'  => '200x400-herve-vue.jpg',
+                '800x600'  => '800x600-herve-vue.jpg',
+            )),
             'album_id' => $herve->id
         ));
 
         Photo::create(array(
             'alt' => 'Les gens ',
-            'url' => 'herve-ambiance.jpg',
+
+            'sizes' => json_encode(array(
+                'full' => 'herve-ambiance.jpg',
+                '200x400'  => '200x400-herve-ambiance.jpg',
+                '800x600'  => '800x600-herve-ambiance.jpg',
+            )),
             'album_id' => $herve->id
         ));
 
@@ -39,19 +52,33 @@ class PhotoTableSeeder extends Seeder {
         $liege = Album::whereName('Liège')->first();
         Photo::create(array(
             'alt' => 'Un repas cher',
-            'url' => 'liege-repas.jpg',
+            'sizes' => json_encode(array(
+                'full' => 'liege-repas.jpg',
+                '200x400'  => '200x400-liege-repas.jpg',
+                '800x600'  => '800x600-liege-repas.jpg',
+            )),
             'album_id' => $liege->id
         ));
 
+
         Photo::create(array(
             'alt' => 'La vue sur meuse',
-            'url' => 'liege-vue.jpg',
+
+            'sizes' => json_encode(array(
+                'full' => 'liege-vue.jpg',
+                '200x400'  => '200x400-liege-vue.jpg',
+                '800x600'  => '800x600-liege-vue.jpg',
+            )),
             'album_id' => $liege->id
         ));
 
         Photo::create(array(
             'alt' => 'Les liègeois',
-            'url' => 'liege-ambiance.jpg',
+            'sizes' => json_encode(array(
+                'full' => 'liege-ambiance.jpg',
+                '200x400'  => '200x400-liege-ambiance.jpg',
+                '800x600'  => '800x600-liege-ambiance.jpg',
+            )),
             'album_id' => $liege->id
         ));
 

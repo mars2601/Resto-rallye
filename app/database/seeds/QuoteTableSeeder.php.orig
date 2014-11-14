@@ -1,0 +1,22 @@
+<?php
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99
+class QuoteTableSeeder extends Seeder {
+
+  /**
+   * Run the database seeds.
+   *
+   * @return void
+   */
+  public function run()
+  {
+    DB::table('quotes')->delete();
+    Quote::create([
+        'author'            => 'Le soir',
+        'content'          => 'L\'article',
+      ]);
+  }
+}

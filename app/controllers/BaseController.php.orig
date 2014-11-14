@@ -1,0 +1,25 @@
+<?php
+
+<<<<<<< HEAD
+class BaseController extends Controller {
+=======
+class BaseController extends \Controller {
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99
+
+	/**
+	 * Setup the layout used by the controller.
+	 *
+	 * @return void
+	 */
+
+
+	protected function setupLayout()
+	{
+		setlocale(LC_TIME,'fr_FR');
+		if ( ! is_null($this->layout))
+		{
+			$this->layout = View::make($this->layout);
+		}
+	}
+
+}

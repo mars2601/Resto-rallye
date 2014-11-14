@@ -1,0 +1,48 @@
+.admin{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    &__menu{
+      $menu_color : #24252c;
+      @include rem-fix(width, 16);
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: $menu_color;
+
+
+      &__title{
+        @include rem-fix(padding, 2, 1,0,1);
+        text-transform: uppercase;
+        color: #D2D2D2;
+        background: $menu_color;
+        @include rem-fix(font-size, 1.4);
+        letter-spacing: 2px;
+
+      }
+
+      &__link{
+        color : #D8D8D8;
+        background: $menu_color;
+        display: block;
+        @include rem-fix(padding, .8, 1.6, .8, 1.6);
+
+        &:hover{
+          background-color: #333;
+          color: #FFF;
+        }
+      }
+    }
+
+    &__view{
+      @include rem-fix(margin-left, 18);
+
+      h1{
+          text-transform: uppercase;
+          color: #6c6159;
+      }
+    }
+
+}

@@ -1,0 +1,1 @@
+"use strict";angular.module("adminApp").controller("AboutCtrl",function(a){a.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]});

@@ -35,7 +35,7 @@ Route::get(     '/a-propos',
 /*-- Event ----------------------------------------------------------*/
 Route::get(     '/rallyes',
                 array(
-                    'as' => 'events',
+                    'as' => 'rallyes',
                     'uses' => 'RallyeController@index'
                 )
 );
@@ -59,10 +59,37 @@ Route::get(     '/galerie',
 );
 
 
+Route::get('/galerie/{slug}', array(
+    'as' => 'album',
+    'uses' => 'GalleryController@show'
+), function ($slug){
+    return $slug;
+});
+
+
 /*-- Contact  ----------------------------------------------------------*/
 Route::get(     '/contact',
                 array('as' => 'contact',
                 function(){
                     return View::make('pages.contact');
                 })
+);
+
+/*-- Contact  ----------------------------------------------------------*/
+Route::get(     '/404',
+    array('as' => '404',
+        function(){
+            return '404';
+        })
+);
+
+
+
+
+Route::get(     '/admin',
+    array(
+        'as'    => 'admin',
+        'uses'  => 'AdminController@index',
+
+    )
 );

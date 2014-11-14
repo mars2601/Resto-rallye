@@ -27,7 +27,7 @@
 
        	@foreach($albums as $album)
        		   	<section class="gallery__photos__album">
-	    			<a href="#" class="gallery__photos__album__link">
+	    			<a href="galerie/{{$album['slug']}}" class="gallery__photos__album__link">
 
 	    				<img src="{{ $album['file']  }}" alt="" class="gallery__photos__album__link__image">
 	    				
@@ -46,107 +46,6 @@
     			</section>
     	@endforeach
 
-    			<section class="gallery__photos__album">
-	    			<a href="#" class="gallery__photos__album__link">
-
-	    				<img src="../img/gal_2.png" alt="" class="gallery__photos__album__link__image">
-	    				
-	    				<div class="gallery__photos__album__link__text">
-	    					<div class="gallery__photos__album__link__text__container">
-
-		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Tournai
-		    					</h4>
-		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
-		    					Le 25 octobre 2014
-		    					</time>
-    						</div>
-	    				</div>
-	    			</a>
-    			</section>
-
-
-    	   		<section class="gallery__photos__album">
-	    			<a href="#" class="gallery__photos__album__link gallery__photos__album__link--last">
-
-	    				<img src="../img/gal_3.png" alt="" class="gallery__photos__album__link__image">
-	    				
-	    				<div class="gallery__photos__album__link__text">
-	    					<div class="gallery__photos__album__link__text__container">
-
-		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Sablon (Bruxelles)
-		    					</h4>
-		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
-		    					Le 25 octobre 2014
-		    					</time>
-	    					</div>
-
-	    				</div>
-	    			</a>
-    			</section>
-
-
-    			<section class="gallery__photos__album">
-	    			<a href="#" class="gallery__photos__album__link">
-
-	    				<img src="../img/gal_4.png" alt="" class="gallery__photos__album__link__image">
-	    				
-	    				<div class="gallery__photos__album__link__text">
-	    					<div class="gallery__photos__album__link__text__container">
-
-		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Le pays de Herve
-		    					</h4>
-		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
-		    					Le 25 octobre 2014
-		    					</time>
-		    					</div>
-	    				</div>
-	    			</a>
-    			</section>
-	
-
-    			<section class="gallery__photos__album">
-	    			<a href="#" class="gallery__photos__album__link">
-
-	    				<img src="../img/gal_5.png" alt="" class="gallery__photos__album__link__image">
-	    				
-	    				<div class="gallery__photos__album__link__text">
-	    					<div class="gallery__photos__album__link__text__container">
-
-		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Marche-en-famenne
-		    					</h4>
-		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
-		    					Le 25 octobre 2014
-		    					</time>
-	    					</div>
-
-	    				</div>
-	    			</a>
-    			</section>
-    	   		
-    	   		<section class="gallery__photos__album ">
-	    			<a href="#" class="gallery__photos__album__link gallery__photos__album__link--last">
-
-	    				<img src="../img/gal_1.png" alt="" class="gallery__photos__album__link__image">
-	    				
-	    				<div class="gallery__photos__album__link__text">
-	    					<div class="gallery__photos__album__link__text__container">
-
-		    					<h4 class="gallery__photos__album__link__text__title">
-		    					Theux
-		    					</h4>
-		    					<time class="gallery__photos__album__link__text__date" datetime="2014-10-25">
-		    					Le 25 octobre 2014
-		    					</time>
-	    					</div>
-
-	    				</div>
-	    			</a>
-    			</section>
-    	   		
     	</section>
 
     	<section class="gallery__videos">

@@ -1,0 +1,22 @@
+<?php
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99
+class Quote extends Eloquent {
+
+
+  /**
+   * The database table used by the model.
+   *
+   * @var string
+   */
+  protected $table = 'quotes';
+
+  /**
+   * The attributes excluded from the model's JSON form.
+   *
+   * @var array
+   */
+}

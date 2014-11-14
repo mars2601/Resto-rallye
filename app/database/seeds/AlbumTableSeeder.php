@@ -21,6 +21,7 @@ class AlbumTableSeeder extends Seeder {
         Album::create(array(
             'name' => 'Herve',
             'description' => 'Herve c’est chouette' ,
+
         ));
 
 
@@ -29,6 +30,7 @@ class AlbumTableSeeder extends Seeder {
         Album::create(array(
             'name' => 'Liège',
             'description' => 'Liège c’est malsain',
+
         ));
 
 

@@ -1,0 +1,23 @@
+<?php
+
+<<<<<<< HEAD:app/models/Rallye.php
+
+
+=======
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99:app/models/Rallye.php
+class Rallye extends Eloquent {
+
+
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'rallyes';
+
+	/**
+	 * The attributes excluded from the model's JSON form.
+	 *
+	 * @var array
+	 */
+}

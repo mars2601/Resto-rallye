@@ -1,8 +1,8 @@
 <?php
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
-
-
-class Album extends Eloquent {
+class Album extends Eloquent  implements SluggableInterface{
     /**
      * The database table used by the model.
      *
@@ -11,6 +11,12 @@ class Album extends Eloquent {
     protected $table = 'albums';
     protected $fillable = array('name', 'description', 'cover_photo_id');
 
+    use SluggableTrait;
+
+    protected $sluggable = array(
+        'build_from' => 'name',
+        'save_to'    => 'slug',
+    );
 
     public function photos()
     {

@@ -1,0 +1,37 @@
+<?php
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99
+class RallyeController extends BaseController {
+
+  // public function __construct()
+  // {
+  // }
+
+  public function index()
+  {
+<<<<<<< HEAD
+
+    $date = date('Y-m-d H:i:s');
+
+    $nextEvents = DB::table('rallyes')->where( 'date', '>', $date )->get();
+    $lastEvents = DB::table('rallyes')->where( 'date', '<', $date )->get();
+    return View::make('pages.events', array( 'nextEvents' => $nextEvents, 'lastEvents' => $lastEvents ));
+=======
+    $rallyes = Rallye::all();
+    $date = date('Y-m-d H:i:s');
+
+    $nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
+    $lastRallyes = DB::table('rallyes')->where( 'date', '<', $date )->get();
+    return View::make('pages.rallyes', array( 'nextRallyes' => $nextRallyes, 'lastRallyes' => $lastRallyes ));
+  }
+  public function show($id)
+  {
+    $rallye = Rallye::find($id);
+
+    return View::make('pages.showRallye', array( 'rallye' => $rallye ));
+>>>>>>> 0473028ef955d43edb8b708ae583df441d935d99
+  }
+}
