@@ -19,7 +19,6 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
 		<header class="header">
 			<div class="wrapper">
 			  	<h1 class="header__title"><a class="header__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
@@ -35,6 +34,22 @@
 				</nav>
 			</div>
 
+      <!-- A revoir /////// TEST USER -->
+      <div id="name" style="position:absolute; background-color:red; top:0;">
+        @if ( ! (Auth::check()))
+          @include('forms.users.login')
+          <p>Pas encore inscris ? <a href="{{ URL::route('register') }}">Inscrivez vous !</a></p>
+        @else
+          <p>
+            Vous êtes connecté en tant que {{Auth::user()->email;}}
+            <a href="{{ URL::route('logout') }}">se déconnecter</a>
+
+          </p>
+        @endif
+      </div>
+      <!-- A revoir /////// TEST USER -->
+
+
 		</header>
 
         @yield('content')
@@ -46,12 +61,13 @@
                 <a href="#" class="footer__social-network__link footer__social-network__link--rss">Flux RSS</a>
             </div>
 
-            <div class="footer__social-network">
+
+            <!-- <div class="footer__social-network">
                 {{ Form::open(array('url' => 'foo/bar')) }}
                     {{Form::text('email', 'example@gmail.com')}}
                     {{Form::submit('S’inscrire')}}
                 {{ Form::close() }}
-            </div>
+            </div> -->
 
             <div class="footer__end-line">
                 <span class="footer__end-line__copyright">

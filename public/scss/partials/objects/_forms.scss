@@ -16,3 +16,59 @@ fieldset {
     margin: 0;
     padding: 0;
 }
+
+fieldset{
+}
+
+form.login{
+}
+
+form.register{
+
+}
+
+form.reserve{
+  @include span(first 6);
+/*   margin-left:span(3);
+ */  label[for="gift"]{
+    @include span(2);
+  }
+  input[type="checkbox"]{
+    background-color:none;
+    @include span(2);
+    @include rem-fix(padding, 0.8);
+  }
+/*   label[for="streetNumber"]{
+  @include span(first 2);
+}
+input[name="streetNumber"]{
+  @include span(first 2);
+} */
+
+}
+
+form.confirm{
+
+}
+
+label{
+  display:inline-block;
+  @include span(first 6);
+}
+
+
+
+input{
+  @include span(first 10);
+  border-radius:2px;
+  border:1px solid black;
+  @include rem-fix(padding, 0.8);
+  @include rem-fix(margin-bottom, 1.5);
+
+}
+
+input[type="submit"]{
+  background-color:none;
+  @include span(4);
+  @include rem-fix(margin-top, 2.5);
+}

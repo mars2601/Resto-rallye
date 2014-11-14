@@ -5,7 +5,7 @@
 	Par Marcel Pirnay et Maxime Lefèbvre
 
 */
-/* line 5, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,38 +26,38 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/compass-core/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -261,14 +261,14 @@ body {
     box-sizing: border-box; }
 
 /* line 32, ../scss/partials/_bases.scss */
-.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .events__next, .events__past__wrapper {
+.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .events__next, .events__past__wrapper, .events__show, .reserve__do {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
   max-width: 117rem; }
-  /* line 12, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
-  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .events__next:after, .events__past__wrapper:after {
+  /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
+  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .events__next:after, .events__past__wrapper:after, .events__show:after, .reserve__do:after {
     content: " ";
     display: block;
     clear: both; }
@@ -397,7 +397,7 @@ code {
     margin-left: auto;
     margin-right: auto;
     text-align: right; }
-    /* line 12, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
+    /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
     .header__nav:after {
       content: " ";
       display: block;
@@ -483,6 +483,61 @@ fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
+
+/* line 30, ../scss/partials/objects/_forms.scss */
+form.reserve {
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+  /*   margin-left:span(3);
+   */
+  /*   label[for="streetNumber"]{
+    @include span(first 2);
+  }
+  input[name="streetNumber"]{
+    @include span(first 2);
+  } */ }
+  /* line 33, ../scss/partials/objects/_forms.scss */
+  form.reserve label[for="gift"] {
+    width: 14.52991%;
+    float: left;
+    margin-right: 2.5641%; }
+  /* line 36, ../scss/partials/objects/_forms.scss */
+  form.reserve input[type="checkbox"] {
+    background-color: none;
+    width: 14.52991%;
+    float: left;
+    margin-right: 2.5641%;
+    padding: 8px;
+    padding: 0.8rem; }
+
+/* line 54, ../scss/partials/objects/_forms.scss */
+label {
+  display: inline-block;
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%; }
+
+/* line 61, ../scss/partials/objects/_forms.scss */
+input {
+  width: 82.90598%;
+  float: left;
+  margin-right: 2.5641%;
+  border-radius: 2px;
+  border: 1px solid black;
+  padding: 8px;
+  padding: 0.8rem;
+  margin-bottom: 15px;
+  margin-bottom: 1.5rem; }
+
+/* line 70, ../scss/partials/objects/_forms.scss */
+input[type="submit"] {
+  background-color: none;
+  width: 31.62393%;
+  float: left;
+  margin-right: 2.5641%;
+  margin-top: 25px;
+  margin-top: 2.5rem; }
 
 /* line 2, ../scss/pages/_home.scss */
 .home__introduction {
@@ -1169,3 +1224,139 @@ fieldset {
       /* line 209, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__goto {
         opacity: 1; }
+
+/* line 2, ../scss/pages/showRallye.scss */
+.events__show {
+  margin-top: 30px;
+  margin-top: 3rem; }
+  /* line 5, ../scss/pages/showRallye.scss */
+  .events__show__image {
+    width: 31.62393%;
+    float: left;
+    margin-right: 2.5641%; }
+  /* line 8, ../scss/pages/showRallye.scss */
+  .events__show__infos {
+    width: 65.81197%;
+    float: right;
+    margin-right: 0; }
+    /* line 10, ../scss/pages/showRallye.scss */
+    .events__show__infos__title {
+      font-size: 2em;
+      margin-bottom: 30px;
+      margin-bottom: 3rem; }
+    /* line 14, ../scss/pages/showRallye.scss */
+    .events__show__infos__place {
+      width: 40.17094%;
+      float: left;
+      margin-right: 2.5641%;
+      font-size: 1.2em; }
+      /* line 17, ../scss/pages/showRallye.scss */
+      .events__show__infos__place span {
+        padding: 10px; }
+    /* line 21, ../scss/pages/showRallye.scss */
+    .events__show__infos__date {
+      width: 40.17094%;
+      float: left;
+      margin-right: 2.5641%;
+      font-size: 1.2em; }
+      /* line 24, ../scss/pages/showRallye.scss */
+      .events__show__infos__date span {
+        padding: 10px; }
+    /* line 28, ../scss/pages/showRallye.scss */
+    .events__show__infos__paragraph {
+      width: 100%;
+      float: left;
+      margin-right: 2.5641%;
+      font-size: 1.2em;
+      padding: 20px 0px;
+      padding: 2rem 0rem; }
+  /* line 35, ../scss/pages/showRallye.scss */
+  .events__show__link {
+    padding: 10px 0px;
+    padding: 1rem 0rem;
+    margin-top: 20px;
+    margin-top: 2rem;
+    color: blue;
+    text-decoration: underline; }
+    /* line 40, ../scss/pages/showRallye.scss */
+    .events__show__link:hover {
+      text-decoration: none; }
+
+/* line 2, ../scss/pages/reserve.scss */
+.reserve {
+  /* Si le user n'est pas logué, affichage des formulaires d'inscription/authentification
+  *
+  *  login
+  *  et
+  *  Register
+  */ }
+  /* line 9, ../scss/pages/reserve.scss */
+  .reserve__do {
+    margin-top: 30px;
+    margin-top: 3rem;
+    /* Login */
+    /* Register */
+    /* Si le user est logué, affichage des formulaires de réservation
+    *
+    *  infos
+    *  et
+    *  Suscribe
+    */
+    /* Infos */
+    /* Suscribe */ }
+    /* line 13, ../scss/pages/reserve.scss */
+    .reserve__do__login {
+      width: 48.71795%;
+      float: left;
+      margin-right: 2.5641%;
+      border-right: 1px solid black; }
+      /* line 16, ../scss/pages/reserve.scss */
+      .reserve__do__login__title {
+        padding: 20px 0px;
+        padding: 2rem 0rem; }
+    /* line 22, ../scss/pages/reserve.scss */
+    .reserve__do__register {
+      width: 48.71795%;
+      float: right;
+      margin-right: 0; }
+      /* line 24, ../scss/pages/reserve.scss */
+      .reserve__do__register__title {
+        padding: 20px 0px;
+        padding: 2rem 0rem; }
+    /* line 37, ../scss/pages/reserve.scss */
+    .reserve__do__infos {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+      /* line 39, ../scss/pages/reserve.scss */
+      .reserve__do__infos__title {
+        font-size: 2em;
+        margin-bottom: 30px;
+        margin-bottom: 3rem; }
+      /* line 43, ../scss/pages/reserve.scss */
+      .reserve__do__infos__place {
+        width: 40.17094%;
+        float: left;
+        margin-right: 2.5641%;
+        font-size: 1.2em; }
+        /* line 46, ../scss/pages/reserve.scss */
+        .reserve__do__infos__place span {
+          padding: 10px; }
+      /* line 50, ../scss/pages/reserve.scss */
+      .reserve__do__infos__date {
+        width: 40.17094%;
+        float: left;
+        margin-right: 2.5641%;
+        font-size: 1.2em; }
+        /* line 53, ../scss/pages/reserve.scss */
+        .reserve__do__infos__date span {
+          padding: 10px; }
+    /* line 59, ../scss/pages/reserve.scss */
+    .reserve__do__suscribe {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 30px;
+      padding-top: 3rem; }

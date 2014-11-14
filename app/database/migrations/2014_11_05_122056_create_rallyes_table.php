@@ -6,10 +6,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateRallyesTable extends Migration {
 
 	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
+	* Run the migrations.
+	*
+	* @return void
+	*/
 	public function up()
 	{
 		Schema::create('rallyes', function(Blueprint $table)
@@ -20,6 +20,7 @@ class CreateRallyesTable extends Migration {
 			$table->string('street');
 			$table->tinyInteger('streetNumber');
 			$table->dateTime('date');
+			$table->string('place');
 			$table->longText('description');
 			$table->timestamps();
 		});
@@ -27,11 +28,11 @@ class CreateRallyesTable extends Migration {
 	}
 
 	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
+	* Reverse the migrations.
+	*
+	* @return void
+	*/
+		public function down()
 	{
 		Schema::drop('rallyes');
 

@@ -1,0 +1,45 @@
+.events{
+  &__show{
+    @extend .wrapper;
+    @include rem-fix(margin-top, 3);
+    &__image{
+      @include span(4 first);
+    }
+    &__infos{
+      @include span(8 last);
+      &__title{
+        font-size:2em;
+        @include rem-fix(margin-bottom, 3);
+      }
+      &__place{
+        @include span(5 first);
+        font-size:1.2em;
+        span{
+          padding:10px;
+        }
+      }
+      &__date{
+        @include span(5);
+        font-size:1.2em;
+        span{
+          padding:10px;
+        }
+      }
+      &__paragraph{
+        @include span(12 first);
+        font-size:1.2em;
+        @include rem-fix(padding, 2, 0);
+
+      }
+    }
+    &__link{
+      @include rem-fix(padding, 1, 0);
+      @include rem-fix(margin-top, 2);
+      color:blue;
+      text-decoration:underline;
+      &:hover{
+        text-decoration:none;
+      }
+    }
+  }
+}

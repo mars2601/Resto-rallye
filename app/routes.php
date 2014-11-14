@@ -35,10 +35,53 @@ Route::get('/showEvent{id}', array(
   'as' => 'showEvent',
   'uses' => 'RallyeController@show'
 ), function ($id){
-		return $id;
-	});
+	return $id;
+});
 
 Route::get('/a-propos', array('as' => 'about', function()
 {
     return View::make('pages.about');
 }));
+
+Route::post('/login', array(
+  'as' => 'login',
+  'uses' => 'AuthController@login'
+));
+
+Route::get('/logout', array(
+  'as' => 'logout',
+  'uses' => 'AuthController@logout'
+));
+
+Route::get('/register', array('as' => 'register', function()
+{
+    return View::make('pages.register');
+}));
+
+Route::post('/store', array(
+  'as' => 'store',
+  'uses' => 'UserController@store'
+));
+
+Route::get('/reserve{id}{way}', array(
+  'as' => 'reserve',
+  'uses' => 'RallyeController@reserve'
+), function ($id, $way){
+  return $id;
+  return $way;
+});
+
+Route::post('/confirm', array(
+  'as' => 'confirm',
+  'uses' => 'RallyeController@confirm'
+));
+
+Route::any('/storeReservation', array(
+  'as' => 'storeReservation',
+    'uses' => 'RallyeController@storeReservation'
+));
+
+Route::any('/myReservation', array(
+  'as' => 'myReservation',
+    'uses' => 'RallyeController@myReservation'
+));

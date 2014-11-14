@@ -1,9 +1,7 @@
 @extends('layouts.master')
 
-
 @section('content')
 
-<?php //dd($quote); ?>
     <section class="home__introduction">
       <div class="home__introduction__event">
           <div class="home__introduction__event__wrapper">
@@ -14,7 +12,7 @@
       </div>
       <img src="./img/logo.svg" alt="" class="home__introduction__logo">
     </section>
-
+    
 
     <section class="home__presentation">
       <h2 class="home__presentation__title">C'est quoi ?</h2>
