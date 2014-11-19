@@ -11,7 +11,7 @@ Error: Undefined mixin 'rem-fix'.
 12:     @include rem-fix(margin-top, 3);
 13:     /* Login *\/
 14:     &__login{
-15: 
+15:
 16:     }
 17:     /* Register *\/
 

@@ -17,8 +17,9 @@ class RallyeTableSeeder extends Seeder {
         'streetNumber'    => '16',
         'date'            => "2014-01-15 19:00:00",
         'place'           => '30',
-        'description'     => 'Venez décourvir le cuisine moléculaire et toute sa magie dans le centre de bruxelles.'
-        
+        'placeAvailable'  => '30',
+        'description'     => '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+
       ]);
     Rallye::create([
         'title'           => 'Repas au centre historique de Liège',
@@ -27,7 +28,8 @@ class RallyeTableSeeder extends Seeder {
         'streetNumber'    => '1',
         'date'            => "2015-01-15 18:30:00",
         'place'           => '45',
-        'description'     => 'Une dégustation qui vous plaira dans le centre historique de Litch'
+        'placeAvailable'  => '45',
+        'description'     => '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
 
       ]);
     Rallye::create([
@@ -37,7 +39,8 @@ class RallyeTableSeeder extends Seeder {
         'streetNumber'    => '105',
         'date'            => "2014-10-15 20:00:00",
         'place'           => '60',
-        'description'     => 'Osez les produits du terroir. Frais bien de chez nous'
+        'placeAvailable'  => '60',
+        'description'     => '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
 
       ]);
   }

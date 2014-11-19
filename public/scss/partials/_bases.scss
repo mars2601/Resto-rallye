@@ -58,15 +58,15 @@ $susy: (
   background-size:cover;
   overflow: hidden;
   position: relative;
-  @include triangle-svg(  $color: FFF,
+  @include triangle-svg(  $color: F9F8F8,
           					 $height: 10,
            					$direction: bottom-right,
            					$position: bottom,
            					$pseudoElement: after );
 
   h2{
-    @include rem-fix(padding-top, 15);
-    @include rem-fix(padding-bottom, 10);
+    @include rem-fix(padding-top, 11);
+    @include rem-fix(padding-bottom, 5);
     @extend .wrapper;
     font-weight: 700;
     text-transform: uppercase;

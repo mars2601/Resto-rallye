@@ -310,13 +310,13 @@ body {
     height: 10rem;
     background-size: 100% 100%;
     display: block;
-    background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L100 0 L100 100' fill='%23FFF'></path></svg>"); }
+    background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L100 0 L100 100' fill='%23F9F8F8'></path></svg>"); }
   /* line 67, ../scss/partials/_bases.scss */
   .big-title h2 {
-    padding-top: 150px;
-    padding-top: 15rem;
-    padding-bottom: 100px;
-    padding-bottom: 10rem;
+    padding-top: 110px;
+    padding-top: 11rem;
+    padding-bottom: 50px;
+    padding-bottom: 5rem;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 46px;
@@ -352,70 +352,175 @@ code {
 
 /* line 1, ../scss/partials/_header.scss */
 .header {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10001; }
-  /* line 11, ../scss/partials/_header.scss */
-  .header__title {
-    width: 31.62393%;
-    float: left;
-    margin-right: 2.5641%;
-    line-height: 60px;
-    line-height: 6rem;
-    font-size: 30px;
-    font-size: 3rem; }
-    /* line 17, ../scss/partials/_header.scss */
-    .header__title a {
-      display: block;
-      padding-left: 120px;
-      padding-left: 12rem;
-      background-image: url("../img/logo-header.png");
-      background-repeat: no-repeat;
-      background-position: 0px 10px;
-      background-position: 0rem 1rem;
-      color: white;
-      text-transform: uppercase;
-      text-decoration: none; }
-      /* line 22, ../scss/partials/_header.scss */
-      .svg .header__title a {
-        background-image: url("../img/logo-header.svg"); }
-      /* line 32, ../scss/partials/_header.scss */
-      .header__title a span {
-        font-weight: 100; }
-      /* line 36, ../scss/partials/_header.scss */
-      .header__title a span + span {
-        font-weight: 500; }
-  /* line 42, ../scss/partials/_header.scss */
-  .header__nav {
-    width: 65.81197%;
-    float: right;
-    margin-right: 0;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right; }
-    /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
-    .header__nav:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    /* line 46, ../scss/partials/_header.scss */
-    .header__nav li {
-      display: inline-block; }
-      /* line 48, ../scss/partials/_header.scss */
-      .header__nav li a {
-        padding: 0px 20px;
-        padding: 0rem 2rem;
-        display: block;
-        font-size: 16px;
-        font-size: 1.6rem;
+  /* line 8, ../scss/partials/_header.scss */
+  .header__auth {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-bottom: 2px solid white;
+    -webkit-box-shadow: inset -2px -2px 6px 0 #333;
+    box-shadow: inset -2px -2px 6px 0 #333;
+    padding: 20px 0px;
+    padding: 2rem 0rem; }
+    /* line 18, ../scss/partials/_header.scss */
+    .header__auth .logout + .button, .header__auth .logout + .events__show__link {
+      width: 23.07692%;
+      float: right;
+      margin-right: 0;
+      margin-top: -5px;
+      margin-top: -0.5rem; }
+    /* line 22, ../scss/partials/_header.scss */
+    .header__auth fieldset {
+      display: inline-block;
+      width: 31.62393%;
+      float: left;
+      margin-right: 2.5641%; }
+      /* line 25, ../scss/partials/_header.scss */
+      .header__auth fieldset label {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%;
+        margin-top: 5px;
+        margin-top: 0.5rem;
+        text-align: right; }
+      /* line 30, ../scss/partials/_header.scss */
+      .header__auth fieldset input[name] {
+        width: 48.71795%;
+        float: right;
+        margin-right: 0;
+        margin-bottom: 0px;
+        margin-bottom: 0rem;
+        margin-top: 1px;
+        margin-top: 0.1rem;
+        padding: 9px 8px 3px 0px;
+        padding: 0.9rem 0.8rem 0.3rem 0rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-bottom: 1px solid white;
         color: #FFF;
+        font-size: 0.9em; }
+        /* line 39, ../scss/partials/_header.scss */
+        .header__auth fieldset input[name]:focus {
+          border-bottom: none;
+          outline: none; }
+      /* line 44, ../scss/partials/_header.scss */
+      .header__auth fieldset input[type='submit'] {
+        width: 82.90598%;
+        float: right;
+        margin-right: 0;
+        margin-bottom: 0px;
+        margin-bottom: 0rem;
+        margin-top: 0px;
+        margin-top: 0rem;
+        padding: 8px;
+        padding: 0.8rem;
+        border: 1px solid #666; }
+    /* line 52, ../scss/partials/_header.scss */
+    .header__auth fieldset:last-child {
+      width: 31.62393%;
+      float: right;
+      margin-right: 0;
+      text-align: left; }
+    /* line 57, ../scss/partials/_header.scss */
+    .header__auth__link {
+      width: 14.52991%;
+      float: right;
+      margin-right: 0;
+      font-size: 1em;
+      line-height: 1em; }
+      /* line 61, ../scss/partials/_header.scss */
+      .header__auth__link a {
+        color: white;
+        text-decoration: underline; }
+        /* line 64, ../scss/partials/_header.scss */
+        .header__auth__link a:hover {
+          color: #666;
+          text-decoration: none; }
+  /* line 71, ../scss/partials/_header.scss */
+  .header__menu {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    /* line 74, ../scss/partials/_header.scss */
+    .header__menu__title {
+      width: 31.62393%;
+      float: left;
+      margin-right: 2.5641%;
+      line-height: 60px;
+      line-height: 6rem;
+      font-size: 30px;
+      font-size: 3rem; }
+      /* line 80, ../scss/partials/_header.scss */
+      .header__menu__title a {
+        display: block;
+        padding-left: 120px;
+        padding-left: 12rem;
+        background-image: url("../img/logo-header.png");
+        background-repeat: no-repeat;
+        background-position: 0px 10px;
+        background-position: 0rem 1rem;
+        color: white;
         text-transform: uppercase;
-        text-decoration: none;
-        line-height: 60px; }
+        text-decoration: none; }
+        /* line 85, ../scss/partials/_header.scss */
+        .svg .header__menu__title a {
+          background-image: url("../img/logo-header.svg"); }
+        /* line 95, ../scss/partials/_header.scss */
+        .header__menu__title a span {
+          font-weight: 100; }
+        /* line 99, ../scss/partials/_header.scss */
+        .header__menu__title a span + span {
+          font-weight: 500; }
+    /* line 105, ../scss/partials/_header.scss */
+    .header__menu__nav {
+      width: 65.81197%;
+      float: right;
+      margin-right: 0;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right; }
+      /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
+      .header__menu__nav:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      /* line 109, ../scss/partials/_header.scss */
+      .header__menu__nav li {
+        display: inline-block; }
+        /* line 111, ../scss/partials/_header.scss */
+        .header__menu__nav li a {
+          padding: 0px 20px;
+          padding: 0rem 2rem;
+          display: block;
+          font-size: 16px;
+          font-size: 1.6rem;
+          color: #FFF;
+          text-transform: uppercase;
+          text-decoration: none;
+          line-height: 60px; }
+      /* line 123, ../scss/partials/_header.scss */
+      .header__menu__nav li.log span {
+        color: white;
+        padding: 20px 10px;
+        padding: 2rem 1rem; }
+        /* line 126, ../scss/partials/_header.scss */
+        .header__menu__nav li.log span:hover {
+          cursor: pointer; }
+  /* line 134, ../scss/partials/_header.scss */
+  .js .header {
+    position: fixed; }
+  /* line 138, ../scss/partials/_header.scss */
+  .js .header__auth {
+    display: none; }
 
 /* line 1, ../scss/partials/_footer.scss */
 .footer {
@@ -435,38 +540,17 @@ code {
     height: 10rem;
     background-size: 100% 100%;
     display: block;
-    background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23FFF'></path></svg>"); }
+    background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23F9F8F8'></path></svg>"); }
 
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?-2mixq6");
-  src: url("../fonts/icomoon.eot?#iefix-2mixq6") format("embedded-opentype"), url("../fonts/icomoon.woff?-2mixq6") format("woff"), url("../fonts/icomoon.ttf?-2mixq6") format("truetype"), url("../fonts/icomoon.svg?-2mixq6#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-/* line 12, ../scss/partials/_typography.scss */
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-/* line 26, ../scss/partials/_typography.scss */
-.icon-plus:before {
-  content: "\e602"; }
-
-/* line 29, ../scss/partials/_typography.scss */
-.icon-location4:before {
-  content: "\e600"; }
-
-/* line 32, ../scss/partials/_typography.scss */
-.icon-calendar2:before {
-  content: "\e601"; }
+/* line 1, ../scss/partials/objects/_btn.scss */
+.logout {
+  color: white;
+  text-decoration: underline;
+  padding: 0px 10px;
+  padding: 0rem 1rem; }
+  /* line 5, ../scss/partials/objects/_btn.scss */
+  .logout:hover {
+    color: #666; }
 
 /*
  * Allow only vertical resizing of textareas.
@@ -484,60 +568,303 @@ fieldset {
   margin: 0;
   padding: 0; }
 
-/* line 30, ../scss/partials/objects/_forms.scss */
+/* line 23, ../scss/partials/objects/_forms.scss */
+.header .login {
+  width: 82.90598%;
+  float: left;
+  margin-right: 2.5641%; }
+  /* line 25, ../scss/partials/objects/_forms.scss */
+  .header .login label {
+    display: inline-block;
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%; }
+  /* line 29, ../scss/partials/objects/_forms.scss */
+  .header .login input {
+    width: 31.62393%;
+    float: left;
+    margin-right: 2.5641%;
+    border: 1px solid black; }
+  /* line 33, ../scss/partials/objects/_forms.scss */
+  .header .login fieldset > span:first-child {
+    display: none; }
+
+/* pour les champs ayant un icone */
+/* line 39, ../scss/partials/objects/_forms.scss */
+span + label + input {
+  padding-left: 28px;
+  padding-left: 2.8rem; }
+
+/* line 47, ../scss/partials/objects/_forms.scss */
 form.reserve {
-  width: 48.71795%;
+  width: 100%;
   float: left;
   margin-right: 2.5641%;
-  /*   margin-left:span(3);
-   */
   /*   label[for="streetNumber"]{
     @include span(first 2);
   }
   input[name="streetNumber"]{
     @include span(first 2);
   } */ }
-  /* line 33, ../scss/partials/objects/_forms.scss */
+  /* line 49, ../scss/partials/objects/_forms.scss */
   form.reserve label[for="gift"] {
-    width: 14.52991%;
+    width: 48.71795%;
     float: left;
-    margin-right: 2.5641%; }
-  /* line 36, ../scss/partials/objects/_forms.scss */
+    margin-right: 2.5641%;
+    margin-bottom: 20px;
+    margin-bottom: 2rem; }
+  /* line 54, ../scss/partials/objects/_forms.scss */
   form.reserve input[type="checkbox"] {
     background-color: none;
     width: 14.52991%;
     float: left;
     margin-right: 2.5641%;
     padding: 8px;
-    padding: 0.8rem; }
+    padding: 0.8rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem; }
 
-/* line 54, ../scss/partials/objects/_forms.scss */
+/* line 73, ../scss/partials/objects/_forms.scss */
 label {
   display: inline-block;
   width: 48.71795%;
   float: left;
-  margin-right: 2.5641%; }
+  margin-right: 2.5641%;
+  font-size: 1.2em; }
 
-/* line 61, ../scss/partials/objects/_forms.scss */
+/* line 78, ../scss/partials/objects/_forms.scss */
 input {
   width: 82.90598%;
   float: left;
   margin-right: 2.5641%;
   border-radius: 2px;
-  border: 1px solid black;
-  padding: 8px;
-  padding: 0.8rem;
+  border: 1px solid #666;
+  padding: 4px 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1em;
   margin-bottom: 15px;
   margin-bottom: 1.5rem; }
+  /* line 85, ../scss/partials/objects/_forms.scss */
+  input:focus {
+    outline: none;
+    border: 1px solid black; }
 
-/* line 70, ../scss/partials/objects/_forms.scss */
+/* line 90, ../scss/partials/objects/_forms.scss */
 input[type="submit"] {
+  font-size: 1em;
+  border-radius: 2px; }
+
+/* line 94, ../scss/partials/objects/_forms.scss */
+input[type="submit"], .button, .events__show__link {
   background-color: none;
   width: 31.62393%;
   float: left;
   margin-right: 2.5641%;
   margin-top: 25px;
-  margin-top: 2.5rem; }
+  margin-top: 2.5rem;
+  padding: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid #666;
+  float: left;
+  color: white;
+  text-transform: uppercase;
+  background: #333333;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 0%, #000000 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #000000));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #333333 0%, #000000 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #333333 0%, #000000 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #333333 0%, #000000 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #333333 0%, #000000 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */ }
+  /* line 113, ../scss/partials/objects/_forms.scss */
+  input[type="submit"]:hover, .button:hover, .events__show__link:hover {
+    background: #000000;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #000000 0%, #333333 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #333333));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #000000 0%, #333333 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #000000 0%, #333333 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #000000 0%, #333333 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #000000 0%, #333333 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 );
+    /* IE6-9 */ }
+
+/* line 127, ../scss/partials/objects/_forms.scss */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #666; }
+
+/* line 130, ../scss/partials/objects/_forms.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #666;
+  opacity: 1; }
+
+/* line 134, ../scss/partials/objects/_forms.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #666;
+  opacity: 1; }
+
+/* line 138, ../scss/partials/objects/_forms.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #666; }
+
+/* line 142, ../scss/partials/objects/_forms.scss */
+span.error {
+  position: absolute;
+  top: 55px;
+  top: 5.5rem;
+  color: white;
+  font-size: 0.8em;
+  background: #ca3c3c;
+  padding: 1px 4px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2px; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-wozcuc");
+  src: url("../fonts/icomoon.eot?#iefix-wozcuc") format("embedded-opentype"), url("../fonts/icomoon.woff?-wozcuc") format("woff"), url("../fonts/icomoon.ttf?-wozcuc") format("truetype"), url("../fonts/icomoon.svg?-wozcuc#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 12, ../scss/partials/objects/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 26, ../scss/partials/objects/_icons.scss */
+.icon-office:before {
+  content: "\e600"; }
+
+/* line 29, ../scss/partials/objects/_icons.scss */
+.icon-pencil:before {
+  content: "\e601"; }
+
+/* line 32, ../scss/partials/objects/_icons.scss */
+.icon-tag:before {
+  content: "\e602"; }
+
+/* line 35, ../scss/partials/objects/_icons.scss */
+.icon-tags:before {
+  content: "\e603"; }
+
+/* line 38, ../scss/partials/objects/_icons.scss */
+.icon-plus:before {
+  content: "\e604"; }
+
+/* line 41, ../scss/partials/objects/_icons.scss */
+.icon-close:before {
+  content: "\e605"; }
+
+/* line 44, ../scss/partials/objects/_icons.scss */
+.icon-compose:before {
+  content: "\e606"; }
+
+/* line 47, ../scss/partials/objects/_icons.scss */
+.icon-portfolio:before {
+  content: "\e607"; }
+
+/* line 50, ../scss/partials/objects/_icons.scss */
+.icon-pin:before {
+  content: "\e608"; }
+
+/* line 53, ../scss/partials/objects/_icons.scss */
+.icon-pin-alt:before {
+  content: "\e609"; }
+
+/* line 56, ../scss/partials/objects/_icons.scss */
+.icon-phone:before {
+  content: "\e60a"; }
+
+/* line 59, ../scss/partials/objects/_icons.scss */
+.icon-mouse:before {
+  content: "\e60b"; }
+
+/* line 62, ../scss/partials/objects/_icons.scss */
+.icon-directions:before {
+  content: "\e60c"; }
+
+/* line 65, ../scss/partials/objects/_icons.scss */
+.icon-mail:before {
+  content: "\e60d"; }
+
+/* line 68, ../scss/partials/objects/_icons.scss */
+.icon-pencil2:before {
+  content: "\e60e"; }
+
+/* line 71, ../scss/partials/objects/_icons.scss */
+.icon-user:before {
+  content: "\e60f"; }
+
+/* line 74, ../scss/partials/objects/_icons.scss */
+.icon-users:before {
+  content: "\e610"; }
+
+/* line 77, ../scss/partials/objects/_icons.scss */
+.icon-user-add:before {
+  content: "\e611"; }
+
+/* line 80, ../scss/partials/objects/_icons.scss */
+.icon-map:before {
+  content: "\e612"; }
+
+/* line 83, ../scss/partials/objects/_icons.scss */
+.icon-compass:before {
+  content: "\e613"; }
+
+/* line 86, ../scss/partials/objects/_icons.scss */
+.icon-location:before {
+  content: "\e614"; }
+
+/* line 89, ../scss/partials/objects/_icons.scss */
+.icon-calendar:before {
+  content: "\e615"; }
+
+/* line 92, ../scss/partials/objects/_icons.scss */
+.icon-cross:before {
+  content: "\e616"; }
+
+/* line 95, ../scss/partials/objects/_icons.scss */
+.icon-cross2:before {
+  content: "\e617"; }
+
+/* line 98, ../scss/partials/objects/_icons.scss */
+.icon-cross3:before {
+  content: "\e618"; }
+
+/* line 103, ../scss/partials/objects/_icons.scss */
+form [class^="icon-"], form [class*=" icon-"] {
+  position: absolute;
+  margin-top: 36px;
+  margin-top: 3.6rem;
+  margin-left: 7px;
+  margin-left: 0.7rem;
+  color: #555; }
 
 /* line 2, ../scss/pages/_home.scss */
 .home__introduction {
@@ -970,12 +1297,24 @@ input[type="submit"] {
 
 /* line 1, ../scss/pages/_events.scss */
 .events {
-  margin-bottom: 200px; }
+  background-color: #F9F8F8; }
   /* line 3, ../scss/pages/_events.scss */
   .events__next {
     margin-bottom: 50px;
     margin-bottom: 5rem; }
-    /* line 11, ../scss/pages/_events.scss */
+    /* line 109, ../scss/modules/framework/partials/_functionsmixins.scss */
+    .events__next__title h2:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      height: 10rem;
+      background-size: 100% 100%;
+      display: block;
+      background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%230'></path></svg>"); }
+    /* line 18, ../scss/pages/_events.scss */
     .events__next__list__item__link {
       width: 100%;
       float: left;
@@ -983,7 +1322,7 @@ input[type="submit"] {
       position: relative;
       display: block;
       background-color: rgba(0, 0, 0, 0.5); }
-      /* line 16, ../scss/pages/_events.scss */
+      /* line 23, ../scss/pages/_events.scss */
       .events__next__list__item__link__goto {
         color: #FFF;
         content: "";
@@ -1002,12 +1341,12 @@ input[type="submit"] {
         border-radius: 100%;
         margin-top: -30px;
         margin-top: -3rem; }
-        /* line 31, ../scss/pages/_events.scss */
+        /* line 38, ../scss/pages/_events.scss */
         .events__next__list__item__link__goto span {
           line-height: 60px;
           line-height: 6rem;
           font-size: 2em; }
-      /* line 36, ../scss/pages/_events.scss */
+      /* line 43, ../scss/pages/_events.scss */
       .events__next__list__item__link__image {
         width: 31.62393%;
         float: left;
@@ -1018,19 +1357,19 @@ input[type="submit"] {
         -webkit-transition: 0.35s;
         transition: 0.35s;
         background-color: black; }
-      /* line 42, ../scss/pages/_events.scss */
+      /* line 49, ../scss/pages/_events.scss */
       .events__next__list__item__link__infos {
         color: white;
         width: 65.81197%;
         float: right;
         margin-right: 0;
         overflow: hidden; }
-        /* line 46, ../scss/pages/_events.scss */
+        /* line 53, ../scss/pages/_events.scss */
         .events__next__list__item__link__infos__title {
           margin: 10px 0px;
           margin: 1rem 0rem;
           font-size: 1.8em; }
-          /* line 50, ../scss/pages/_events.scss */
+          /* line 57, ../scss/pages/_events.scss */
           .events__next__list__item__link__infos__title:after {
             content: "";
             display: block;
@@ -1047,38 +1386,38 @@ input[type="submit"] {
             -ms-transform: translate3d(-50%, 0, 0);
             -webkit-transform: translate3d(-50%, 0, 0);
             transform: translate3d(-50%, 0, 0); }
-        /* line 62, ../scss/pages/_events.scss */
+        /* line 69, ../scss/pages/_events.scss */
         .events__next__list__item__link__infos__date {
           margin-top: 10px;
           margin-top: 1rem;
           display: block;
           font-size: 1.4em; }
-          /* line 66, ../scss/pages/_events.scss */
+          /* line 73, ../scss/pages/_events.scss */
           .events__next__list__item__link__infos__date span {
             padding: 0 15px 0 0; }
-        /* line 70, ../scss/pages/_events.scss */
+        /* line 77, ../scss/pages/_events.scss */
         .events__next__list__item__link__infos__place {
           display: block;
           font-size: 1.4em; }
-          /* line 73, ../scss/pages/_events.scss */
+          /* line 80, ../scss/pages/_events.scss */
           .events__next__list__item__link__infos__place span {
             padding: 0 15px 0 0; }
-      /* line 78, ../scss/pages/_events.scss */
+      /* line 85, ../scss/pages/_events.scss */
       .events__next__list__item__link:hover {
         background-color: rgba(0, 0, 0, 0.8); }
-      /* line 81, ../scss/pages/_events.scss */
+      /* line 88, ../scss/pages/_events.scss */
       .events__next__list__item__link:hover .events__next__list__item__link__image {
         opacity: 0.5; }
-      /* line 84, ../scss/pages/_events.scss */
+      /* line 91, ../scss/pages/_events.scss */
       .events__next__list__item__link:hover .events__next__list__item__link__goto {
         opacity: 1; }
-      /* line 88, ../scss/pages/_events.scss */
+      /* line 95, ../scss/pages/_events.scss */
       .events__next__list__item__link:hover .events__next__list__item__link__infos__title:after {
         -moz-transform: translate3d(-10%, 0, 0);
         -ms-transform: translate3d(-10%, 0, 0);
         -webkit-transform: translate3d(-10%, 0, 0);
         transform: translate3d(-10%, 0, 0); }
-  /* line 96, ../scss/pages/_events.scss */
+  /* line 103, ../scss/pages/_events.scss */
   .events__past {
     background-color: rgba(0, 0, 0, 0.2);
     position: relative; }
@@ -1094,15 +1433,15 @@ input[type="submit"] {
       background-size: 100% 100%;
       display: block;
       background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23FFF'></path></svg>"); }
-    /* line 107, ../scss/pages/_events.scss */
+    /* line 114, ../scss/pages/_events.scss */
     .events__past__wrapper__title {
       padding-top: 100px;
       padding-top: 10rem; }
-    /* line 111, ../scss/pages/_events.scss */
+    /* line 118, ../scss/pages/_events.scss */
     .events__past__wrapper__date {
       font-size: 1.5em;
       color: #FFF; }
-    /* line 117, ../scss/pages/_events.scss */
+    /* line 124, ../scss/pages/_events.scss */
     .events__past__wrapper__list__item__link {
       width: 31.62393%;
       float: left;
@@ -1120,7 +1459,7 @@ input[type="submit"] {
       transition: 0.35s;
       margin-top: 50px;
       margin-top: 5rem; }
-      /* line 125, ../scss/pages/_events.scss */
+      /* line 132, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__goto {
         color: #FFF;
         content: "";
@@ -1141,41 +1480,41 @@ input[type="submit"] {
         margin-left: -30px;
         margin-left: -3rem;
         top: 32%; }
-        /* line 141, ../scss/pages/_events.scss */
+        /* line 148, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__goto span {
           line-height: 60px;
           line-height: 6rem;
           font-size: 2em; }
-      /* line 146, ../scss/pages/_events.scss */
+      /* line 153, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__image {
         width: 100%;
         background-color: black; }
-      /* line 150, ../scss/pages/_events.scss */
+      /* line 157, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__infos {
         min-height: 150px;
         min-height: 15rem;
         padding: 0px 5px;
         padding: 0rem 0.5rem; }
-        /* line 153, ../scss/pages/_events.scss */
+        /* line 160, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__title {
           margin: 10px 0px;
           margin: 1rem 0rem;
           border-bottom: 1px solid black;
           margin-bottom: 10px;
           margin-bottom: 1rem; }
-        /* line 159, ../scss/pages/_events.scss */
+        /* line 166, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__date {
           display: block; }
-          /* line 161, ../scss/pages/_events.scss */
+          /* line 168, ../scss/pages/_events.scss */
           .events__past__wrapper__list__item__link__infos__date span {
             padding: 0 10px 0 0; }
-        /* line 165, ../scss/pages/_events.scss */
+        /* line 172, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__place {
           display: block; }
-          /* line 167, ../scss/pages/_events.scss */
+          /* line 174, ../scss/pages/_events.scss */
           .events__past__wrapper__list__item__link__infos__place span {
             padding: 0 10px 0 0; }
-      /* line 175, ../scss/pages/_events.scss */
+      /* line 182, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link--last {
         width: 31.62393%;
         float: right;
@@ -1188,7 +1527,7 @@ input[type="submit"] {
         transition: 0.35s;
         margin-top: 50px;
         margin-top: 5rem; }
-        /* line 181, ../scss/pages/_events.scss */
+        /* line 188, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover {
           -moz-transform: scale(1.18);
           -ms-transform: scale(1.18);
@@ -1197,16 +1536,16 @@ input[type="submit"] {
           background-color: #494949;
           color: #FFF;
           z-index: 100; }
-        /* line 187, ../scss/pages/_events.scss */
+        /* line 194, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__image {
           opacity: .5; }
-        /* line 190, ../scss/pages/_events.scss */
+        /* line 197, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__infos__title {
           border-bottom: 1px solid #FFF; }
-        /* line 193, ../scss/pages/_events.scss */
+        /* line 200, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__goto {
           opacity: 1; }
-      /* line 197, ../scss/pages/_events.scss */
+      /* line 204, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover {
         -moz-transform: scale(1.18);
         -ms-transform: scale(1.18);
@@ -1215,13 +1554,13 @@ input[type="submit"] {
         background-color: #494949;
         color: #FFF;
         z-index: 100; }
-      /* line 203, ../scss/pages/_events.scss */
+      /* line 210, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__image {
         opacity: .5; }
-      /* line 206, ../scss/pages/_events.scss */
+      /* line 213, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__infos__title {
         border-bottom: 1px solid #FFF; }
-      /* line 209, ../scss/pages/_events.scss */
+      /* line 216, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__goto {
         opacity: 1; }
 
@@ -1276,37 +1615,62 @@ input[type="submit"] {
   /* line 5, ../scss/pages/_showRallye.scss */
   .events__show__image {
     width: 31.62393%;
-    float: left;
-    margin-right: 2.5641%; }
-  /* line 8, ../scss/pages/_showRallye.scss */
+    float: right;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-top: 1rem; }
+  /* line 9, ../scss/pages/_showRallye.scss */
   .events__show__infos {
     width: 65.81197%;
-    float: right;
-    margin-right: 0; }
-    /* line 10, ../scss/pages/_showRallye.scss */
-    .events__show__infos__title {
-      font-size: 2em;
-      margin-bottom: 30px;
-      margin-bottom: 3rem; }
-    /* line 14, ../scss/pages/_showRallye.scss */
-    .events__show__infos__place {
-      width: 40.17094%;
-      float: left;
-      margin-right: 2.5641%;
-      font-size: 1.2em; }
-      /* line 17, ../scss/pages/_showRallye.scss */
-      .events__show__infos__place span {
-        padding: 10px; }
-    /* line 21, ../scss/pages/_showRallye.scss */
-    .events__show__infos__date {
-      width: 40.17094%;
-      float: left;
-      margin-right: 2.5641%;
-      font-size: 1.2em; }
-      /* line 24, ../scss/pages/_showRallye.scss */
-      .events__show__infos__date span {
-        padding: 10px; }
-    /* line 28, ../scss/pages/_showRallye.scss */
+    float: left;
+    margin-right: 2.5641%; }
+    /* line 11, ../scss/pages/_showRallye.scss */
+    .events__show__infos__header {
+      border-bottom: 1px solid gray;
+      padding: 10px;
+      padding: 1rem; }
+      /* line 14, ../scss/pages/_showRallye.scss */
+      .events__show__infos__header:after {
+        content: '';
+        display: block;
+        clear: both; }
+      /* line 19, ../scss/pages/_showRallye.scss */
+      .events__show__infos__header__title {
+        font-size: 2em;
+        margin-bottom: 20px;
+        margin-bottom: 2rem; }
+      /* line 23, ../scss/pages/_showRallye.scss */
+      .events__show__infos__header #gauge {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%;
+        margin-left: -30px;
+        margin-left: -3rem; }
+      /* line 28, ../scss/pages/_showRallye.scss */
+      .events__show__infos__header__place {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%;
+        font-size: 1.2em;
+        padding: 50px 0px 20px 0px;
+        padding: 5rem 0rem 2rem 0rem; }
+        /* line 32, ../scss/pages/_showRallye.scss */
+        .events__show__infos__header__place span {
+          padding: 10px 10px 10px 0px;
+          padding: 1rem 1rem 1rem 0rem; }
+      /* line 36, ../scss/pages/_showRallye.scss */
+      .events__show__infos__header__date {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%;
+        font-size: 1.2em;
+        padding: 20px 0px;
+        padding: 2rem 0rem; }
+        /* line 40, ../scss/pages/_showRallye.scss */
+        .events__show__infos__header__date span {
+          padding: 10px 10px 10px 0px;
+          padding: 1rem 1rem 1rem 0rem; }
+    /* line 45, ../scss/pages/_showRallye.scss */
     .events__show__infos__paragraph {
       width: 100%;
       float: left;
@@ -1314,17 +1678,34 @@ input[type="submit"] {
       font-size: 1.2em;
       padding: 20px 0px;
       padding: 2rem 0rem; }
-  /* line 35, ../scss/pages/_showRallye.scss */
+    /* line 50, ../scss/pages/_showRallye.scss */
+    .events__show__infos__reserve {
+      padding: 8px 0px;
+      padding: 0.8rem 0rem;
+      width: 40.17094%;
+      float: left;
+      margin-right: 2.5641%;
+      font-weight: bold;
+      margin-right: 0; }
+    /* line 56, ../scss/pages/_showRallye.scss */
+    .events__show__infos .place {
+      position: absolute;
+      bottom: 37px;
+      margin-left: 39px;
+      font-size: 1em; }
+    /* line 62, ../scss/pages/_showRallye.scss */
+    .events__show__infos .knob {
+      margin-top: 40px; }
+  /* line 66, ../scss/pages/_showRallye.scss */
   .events__show__link {
-    padding: 10px 0px;
-    padding: 1rem 0rem;
-    margin-top: 20px;
-    margin-top: 2rem;
-    color: blue;
-    text-decoration: underline; }
-    /* line 40, ../scss/pages/_showRallye.scss */
+    margin-top: 0; }
+    /* line 69, ../scss/pages/_showRallye.scss */
     .events__show__link:hover {
       text-decoration: none; }
+
+/* line 75, ../scss/pages/_showRallye.scss */
+.js p.ifNoJs {
+  display: none; }
 
 /* line 2, ../scss/pages/_reserve.scss */
 .reserve {
@@ -1333,8 +1714,9 @@ input[type="submit"] {
   *  login
   *  et
   *  Register
-  */ }
-  /* line 9, ../scss/pages/_reserve.scss */
+  */
+  background-color: #F9F8F8; }
+  /* line 10, ../scss/pages/_reserve.scss */
   .reserve__do {
     margin-top: 30px;
     margin-top: 3rem;
@@ -1348,59 +1730,144 @@ input[type="submit"] {
     */
     /* Infos */
     /* Suscribe */ }
-    /* line 13, ../scss/pages/_reserve.scss */
+    /* line 14, ../scss/pages/_reserve.scss */
     .reserve__do__login {
-      width: 48.71795%;
+      width: 44%;
       float: left;
       margin-right: 2.5641%;
+      height: 450px;
+      height: 45rem;
       border-right: 1px solid black; }
-      /* line 16, ../scss/pages/_reserve.scss */
+      /* line 20, ../scss/pages/_reserve.scss */
       .reserve__do__login__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 22, ../scss/pages/_reserve.scss */
+    /* line 26, ../scss/pages/_reserve.scss */
     .reserve__do__register {
       width: 48.71795%;
       float: right;
       margin-right: 0; }
-      /* line 24, ../scss/pages/_reserve.scss */
+      /* line 28, ../scss/pages/_reserve.scss */
       .reserve__do__register__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 37, ../scss/pages/_reserve.scss */
+    /* line 41, ../scss/pages/_reserve.scss */
+    .reserve__do__reserveHeader {
+      width: 40.17094%;
+      float: right;
+      margin-right: 0; }
+      /* line 43, ../scss/pages/_reserve.scss */
+      .reserve__do__reserveHeader__place {
+        width: 100%;
+        float: left;
+        margin-right: 2.5641%;
+        font-size: 1.2em; }
+        /* line 46, ../scss/pages/_reserve.scss */
+        .reserve__do__reserveHeader__place span {
+          padding: 10px 10px 10px 0px;
+          padding: 1rem 1rem 1rem 0rem; }
+      /* line 50, ../scss/pages/_reserve.scss */
+      .reserve__do__reserveHeader__date {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.2em; }
+        /* line 53, ../scss/pages/_reserve.scss */
+        .reserve__do__reserveHeader__date span {
+          padding: 10px 10px 10px 0px;
+          padding: 1rem 1rem 1rem 0rem; }
+    /* line 58, ../scss/pages/_reserve.scss */
+    .reserve__do p {
+      padding: 2px 0px;
+      padding: 0.2rem 0rem; }
+      /* line 60, ../scss/pages/_reserve.scss */
+      .reserve__do p [class^="icon-"], .reserve__do p [class*=" icon-"] {
+        margin-right: 8px;
+        margin-right: 0.8rem; }
+    /* line 64, ../scss/pages/_reserve.scss */
+    .reserve__do h4 {
+      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      padding: 5px;
+      padding: 0.5rem;
+      border-bottom: 1px solid black; }
+    /* line 69, ../scss/pages/_reserve.scss */
     .reserve__do__infos {
       width: 100%;
       float: left;
       margin-left: 0;
       margin-right: 0; }
-      /* line 39, ../scss/pages/_reserve.scss */
+      /* line 71, ../scss/pages/_reserve.scss */
       .reserve__do__infos__title {
         font-size: 2em;
         margin-bottom: 30px;
         margin-bottom: 3rem; }
-      /* line 43, ../scss/pages/_reserve.scss */
-      .reserve__do__infos__place {
-        width: 40.17094%;
+      /* line 76, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__list {
+        margin-top: 40px;
+        margin-top: 4rem; }
+        /* line 78, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__list li {
+          padding: 20px 0px 30px 0px;
+          padding: 2rem 0rem 3rem 0rem;
+          min-height: 160px;
+          min-height: 16rem; }
+          /* line 81, ../scss/pages/_reserve.scss */
+          .reserve__do__infos__list li [class^="icon-"], .reserve__do__infos__list li [class*=" icon-"] {
+            padding: 3px 5px;
+            padding: 0.3rem 0.5rem; }
+        /* line 85, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__list a {
+          width: 14.52991%;
+          float: right;
+          margin-right: 0;
+          position: relative;
+          margin-top: 0px;
+          margin-top: 0rem;
+          margin-bottom: 10px;
+          margin-bottom: 1rem; }
+        /* line 91, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__list li + li {
+          border-top: 1px solid black; }
+      /* line 95, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__rallye {
+        width: 31.62393%;
+        float: left;
+        margin-right: 2.5641%; }
+      /* line 98, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__contact {
+        width: 14.52991%;
         float: left;
         margin-right: 2.5641%;
-        font-size: 1.2em; }
-        /* line 46, ../scss/pages/_reserve.scss */
-        .reserve__do__infos__place span {
-          padding: 10px; }
-      /* line 50, ../scss/pages/_reserve.scss */
-      .reserve__do__infos__date {
-        width: 40.17094%;
-        float: left;
-        margin-right: 2.5641%;
-        font-size: 1.2em; }
-        /* line 53, ../scss/pages/_reserve.scss */
-        .reserve__do__infos__date span {
-          padding: 10px; }
-    /* line 59, ../scss/pages/_reserve.scss */
+        background-color: #666;
+        color: #FFF;
+        left: 30%;
+        padding: 10px;
+        padding: 1rem; }
+        /* line 104, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__contact p {
+          display: block; }
+      /* line 108, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__count {
+        width: 31.62393%;
+        float: right;
+        margin-right: 0;
+        text-align: right;
+        font-size: 1.2em;
+        margin-top: -30px;
+        margin-top: -3rem;
+        z-index: 1001;
+        position: relative; }
+    /* line 118, ../scss/pages/_reserve.scss */
     .reserve__do__suscribe {
-      width: 100%;
+      width: 48.71795%;
       float: left;
-      margin-left: 0;
-      margin-right: 0;
-      padding-top: 30px;
-      padding-top: 3rem; }
+      margin-right: 2.5641%;
+      padding-top: 20px;
+      padding-top: 2rem; }
+      /* line 121, ../scss/pages/_reserve.scss */
+      .reserve__do__suscribe input[type="submit"] {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%; }

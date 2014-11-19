@@ -1,38 +1,57 @@
-{{ Form::open(['route'=>'confirm' , 'class' => 'reserve']) }}
+@if($way == 'y')
+  {{Form::model($rallye, array('route' => 'confirm', 'class' => 'reserve'))}}
+  <p>ooo</p>
+@else
+  {{ Form::open(['route'=>'confirm' , 'class' => 'reserve']) }}
+@endif
 <fieldset>
-  {{Form::label('gift', 'Ceci est un cadeau: ',
-  ['class' => 'block'])}}
+  {{Form::label('gift', 'Ceci est un cadeau: ')}}
     {{Form::checkbox('gift','' )}}
 </fieldset>
 
 <fieldset>
-  {{Form::label('entreprise', 'Société: ',
-  ['class' => 'block'])}}
-    {{Form::text('entreprise','' )}}
-  {{Form::label('contactFirstName', 'Nom: ',
-  ['class' => 'block'])}}
-    {{Form::text('contactFirstName','' )}}
-  {{Form::label('contactLastName', 'Prénom: ',
-  ['class' => 'block'])}}
-    {{Form::text('contactLastName','' )}}
-  {{Form::label('street', 'Rue: ',
-  ['class' => 'block'])}}
-    {{Form::text('street','' )}}
-  {{Form::label('streetNumber', 'Numéro: ',
-  ['class' => 'block'])}}
-    {{Form::text('streetNumber','' )}}
-  {{Form::label('town', 'Ville: ',
-  ['class' => 'block'])}}
-    {{Form::text('town','' )}}
-  {{Form::label('telephone', 'Numéro de téléphone: ',
-  ['class' => 'block'])}}
-    {{Form::text('telephone','' )}}
-  {{Form::label('placeReserved', 'Nombre de personnes attendue: ',
-  ['class' => 'block'])}}
-    {{Form::number('placeReserved','', ['min' => '0', 'max' => '10'] )}}
-  {{ Form::hidden('idRallye', $rallye->id) }}
-  {{ Form::hidden('way', $way) }}
+  <span class='icon-office'></span>
+  {{Form::label('id', 'Société: ')}}
+    {{Form::text('id','' )}}
 </fieldset>
+<fieldset>
+  <span class='icon-user'></span>
+  {{Form::label('contactFirstName', 'Nom: ')}}
+    {{Form::text('contactFirstName','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-mouse'></span>
+  {{Form::label('contactLastName', 'Prénom: ')}}
+    {{Form::text('contactLastName','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-directions'></span>
+  {{Form::label('street', 'Rue: ')}}
+    {{Form::text('street','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-compass'></span>
+  {{Form::label('streetNumber', 'Numéro: ')}}
+    {{Form::text('streetNumber','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-pin-alt'></span>
+  {{Form::label('town', 'Ville: ')}}
+    {{Form::text('town','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-phone'></span>
+  {{Form::label('telephone', 'Numéro de téléphone: ')}}
+    {{Form::text('telephone','' )}}
+</fieldset>
+<fieldset>
+  <span class='icon-users'></span>
+  {{Form::label('placeReserved', 'Nombre de personnes attendue: ')}}
+    {{Form::number('placeReserved','', ['min' => '0', 'max' => '10'] )}}
+</fieldset>
+
+{{ Form::hidden('idRallye', $rallye->id) }}
+{{ Form::hidden('way', $way) }}
 
 <fieldset>
   @if ($way == 'y')

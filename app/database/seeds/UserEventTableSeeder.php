@@ -1,6 +1,6 @@
 <?php
 
-class UserEventTableSeeder extends Seeder {
+class EventUserTableSeeder extends Seeder {
 
   /**
  * Run the database seeds.
@@ -10,7 +10,7 @@ class UserEventTableSeeder extends Seeder {
   public function run()
   {
     DB::table('eventuser')->delete();
-    UserEvent::create([
+    EventUser::create([
         'rallye_id'           => '3',
         'user_id'            => '13',
         'place'              => '4',

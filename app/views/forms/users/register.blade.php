@@ -1,16 +1,30 @@
 {{ Form::open(['route'=>'store', 'class' => 'register']) }}
-    {{Form::label('firstName', 'Nom: ',
-    ['class' => 'block'])}}
-      {{Form::text('firstName','' )}}
-    {{Form::label('lastName', 'Prénom: ',
-    ['class' => 'block'])}}
-      {{Form::text('lastName','' )}}
-    {{Form::label('email', 'Email: ',
-    ['class' => 'block'])}}
-      {{Form::email('email','' )}}
-    {{Form::label('password', 'Mot de passe: ',
-    ['class' => 'block'])}}
-      {{Form::password('password','' )}}
-      {{Form::submit('S\'enregistrer')}}
-  </div>
+
+  <fieldset>
+    <span class='icon-user'></span>
+    {{Form::label('firstName', 'Nom: ')}}
+    {{Form::text('firstName','' )}}
+      <!-- {{$errors->first('firstName', '<span class="error">:message</span>')}} -->
+  </fieldset>
+  <fieldset>
+    <span class='icon-mouse'></span>
+    {{Form::label('lastName', 'Prénom: ')}}
+    {{Form::text('lastName','' )}}
+      <!-- {{$errors->first('lastName', '<span class="error">:message</span>')}} -->
+  </fieldset>
+  <fieldset>
+    <span class='icon-mail'></span>
+    {{Form::label('email', 'Email: ')}}
+    {{Form::email('email','' )}}
+      <!-- {{$errors->first('email', '<span class="error">:message</span>')}} -->
+  </fieldset>
+  <fieldset>
+    <span class='icon-lock'></span>
+    {{Form::label('password', 'Mot de passe: ')}}
+    {{Form::password('password','' )}}
+      <!-- {{$errors->first('password', '<span class="error">:message</span>')}} -->
+  </fieldset>
+  <fieldset>
+    {{Form::submit('S\'enregistrer')}}
+  </fieldset>
 {{ Form::close() }}

@@ -16,6 +16,6 @@
   </br>
   </br>
   <div class="separate">
-      {{Form::submit('Confirmer la réservation', ['class' => 'block'])}}
+      {{Form::submit('Confirmer la réservation')}}
   </div>
 {{ Form::close() }}

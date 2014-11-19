@@ -3,43 +3,75 @@
     @extend .wrapper;
     @include rem-fix(margin-top, 3);
     &__image{
-      @include span(4 first);
+        @include span(last 4);
+        @include rem-fix(margin-top, 1);
     }
     &__infos{
-      @include span(8 last);
-      &__title{
-        font-size:2em;
-        @include rem-fix(margin-bottom, 3);
-      }
-      &__place{
-        @include span(5 first);
-        font-size:1.2em;
-        span{
-          padding:10px;
+      @include span(8);
+      &__header{
+        border-bottom:1px solid gray;
+        @include rem-fix(padding, 1);
+        &:after {
+            content:'';
+            display:block;
+            clear: both;
         }
-      }
-      &__date{
-        @include span(5);
-        font-size:1.2em;
-        span{
-          padding:10px;
+        &__title{
+          font-size:2em;
+          @include rem-fix(margin-bottom, 2);
+        }
+        #gauge{
+          @include span(6 first);
+          @include rem-fix(margin-left, -3);
+
+        }
+        &__place{
+          @include span(6 first);
+          font-size:1.2em;
+          @include rem-fix(padding, 5, 0, 2, 0);
+          span{
+            @include rem-fix(padding, 1, 1, 1, 0);
+          }
+        }
+        &__date{
+          @include span(first 6);
+          font-size:1.2em;
+          @include rem-fix(padding, 2, 0);
+          span{
+            @include rem-fix(padding, 1, 1, 1, 0);
+          }
         }
       }
       &__paragraph{
         @include span(12 first);
         font-size:1.2em;
         @include rem-fix(padding, 2, 0);
-
       }
+      &__reserve{
+        @include rem-fix(padding, 0.8, 0);
+        @include span(5);
+        font-weight: bold;
+        margin-right:0;
+      }
+    .place{
+      position: absolute;
+      bottom: 37px;
+      margin-left: 39px;
+      font-size: 1em;
+    }
+    .knob{
+      margin-top: 40px;
+    }
     }
     &__link{
-      @include rem-fix(padding, 1, 0);
-      @include rem-fix(margin-top, 2);
-      color:blue;
-      text-decoration:underline;
+      @extend .button;
+      margin-top:0;
       &:hover{
         text-decoration:none;
       }
     }
   }
+}
+.js p.ifNoJs{
+  display:none;
 }

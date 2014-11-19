@@ -20,35 +20,35 @@
         <![endif]-->
 
 		<header class="header">
-			<div class="wrapper">
-			  	<h1 class="header__title"><a class="header__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
-			  	<nav class="header__nav">
-			  		<h2 class="visuallyhidden">Navigation principale</h2>
-					<ul>
-						<li>{{ link_to_route('homepage', 'Accueil')}}</li>
-						<li>{{ link_to_route('about', 'A propos')}}</li>
-						<li>{{ link_to_route('rallyes', 'Evenements')}}</li>
-						<li>{{ link_to_route('gallery', 'Galerie')}}</li>
-						<li>{{ link_to_route('contact', 'Contact')}}</li>
-					</ul>
-				</nav>
-			</div>
-
-      <!-- A revoir /////// TEST USER -->
-      <div id="name" style="position:absolute; background-color:red; top:0;">
-        @if ( ! (Auth::check()))
-          @include('forms.users.login')
-          <p>Pas encore inscris ? <a href="{{ URL::route('register') }}">Inscrivez vous !</a></p>
-        @else
-          <p>
-            Vous êtes connecté en tant que {{Auth::user()->email;}}
-            <a href="{{ URL::route('logout') }}">se déconnecter</a>
-
-          </p>
-        @endif
-      </div>
-      <!-- A revoir /////// TEST USER -->
-
+          <div class="header__auth js-login">
+            <div class="wrapper">
+            @if ( ! (Auth::check()))
+              @include('forms.users.login')
+              <p class="header__auth__link">Pas encore inscris ? <a href="{{ URL::route('register') }}">Inscrivez vous !</a></p>
+            @else
+              <p>
+                Vous êtes connecté en tant que {{Auth::user()->email;}}
+                <a class="logout" href="{{ URL::route('logout') }}">se déconnecter</a>
+                <a class="button" href="{{ URL::route('myReservation') }}">Mes réservations</a>
+              </p>
+            @endif
+            </div>
+          </div>
+          <div class="header__menu">
+            <div class="wrapper">
+              <h1 class="header__menu__title"><a class="header__menu__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
+              <nav class="header__menu__nav">
+                <h2 class="visuallyhidden">Navigation principale</h2>
+                <ul class="js-menu">
+                  <li>{{ link_to_route('homepage', 'Accueil')}}</li>
+                  <li>{{ link_to_route('about', 'A propos')}}</li>
+                  <li>{{ link_to_route('rallyes', 'Evenements')}}</li>
+                  <li>{{ link_to_route('gallery', 'Galerie')}}</li>
+                  <li>{{ link_to_route('contact', 'Contact')}}</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
 
 		</header>
 
@@ -87,6 +87,7 @@
 
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
+
 
 		<script src="//use.typekit.net/vey2mcx.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>

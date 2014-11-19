@@ -32,7 +32,7 @@ Route::get(     '/a-propos',
                 )
 );
 
-/*-- Event ----------------------------------------------------------*/
+/*-- Rallye ----------------------------------------------------------*/
 Route::get(     '/rallyes',
                 array(
                     'as' => 'rallyes',
@@ -40,11 +40,12 @@ Route::get(     '/rallyes',
                 )
 );
 
-Route::get('/rallye/{id}', array(
+Route::get('/rallye/{id}{dateStatus}', array(
   'as' => 'showEvent',
   'uses' => 'RallyeController@show'
-), function ($id){
+), function ($id, $dateStatus){
 		return $id;
+    return $dateStatus;
 	});
 
 
@@ -126,15 +127,25 @@ Route::get('/reserve{id}{way}', array(
   return $id;
   return $way;
 });
+
 Route::post('/confirm', array(
   'as' => 'confirm',
   'uses' => 'RallyeController@confirm'
 ));
+
 Route::any('/storeReservation', array(
   'as' => 'storeReservation',
     'uses' => 'RallyeController@storeReservation'
 ));
+
 Route::any('/myReservation', array(
   'as' => 'myReservation',
     'uses' => 'RallyeController@myReservation'
 ));
+
+Route::any('/delete{id}', array(
+  'as' => 'delete',
+  'uses' => 'RallyeController@delete'
+), function ($id){
+  return $id;
+});

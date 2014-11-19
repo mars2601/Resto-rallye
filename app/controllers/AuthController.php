@@ -1,13 +1,29 @@
 <?php
+use todo\Forms\Login as LoginForm;
+use Laracasts\Validation\FormValidationException;
 
 class AuthController extends BaseController {
 
-  // public function __construct()
-  // {
-  // }
+  private $loginForm;
+
+  public function __construct(LoginForm $loginForm)
+  {
+    $this->loginForm = $loginForm;
+  }
+
   public function login()
   {
-     $user = array(
+    $user = Input::only('email', 'password');
+    try
+    {
+      $this->loginForm->validate($user); //Gestion des erreurs via Validation
+    }
+    catch (FormValidationException $e)
+    {
+        return Redirect::back()->withInput()->withErrors($e->getErrors());
+    }
+
+    $user = array(
       'email' => Input::get('email'),
       'password' => Input::get('password')
         );
@@ -16,7 +32,7 @@ class AuthController extends BaseController {
       return Redirect::back();
     }else{
       dd('aie');
-      // mauvais mot de passe et/ou email -> redirect
+      // log not found -> redirect
     }
   }
   public function logout(){

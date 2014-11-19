@@ -1,10 +1,17 @@
 .events{
-  margin-bottom:200px;
+  background-color: #F9F8F8;
   &__next{
     @extend .wrapper;
     @include rem-fix(margin-bottom, 5);
     &__title{
       @extend .center-title;
+      h2{
+        @include triangle-svg(  $color: 000,
+                                $height: 10,
+                                $direction: top-left,
+                                $position: top,
+                                $pseudoElement: after );
+      }
     }
     &__list{
       &__item{

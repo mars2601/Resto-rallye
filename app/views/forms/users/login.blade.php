@@ -1,10 +1,19 @@
 {{ Form::open(['route'=>'login', 'class' => 'login']) }}
-    {{Form::label('email', 'Email: ', ['for' => 'email'])}}
-    {{Form::email('email','' , ['class' => 'aform-control', 'id' => 'email', 'placeholder' => 'Entrez votre Email'])}}
 
-    {{Form::label('password', 'Mot de passe: ', ['for' => 'password'])}}
-    {{Form::password('password','' , ['id' => 'password', 'placeholder' => 'Mot de passe'])}}
-
-  {{Form::submit('Se connecter')}}
+    <fieldset>
+      <span class='icon-mail'></span>
+      {{Form::label('email', 'Email: ', ['for' => 'email'])}}
+      {{Form::email('email','' , ['class' => 'aform-control', 'id' => 'email', 'placeholder' => 'user@domaine.com'])}}
+        {{$errors->first('email', '<span class="error">:message</span>')}}
+    </fieldset>
+    <fieldset>
+      <span class='icon-lock'></span>
+      {{Form::label('password', 'Mot de passe: ', ['for' => 'password'])}}
+      {{Form::password('password','' , ['id' => 'password', 'placeholder' => 'Mot de passe'])}}
+        {{$errors->first('password', '<span class="error">:message</span>')}}
+    </fieldset>
+    <fieldset>
+      {{Form::submit('Se connecter')}}
+    </fieldset>
 </form>
 {{ Form::close() }}

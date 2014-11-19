@@ -9,26 +9,28 @@
 
   <section class="reserve__do">
       <div class="reserve__do__infos">
-        @foreach($userEvent as $reservation)
+        <p class="reserve__do__infos__count">Réservations: <strong>{{$count}}</strong></p>
+        <ul class="reserve__do__infos__list">
+          @foreach($eventUser as $reservation)
+          <li>
+            <div class="reserve__do__infos__rallye">
+              <p class="reserve__do__infos__nbPlace"><span class='icon-user'></span>  <strong>{{$reservation->place}}</strong></p>
+              <p class="reserve__do__infos__entreprise"><span class='icon-office'></span><strong>{{$reservation->entreprise}}</strong></p>
+            </div>
+            <div class="reserve__do__infos__contact">
+              <p><strong>• {{$reservation->contactFirstName}} {{$reservation->contactLastName}}</strong></p>
+              <p><strong>Rue {{$reservation->street}} {{$reservation->streetNumber}}</strong></p>
+              <p><strong>{{$reservation->town}}</strong></p>
+              <p><strong>{{$reservation->telephone}}</strong></p>
+            </div>
 
-    </br>
-    </br>
-    </br>
-      <p class="reserve__do__infos__nbPlace">Vous avez réserver {{$reservation->place}} places</p>
 
-    </br>
-
-      <div id="name">
-        <p class="reserve__do__infos__entreprise">Au nom de l'entreprise {{$reservation->entreprise}}</p>
-        <p>La personne de contact est {{$reservation->contactFirstName}} {{$reservation->contactLastName}}</p>
-        <p>Rue {{$reservation->street}} {{$reservation->streetNumber}}</p>
-        <p>{{$reservation->town}}</p>
-        <p>{{$reservation->telephone}}</p>
-      </div>
-
-      <a class="events__show__link" href="{{ URL::route('reserve', array($reservation->rallye_id, 'modify')) }}">Modifier la réservation</a>
-
-      @endforeach
+            <a class="button" href="{{ URL::route('delete', $reservation->rallye_id) }}"><span class='icon-cross2'></span>Supprimer</a>
+            <a class="button" href="{{ URL::route('reserve', array($reservation->rallye_id, 'modify')) }}"><span class='icon-compose'></span>Modifier</a>
+          </li>
+          @endforeach
+      </ul>
+    </div>
   </section>
 </section>
 

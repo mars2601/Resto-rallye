@@ -6,12 +6,16 @@
   *  et
   *  Register
   */
+  background-color: #F9F8F8;
   &__do{
     @extend .wrapper;
     @include rem-fix(margin-top, 3);
     /* Login */
     &__login{
-      @include span(6 first);
+      width: 44%;
+      float:left;
+      margin-right: 2.5641%;
+      @include rem-fix(height, 45);
       border-right:1px solid black;
       &__title{
         @include rem-fix(padding, 2, 0);
@@ -34,32 +38,89 @@
     */
 
     /* Infos */
+    &__reserveHeader{
+      @include span(last 5);
+      &__place{
+        @include span(12 first);
+        font-size:1.2em;
+        span{
+          @include rem-fix(padding, 1, 1, 1, 0);
+        }
+      }
+      &__date{
+        @include span(12);
+        font-size:1.2em;
+        span{
+          @include rem-fix(padding, 1, 1, 1, 0);
+        }
+      }
+    }
+    p{
+      @include rem-fix(padding, 0.2, 0);
+      [class^="icon-"], [class*=" icon-"]{
+        @include rem-fix(margin-right, 0.8);
+      }
+    }
+    h4{
+      @include rem-fix(margin-bottom, 1);
+      @include rem-fix(padding, 0.5);
+      border-bottom:1px solid black;
+    }
     &__infos{
         @include span(12);
       &__title{
         font-size:2em;
         @include rem-fix(margin-bottom, 3);
       }
-      &__place{
-        @include span(5 first);
-        font-size:1.2em;
-        span{
-          padding:10px;
+
+      &__list{
+        @include rem-fix(margin-top, 4);
+        li{
+          @include rem-fix(padding, 2, 0, 3, 0);
+          @include rem-fix(min-height, 16);
+          [class^="icon-"], [class*=" icon-"]{
+            @include rem-fix(padding, 0.3, 0.5);
+          }
+        }
+        a{
+          @include span(last 2);
+          position:relative;
+          @include rem-fix(margin-top, 0);
+          @include rem-fix(margin-bottom, 1);
+        }
+        li+li{
+          border-top:1px solid black;
         }
       }
-      &__date{
-        @include span(5);
-        font-size:1.2em;
-        span{
-          padding:10px;
+      &__rallye{
+        @include span(first 4);
+      }
+      &__contact{
+        @include span(first 2);
+        background-color:#666;
+        color:#FFF;
+        left:30%;
+        @include rem-fix(padding, 1);
+        p{
+          display:block;
         }
+      }
+      &__count{
+        @include span(last 4);
+        text-align:right;
+        font-size:1.2em;
+        @include rem-fix(margin-top, -3);
+        z-index: 1001;
+        position: relative;
       }
     }
     /* Suscribe */
     &__suscribe{
-      @include span(12);
-      @include rem-fix(padding-top, 3);
+      @include span(6);
+      @include rem-fix(padding-top, 2);
+      input[type="submit"]{
+        @include span(6);
+      }
     }
   }
-
 }

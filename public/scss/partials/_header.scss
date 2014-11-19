@@ -1,61 +1,142 @@
 .header{
 
-    background-color:rgba(0, 0, 0, 0.7);
-    position: fixed;
+    position: relative;
     top: 0 ;
     left: 0;
     right: 0;
     z-index: 10001;
-
-
-    &__title{
-      @include span(first 4);
-      @include rem-fix(line-height, 6);
-      @include rem-fix(font-size, 3);
-
-
-      a{
-        display:block;
-        @include rem-fix(padding-left, 12);
-
-        background-image: url('../img/logo-header.png');
-        .svg & {
-            background-image: url('../img/logo-header.svg');
-
+    &__auth{
+      position:relative;
+      display:block;
+      width:100%;
+      background-color:rgba(0, 0, 0, 0.9);
+      color:white;
+      border-bottom:2px solid white;
+      -webkit-box-shadow:inset -2px -2px 6px 0 #333;
+      box-shadow:inset -2px -2px 6px 0 #333;
+      @include rem-fix(padding, 2, 0);
+      .logout+.button{
+        @include span(last 3);
+        @include rem-fix(margin-top, -0.5);
+      }
+      fieldset{
+        display:inline-block;
+        @include span(first 4);
+        label{
+          @include span(first 6);
+          @include rem-fix(margin-top, 0.5);
+          text-align:right;
         }
-        background-repeat: no-repeat;
-        @include rem-fix(background-position, 0, 1);
-
-        color:white;
-        text-transform: uppercase;
-        text-decoration:none;
-        span{
-
-          font-weight:100;
+        input[name]{
+          @include span(last 6);
+          @include rem-fix(margin-bottom, 0);
+          @include rem-fix(margin-top, 0.1);
+          @include rem-fix(padding, 0.9, 0.8, 0.3, 0);
+          background-color:rgba(0, 0, 0, 0.9);
+          border-bottom:1px solid white;
+          color:#FFF;
+          font-size:0.9em;
+          &:focus{
+            border-bottom:none;
+            outline:none;
+          }
         }
-        span+span{
-          font-weight:500;
+        input[type='submit']{
+          @include span(last 10);
+          @include rem-fix(margin-bottom, 0);
+          @include rem-fix(margin-top, 0);
+          @include rem-fix(padding, 0.8);
+          border:1px solid #666;
+        }
+      }
+      fieldset:last-child{
+        @include span(last 4);
+        text-align:left;
+
+      }
+      &__link{
+        @include span(last 2);
+        font-size:1em;
+        line-height:1em;
+        a{
+          color:white;
+          text-decoration:underline;
+          &:hover{
+            color:#666;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+    &__menu{
+      background-color:rgba(0, 0, 0, 0.7);
+      @include span(12);
+      &__title{
+        @include span(first 4);
+        @include rem-fix(line-height, 6);
+        @include rem-fix(font-size, 3);
+
+
+        a{
+          display:block;
+          @include rem-fix(padding-left, 12);
+
+          background-image: url('../img/logo-header.png');
+          .svg & {
+              background-image: url('../img/logo-header.svg');
+
+          }
+          background-repeat: no-repeat;
+          @include rem-fix(background-position, 0, 1);
+
+          color:white;
+          text-transform: uppercase;
+          text-decoration:none;
+          span{
+
+            font-weight:100;
+          }
+          span+span{
+            font-weight:500;
+          }
+        }
+      }
+
+      &__nav{
+        @include span(last 8);
+        @include container;
+        text-align: right;
+        li{
+          display: inline-block;
+          a{
+            @include rem-fix(padding, 0, 2);
+            display:block;
+            @include rem-fix(font-size, 1.6);
+
+            color: #FFF;
+            text-transform:uppercase;
+            text-decoration:none;
+            line-height:60px;
+          }
+        }
+        li.log{
+          span{
+            color:white;
+            @include rem-fix(padding, 2, 1);
+            &:hover{
+              cursor: pointer;
+            }
+          }
         }
       }
     }
 
-    &__nav{
-      @include span(last 8);
-      @include container;
-      text-align: right;
-      li{
-        display: inline-block;
-        a{
-          @include rem-fix(padding, 0, 2);
-          display:block;
-          @include rem-fix(font-size, 1.6);
+    .js &{
+      position:fixed;
 
-          color: #FFF;
-          text-transform:uppercase;
-          text-decoration:none;
-          line-height:60px;
-        }
-      }
+    }
+    .js &__auth{
+      display: none;
     }
 
 

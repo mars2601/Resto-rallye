@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder {
         $this->command->info('Quote tables seeded!');
         $this->call('AlbumTableSeeder');
         $this->command->info('Album table seeded!');
-		$this->call('UserEventTableSeeder');
-        $this->command->info('UserEvent table seeded!');
+		$this->call('EventUserTableSeeder');
+        $this->command->info('EventUser table seeded!');
   		$this->call('PhotoTableSeeder');
         $this->command->info('Photo table seeded!');
 	}

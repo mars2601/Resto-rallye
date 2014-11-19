@@ -13,24 +13,27 @@
 
   <section class="reserve__do">
       <div class="reserve__do__infos">
-        <h3 class="reserve__do__infos__title">Réservation de: {{$rallye->title}}</h3>
-        <span class="reserve__do__infos__place"><span class="icon-location4"></span>{{$rallye->street}}&nbsp;{{$rallye->streetNumber}}</br>{{$rallye->town}}</span>
-        <span class="reserve__do__infos__date"><span class="icon-calendar2"></span>{{strftime("%A %d %B %G", strtotime($rallye->date))}}</span>
+        <h3 class="reserve__do__infos__title">{{$rallye->title}}</h3>
+      </div>
+      <div class="reserve__do__reserveHeader">
+        <span class="reserve__do__reserveHeader__place"><span class="icon-pin"></span>{{$rallye->street}}&nbsp;{{$rallye->streetNumber}}, {{$rallye->town}}</span>
+        <span class="reserve__do__reserveHeader__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($rallye->date))}}</span>
       </div>
     </br>
     </br>
-      <p>Mr/Mme {{$userLastName}},</p>
+      <p>Réservation de <strong>{{ucfirst(Auth::user()->firstName)}} {{ucfirst(Auth::user()->lastName)}}</strong></p>
     </br>
-      <p class="reserve__do__infos__nbPlace">Vous avez réserver {{$placeReserved}} places</p>
+      <p class="reserve__do__infos__nbPlace">Places réservées: <strong>{{$placeReserved}}</strong></p>
 
     </br>
 
       <div id="name">
-        <p class="reserve__do__infos__entreprise">Au nom de l'entreprise {{$entreprise}}</p>
-        <p>La personne de contact est {{$contactFirstName}} {{$contactLastName}}</p>
-        <p>Rue {{$street}} {{$streetNumber}}</p>
-        <p>{{$town}}</p>
-        <p>{{$telephone}}</p>
+        <h4>Personne de contact</h4>
+        <p><span class='icon-user'></span><strong>{{$contactFirstName}} {{$contactLastName}}</strong></p>
+        <p class="reserve__do__infos__entreprise"><span class='icon-office'></span><strong>{{$entreprise}}</strong></p>
+        <p class="adress"><span class='icon-directions'></span>{{$street}} {{$streetNumber}}</p>
+        <p class="adress"><span class='icon-pin'></span>{{$town}}</p>
+        <p class="adress"><span class='icon-phone'></span>{{$telephone}}</p>
       </div>
 
       @include('forms.rallyes.confirm')

@@ -21,6 +21,7 @@ class CreateRallyesTable extends Migration {
 			$table->tinyInteger('streetNumber');
 			$table->dateTime('date');
 			$table->string('place');
+			$table->string('placeAvailable');
 			$table->longText('description');
 			$table->timestamps();
 		});

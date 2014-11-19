@@ -1,6 +1,4 @@
 <?php
-
-
 class RallyeController extends BaseController {
 
   // public function __construct()
@@ -14,23 +12,51 @@ class RallyeController extends BaseController {
 
     $nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
     $lastRallyes = DB::table('rallyes')->where( 'date', '<', $date )->get();
+    // $eventUser = EventUser::where('rallye_id', $input['rallyeId'])
+
     return View::make('pages.rallyes', array( 'nextRallyes' => $nextRallyes, 'lastRallyes' => $lastRallyes ));
   }
-  public function show($id)
+  public function show($id, $dateStatus)
   {
     $rallye = Rallye::find($id);
+    if($dateStatus == 'p'){
+      $rallye->placeAvailable = 0;
+      $rallye->save();
+    }
     if(Auth::check())
     {
         $reserved_rallye = DB::table('eventuser')->where('user_id', '=', Auth::user()->id)->pluck('rallye_id');
-        return View::make('pages.showRallye', array( 'rallye' => $rallye, 'reserved_rallye' => $reserved_rallye ));
+        return View::make('pages.showRallye', array( 'rallye' => $rallye, 'dateStatus' => $dateStatus, 'reserved_rallye' => $reserved_rallye ));
     }else{
-      return View::make('pages.showRallye', array( 'rallye' => $rallye ));
+      return View::make('pages.showRallye', array( 'rallye' => $rallye, 'dateStatus' => $dateStatus ));
     }
   }
   public function reserve($id, $way)
   {
     $rallye = Rallye::find($id);
-    return View::make('pages.reserve', array( 'rallye' => $rallye, 'way' => $way ));
+    if (Auth::check()){
+      $eventuser = DB::table('eventuser')->where('rallye_id', $rallye->id)
+              ->where('user_id', Auth::user()->id)->first();
+      if($eventuser){
+        if($eventuser->rallye_id == $rallye->id){
+
+          //  l'utilisateur tente d'acéder a la page de réservation d'un évenement qu'il a déja réservé
+          $count = DB::table('eventuser')->where('user_id', '=', Auth::user()->id)->count();
+          if($way == 'y'){
+            return View::make('pages.reserve', array( 'eventuser' => $eventuser,'rallye' => $rallye, 'way' => $way ));
+          }else{
+            return Redirect::route('myReservation', array( 'eventuser' => $eventuser, 'count' => $count ));
+          }
+        }else{
+          return View::make('pages.reserve', array( 'rallye' => $rallye, 'way' => $way ));
+        }
+      }else{
+        return View::make('pages.reserve', array( 'rallye' => $rallye, 'way' => $way ));
+      }
+    }else{
+      return View::make('pages.reserve', array( 'rallye' => $rallye, 'way' => $way ));
+    }
+
   }
   public function confirm()
   {
@@ -83,6 +109,7 @@ class RallyeController extends BaseController {
                                                 ));
     }
   }
+
   public function storeReservation()
   {
     $input = Input::only('way',
@@ -100,50 +127,63 @@ class RallyeController extends BaseController {
     $way = $input['way'];
     if($way == 'y'){
       // modify an existing reservation
-      $userEvent = UserEvent::where('rallye_id', $input['rallyeId'])
+      $eventUser = EventUser::where('rallye_id', $input['rallyeId'])
                             ->where('user_id', Auth::user()->id)->firstOrFail();
-  
 
-      $userEvent->rallye_id = $input['rallyeId'];
-      $userEvent->user_id = Auth::user()->id;
-      $userEvent->entreprise = $input['entreprise'];
-      $userEvent->contactFirstName = $input['contactFirstName'];
-      $userEvent->contactLastName = $input['contactLastName'];
-      $userEvent->street = $input['street'];
-      $userEvent->streetNumber = $input['streetNumber'];
-      $userEvent->town = $input['town'];
-      $userEvent->telephone = $input['telephone'];
-
-      // dd($userEvent);
-
-      $userEvent->save();
-
+      $Rallye = Rallye::find($input['rallyeId']);
+      $Rallye->placeAvailable = $Rallye->placeAvailable + $eventUser->place;
+      $Rallye->placeAvailable = $Rallye->placeAvailable - $input['placeReserved'];
+      // Available place count
     }else{
       // Create a new reservation
 
       // [fr] Création d'une table pivot récupérant les infos d'un user, d'un évenement
       // et le nombre de place. Cette table fonctionne un peu comme un bon qui réserve
       // autant de place a l'évenement.
-      $userEvent = new UserEvent;
+      $eventUser = new EventUser;
 
-      $userEvent->rallye_id = $input['rallyeId'];
-      $userEvent->user_id = Auth::user()->id;
-      $userEvent->entreprise = $input['entreprise'];
-      $userEvent->contactFirstName = $input['contactFirstName'];
-      $userEvent->contactLastName = $input['contactLastName'];
-      $userEvent->street = $input['street'];
-      $userEvent->streetNumber = $input['streetNumber'];
-      $userEvent->town = $input['town'];
-      $userEvent->telephone = $input['telephone'];
-
-      $userEvent->save();
+      $Rallye = Rallye::find($input['rallyeId']);
+      $Rallye->placeAvailable = $Rallye->placeAvailable - $input['placeReserved'];
+      // Available place count
     }
 
-    return Redirect::route('showEvent', array( 'id' => $input['rallyeId']));
+
+
+    $eventUser->rallye_id = $input['rallyeId'];
+    $eventUser->user_id = Auth::user()->id;
+    $eventUser->entreprise = $input['entreprise'];
+    $eventUser->contactFirstName = $input['contactFirstName'];
+    $eventUser->contactLastName = $input['contactLastName'];
+    $eventUser->street = $input['street'];
+    $eventUser->streetNumber = $input['streetNumber'];
+    $eventUser->town = $input['town'];
+    $eventUser->telephone = $input['telephone'];
+    $eventUser->place = $input['placeReserved'];
+
+    $eventUser->save();
+    $Rallye->save();
+
+    return Redirect::route('showEvent', array( 'id' => $input['rallyeId'], 'dateStatus' => 'n'));
   }
+
   public function myReservation()
   {
-    $userEvent = DB::table('eventuser')->where('user_id', '=', Auth::user()->id)->get();
-    return View::make('pages.myReservation', array( 'userEvent' => $userEvent ));
+    $eventUser = EventUser::where('user_id', '=', Auth::user()->id)->get();
+    $count = EventUser::where('user_id', '=', Auth::user()->id)->count();
+    return View::make('pages.myReservation', array( 'eventUser' => $eventUser, 'count' => $count ));
+  }
+  public function delete($id)
+  {
+    $reservation = EventUser::where('rallye_id', '=', $id)->first();
+    $Rallye = Rallye::find($id);
+    $Rallye->placeAvailable = $Rallye->placeAvailable + $reservation->place;
+
+    $Rallye->save();
+    $reservation->delete();
+    $eventUser = EventUser::where('user_id', '=', Auth::user()->id)->get();
+    $count = EventUser::where('user_id', '=', Auth::user()->id)->count();
+
+
+    return View::make('pages.myReservation', array( 'eventUser' => $eventUser, 'count' => $count ));
   }
 }
