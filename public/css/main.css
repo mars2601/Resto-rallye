@@ -244,7 +244,7 @@ html {
 /* line 26, ../scss/modules/framework/main.scss */
 body {
   font-size: 1.6em;
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #000;
   line-height: 1.5; }
 
@@ -261,20 +261,20 @@ body {
     box-sizing: border-box; }
 
 /* line 32, ../scss/partials/_bases.scss */
-.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .events__next, .events__past__wrapper, .events__show, .reserve__do {
+.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .album__photos, .events__next, .events__past__wrapper, .events__show, .reserve__do {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
   max-width: 117rem; }
   /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
-  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .events__next:after, .events__past__wrapper:after, .events__show:after, .reserve__do:after {
+  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .album__photos:after, .events__next:after, .events__past__wrapper:after, .events__show:after, .reserve__do:after {
     content: " ";
     display: block;
     clear: both; }
 
 /* line 37, ../scss/partials/_bases.scss */
-.center-title, .gallery__photos__title, .events__next__title, .events__past__wrapper__title {
+.center-title, .gallery__photos__title, .album__photos__title, .events__next__title, .events__past__wrapper__title {
   font-size: 40px;
   font-size: 4rem;
   font-weight: 200;
@@ -1125,11 +1125,21 @@ form [class^="icon-"], form [class*=" icon-"] {
   line-height: 60px;
   line-height: 6rem; }
 
-/* line 10, ../scss/pages/_gallery.scss */
-.gallery__photos__title span {
+/* line 4, ../scss/pages/_gallery.scss */
+.gallery__photos__list, .album__photos__list {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  display: block; }
+  /* line 8, ../scss/pages/_gallery.scss */
+  .gallery__photos__list:after, .album__photos__list:after {
+    content: '';
+    display: block;
+    clear: both; }
+/* line 18, ../scss/pages/_gallery.scss */
+.gallery__photos__title span, .album__photos__title span {
   position: relative; }
-  /* line 12, ../scss/pages/_gallery.scss */
-  .gallery__photos__title span:after {
+  /* line 20, ../scss/pages/_gallery.scss */
+  .gallery__photos__title span:after, .album__photos__title span:after {
     content: "";
     position: absolute;
     bottom: -20px;
@@ -1138,24 +1148,24 @@ form [class^="icon-"], form [class*=" icon-"] {
     right: 0.7em;
     height: 1px;
     background-color: #000; }
-/* line 26, ../scss/pages/_gallery.scss */
-.gallery__photos__sort {
+/* line 34, ../scss/pages/_gallery.scss */
+.gallery__photos__sort, .album__photos__sort {
   text-align: center; }
-  /* line 28, ../scss/pages/_gallery.scss */
-  .gallery__photos__sort a {
+  /* line 36, ../scss/pages/_gallery.scss */
+  .gallery__photos__sort a, .album__photos__sort a {
     text-transform: uppercase;
     font-size: 24px;
     font-size: 2.4rem; }
-    /* line 31, ../scss/pages/_gallery.scss */
-    .gallery__photos__sort a:before {
+    /* line 39, ../scss/pages/_gallery.scss */
+    .gallery__photos__sort a:before, .album__photos__sort a:before {
       content: "|";
       padding: 1em; }
-    /* line 37, ../scss/pages/_gallery.scss */
-    .gallery__photos__sort a:first-child:before {
+    /* line 45, ../scss/pages/_gallery.scss */
+    .gallery__photos__sort a:first-child:before, .album__photos__sort a:first-child:before {
       content: "";
       padding: 0; }
-/* line 48, ../scss/pages/_gallery.scss */
-.gallery__photos__album__link {
+/* line 55, ../scss/pages/_gallery.scss */
+.gallery__photos__album__link, .album__photos__album__link {
   position: relative;
   margin-top: 30px;
   margin-top: 3rem;
@@ -1163,13 +1173,13 @@ form [class^="icon-"], form [class*=" icon-"] {
   float: left;
   margin-right: 2.5641%;
   overflow: hidden; }
-  /* line 54, ../scss/pages/_gallery.scss */
-  .gallery__photos__album__link--last {
+  /* line 61, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link--last, .album__photos__album__link--last {
     width: 31.62393%;
     float: right;
     margin-right: 0; }
-  /* line 60, ../scss/pages/_gallery.scss */
-  .gallery__photos__album__link__image {
+  /* line 67, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link__image, .album__photos__album__link__image {
     width: 100%;
     height: auto;
     -moz-transition: -moz-transform 0.35s;
@@ -1180,8 +1190,8 @@ form [class^="icon-"], form [class*=" icon-"] {
     -ms-transform: scale3d(1, 1, 1);
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1); }
-  /* line 69, ../scss/pages/_gallery.scss */
-  .gallery__photos__album__link__text {
+  /* line 76, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link__text, .album__photos__album__link__text {
     position: absolute;
     top: 0;
     right: 0;
@@ -1193,13 +1203,13 @@ form [class^="icon-"], form [class*=" icon-"] {
     transition: background-color 0.3s;
     padding: 2rem;
     overflow: hidden; }
-    /* line 80, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link__text__container {
+    /* line 87, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__container, .album__photos__album__link__text__container {
       overflow: hidden;
       z-index: 50;
       position: relative; }
-    /* line 88, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link__text__title {
+    /* line 95, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__title, .album__photos__album__link__text__title {
       font-size: 22px;
       font-size: 2.2rem;
       color: #FFF;
@@ -1207,8 +1217,8 @@ form [class^="icon-"], form [class*=" icon-"] {
       font-weight: 700;
       letter-spacing: 1px;
       position: relative; }
-      /* line 98, ../scss/pages/_gallery.scss */
-      .gallery__photos__album__link__text__title:after {
+      /* line 105, ../scss/pages/_gallery.scss */
+      .gallery__photos__album__link__text__title:after, .album__photos__album__link__text__title:after {
         content: "";
         display: block;
         position: relative;
@@ -1224,8 +1234,8 @@ form [class^="icon-"], form [class*=" icon-"] {
         -ms-transform: translate3d(-100%, 0, 0);
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0); }
-    /* line 112, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link__text__date {
+    /* line 119, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text__date, .album__photos__album__link__text__date {
       font-family: "chaparral-pro", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
       color: #C5C5C5;
       font-style: italic;
@@ -1240,8 +1250,8 @@ form [class^="icon-"], form [class*=" icon-"] {
       -ms-transform: translate3d(200%, 0, 0);
       -webkit-transform: translate3d(200%, 0, 0);
       transform: translate3d(200%, 0, 0); }
-    /* line 124, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link__text:after {
+    /* line 131, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link__text:after, .album__photos__album__link__text:after {
       content: "";
       background-color: rgba(0, 0, 0, 0.5);
       width: 300%;
@@ -1259,36 +1269,36 @@ form [class^="icon-"], form [class*=" icon-"] {
       -webkit-transform: rotate(-10deg) translate3d(0, -98%, 0);
       transform: rotate(-10deg) translate3d(0, -98%, 0);
       z-index: 10; }
-  /* line 139, ../scss/pages/_gallery.scss */
-  .gallery__photos__album__link:hover .gallery__photos__album__link__text {
+  /* line 146, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link:hover .gallery__photos__album__link__text, .album__photos__album__link:hover .gallery__photos__album__link__text, .gallery__photos__album__link:hover .album__photos__album__link__text, .album__photos__album__link:hover .album__photos__album__link__text {
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.75); }
-    /* line 143, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link:hover .gallery__photos__album__link__text:after {
+    /* line 150, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text:after, .album__photos__album__link:hover .gallery__photos__album__link__text:after, .gallery__photos__album__link:hover .album__photos__album__link__text:after, .album__photos__album__link:hover .album__photos__album__link__text:after {
       -moz-transform: rotate(-10deg) translate3d(0, -10%, 0);
       -ms-transform: rotate(-10deg) translate3d(0, -10%, 0);
       -webkit-transform: rotate(-10deg) translate3d(0, -10%, 0);
       transform: rotate(-10deg) translate3d(0, -10%, 0); }
-    /* line 147, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link:hover .gallery__photos__album__link__text__title:after {
+    /* line 154, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text__title:after, .album__photos__album__link:hover .gallery__photos__album__link__text__title:after, .gallery__photos__album__link:hover .album__photos__album__link__text__title:after, .album__photos__album__link:hover .album__photos__album__link__text__title:after {
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-    /* line 149, ../scss/pages/_gallery.scss */
-    .gallery__photos__album__link:hover .gallery__photos__album__link__text__date {
+    /* line 156, ../scss/pages/_gallery.scss */
+    .gallery__photos__album__link:hover .gallery__photos__album__link__text__date, .album__photos__album__link:hover .gallery__photos__album__link__text__date, .gallery__photos__album__link:hover .album__photos__album__link__text__date, .album__photos__album__link:hover .album__photos__album__link__text__date {
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
-  /* line 153, ../scss/pages/_gallery.scss */
-  .gallery__photos__album__link:hover .gallery__photos__album__link__image {
+  /* line 160, ../scss/pages/_gallery.scss */
+  .gallery__photos__album__link:hover .gallery__photos__album__link__image, .album__photos__album__link:hover .gallery__photos__album__link__image, .gallery__photos__album__link:hover .album__photos__album__link__image, .album__photos__album__link:hover .album__photos__album__link__image {
     -moz-transform: scale3d(1.5, 1.5, 1.5);
     -ms-transform: scale3d(1.5, 1.5, 1.5);
     -webkit-transform: scale3d(1.5, 1.5, 1.5);
     transform: scale3d(1.5, 1.5, 1.5); }
-/* line 162, ../scss/pages/_gallery.scss */
-.gallery__videos {
+/* line 169, ../scss/pages/_gallery.scss */
+.gallery__videos, .album__videos {
   height: 600px;
   background-color: #D8D8D8;
   position: relative;
@@ -1297,7 +1307,7 @@ form [class^="icon-"], form [class*=" icon-"] {
   padding-top: 100px;
   padding-top: 10rem; }
   /* line 109, ../scss/modules/framework/partials/_functionsmixins.scss */
-  .gallery__videos:before {
+  .gallery__videos:before, .album__videos:before {
     content: '';
     position: absolute;
     top: 0;
@@ -1308,8 +1318,8 @@ form [class^="icon-"], form [class*=" icon-"] {
     background-size: 100% 100%;
     display: block;
     background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L50 100 L100 0' fill='%23FFF'></path></svg>"); }
-  /* line 177, ../scss/pages/_gallery.scss */
-  .gallery__videos__title {
+  /* line 184, ../scss/pages/_gallery.scss */
+  .gallery__videos__title, .album__videos__title {
     font-size: 40px;
     font-size: 4rem;
     font-weight: 200;
@@ -1319,19 +1329,19 @@ form [class^="icon-"], form [class*=" icon-"] {
     padding: 5rem 0rem;
     position: relative;
     z-index: 9999; }
-  /* line 188, ../scss/pages/_gallery.scss */
-  .gallery__videos__video {
+  /* line 195, ../scss/pages/_gallery.scss */
+  .gallery__videos__video, .album__videos__video {
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0;
     position: relative; }
-    /* line 191, ../scss/pages/_gallery.scss */
-    .gallery__videos__video img {
+    /* line 198, ../scss/pages/_gallery.scss */
+    .gallery__videos__video img, .album__videos__video img {
       width: 100%;
       height: auto; }
-    /* line 196, ../scss/pages/_gallery.scss */
-    .gallery__videos__video figcaption {
+    /* line 203, ../scss/pages/_gallery.scss */
+    .gallery__videos__video figcaption, .album__videos__video figcaption {
       position: absolute;
       top: 0;
       right: 0;
@@ -1339,10 +1349,226 @@ form [class^="icon-"], form [class*=" icon-"] {
       bottom: 0;
       overflow: hidden; }
 
-/* line 207, ../scss/pages/_gallery.scss */
+/* line 214, ../scss/pages/_gallery.scss */
 .album {
   min-height: 700px;
   min-height: 70rem; }
+
+/* line 219, ../scss/pages/_gallery.scss */
+.thumbnail {
+  display: inline-block;
+  width: 23.07692%;
+  float: left;
+  margin-right: 2.5641%;
+  height: 200px;
+  margin-top: 25.64103px;
+  margin-top: 2.5641rem;
+  padding: 2px;
+  padding: 0.2rem;
+  -webkit-box-shadow: 0px 0px 1px #666;
+  box-shadow: 0px 0px 1px #666;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+/* line 230, ../scss/pages/_gallery.scss */
+.thumbnail:nth-child(4n+4) {
+  width: 23.07692%;
+  float: right;
+  margin-right: 0; }
+
+/*
+Colorbox Core Style:
+The following CSS is consistent between example themes and should not be altered.
+*/
+/* line 238, ../scss/pages/_gallery.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden; }
+
+/* line 239, ../scss/pages/_gallery.scss */
+#cboxWrapper {
+  max-width: none; }
+
+/* line 240, ../scss/pages/_gallery.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+/* line 241, ../scss/pages/_gallery.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left; }
+
+/* line 242, ../scss/pages/_gallery.scss */
+#cboxContent {
+  position: relative; }
+
+/* line 243, ../scss/pages/_gallery.scss */
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/* line 244, ../scss/pages/_gallery.scss */
+#cboxTitle {
+  margin: 0; }
+
+/* line 245, ../scss/pages/_gallery.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 246, ../scss/pages/_gallery.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer; }
+
+/* line 247, ../scss/pages/_gallery.scss */
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic; }
+
+/* line 248, ../scss/pages/_gallery.scss */
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+/* line 249, ../scss/pages/_gallery.scss */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
+
+/*
+User Style:
+Change the following styles to modify the appearance of Colorbox.  They are
+ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+/* line 256, ../scss/pages/_gallery.scss */
+#cboxOverlay {
+  background: #000;
+  opacity: 0.9;
+  filter: alpha(opacity=90); }
+
+/* line 257, ../scss/pages/_gallery.scss */
+#colorbox {
+  outline: 0; }
+
+/* line 258, ../scss/pages/_gallery.scss */
+#cboxContent {
+  margin-top: 20px;
+  background: #000; }
+
+/* line 259, ../scss/pages/_gallery.scss */
+.cboxIframe {
+  background: #fff; }
+
+/* line 260, ../scss/pages/_gallery.scss */
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc; }
+
+/* line 261, ../scss/pages/_gallery.scss */
+#cboxLoadedContent {
+  border: 5px solid #000;
+  background: #fff; }
+
+/* line 262, ../scss/pages/_gallery.scss */
+#cboxTitle {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #ccc; }
+
+/* line 263, ../scss/pages/_gallery.scss */
+#cboxCurrent {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  color: #ccc; }
+
+/* line 264, ../scss/pages/_gallery.scss */
+#cboxLoadingGraphic {
+  background: url(images/loading.gif) no-repeat center center; }
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+/* line 267, ../scss/pages/_gallery.scss */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  width: auto;
+  background: none; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+/* line 270, ../scss/pages/_gallery.scss */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0; }
+
+/* line 272, ../scss/pages/_gallery.scss */
+#cboxSlideshow {
+  position: absolute;
+  top: -20px;
+  right: 90px;
+  color: #fff; }
+
+/* line 273, ../scss/pages/_gallery.scss */
+#cboxPrevious {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -32px;
+  background: url(images/controls.png) no-repeat top left;
+  width: 28px;
+  height: 65px;
+  text-indent: -9999px; }
+
+/* line 274, ../scss/pages/_gallery.scss */
+#cboxPrevious:hover {
+  background-position: bottom left; }
+
+/* line 275, ../scss/pages/_gallery.scss */
+#cboxNext {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  margin-top: -32px;
+  background: url(images/controls.png) no-repeat top right;
+  width: 28px;
+  height: 65px;
+  text-indent: -9999px; }
+
+/* line 276, ../scss/pages/_gallery.scss */
+#cboxNext:hover {
+  background-position: bottom right; }
+
+/* line 277, ../scss/pages/_gallery.scss */
+#cboxClose {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  background: url(images/controls.png) no-repeat top center;
+  width: 38px;
+  height: 19px;
+  text-indent: -9999px; }
+
+/* line 278, ../scss/pages/_gallery.scss */
+#cboxClose:hover {
+  background-position: bottom center; }
 
 /* line 1, ../scss/pages/_events.scss */
 .events {

@@ -26,11 +26,11 @@
 
 
        	@foreach($albums as $album)
-       		   	<section class="gallery__photos__album">
+       		 <section class="gallery__photos__album">
 	    			<a href="galerie/{{$album['slug']}}" class="gallery__photos__album__link">
 
 	    				<img src="{{ $album['file']  }}" alt="" class="gallery__photos__album__link__image">
-	    				
+
 	    				<div class="gallery__photos__album__link__text">
 	    					<div class="gallery__photos__album__link__text__container">
 

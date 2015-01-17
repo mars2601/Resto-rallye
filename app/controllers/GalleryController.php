@@ -45,8 +45,6 @@ class GalleryController extends BaseController {
 
     public function show($slug)
     {
-
-
         $album = Album::whereSlug($slug)->first();
         $rallye = DB::table('rallyes')->where('album_id', '=', $album->id)->first();
         if($album){
