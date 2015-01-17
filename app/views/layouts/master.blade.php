@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="{{asset('css/main.css')}}">
 
         <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js')}}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ asset('js/vendor/jquery-1.11.1.min.js') }}"><\/script>')</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -62,13 +64,6 @@
             </div>
 
 
-            <!-- <div class="footer__social-network">
-                {{ Form::open(array('url' => 'foo/bar')) }}
-                    {{Form::text('email', 'example@gmail.com')}}
-                    {{Form::submit('S’inscrire')}}
-                {{ Form::close() }}
-            </div> -->
-
             <div class="footer__end-line">
                 <span class="footer__end-line__copyright">
                     ® 2014 Resto-Rallye
@@ -82,8 +77,7 @@
         </footer>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{ asset('js/vendor/jquery-1.11.1.min.js') }}"><\/script>')</script>
+
 
         <script src="{{ asset('js/plugins.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>

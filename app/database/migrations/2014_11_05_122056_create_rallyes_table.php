@@ -15,6 +15,7 @@ class CreateRallyesTable extends Migration {
 		Schema::create('rallyes', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('album_id');
 			$table->string('title');
 			$table->string('town');
 			$table->string('street');
@@ -23,6 +24,7 @@ class CreateRallyesTable extends Migration {
 			$table->string('place');
 			$table->string('placeAvailable');
 			$table->longText('description');
+			$table->string('price');
 			$table->timestamps();
 		});
 

@@ -102,7 +102,7 @@
 form{
 	[class^="icon-"], [class*=" icon-"]{
 		position: absolute;
-		@include rem-fix(margin-top, 3.6);
+		@include rem-fix(margin-top, 3.1);
 		@include rem-fix(margin-left, 0.7);
 		color:#555;
 	}

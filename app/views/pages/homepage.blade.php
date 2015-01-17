@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
     <section class="home__introduction">
       <div class="home__introduction__event">
           <div class="home__introduction__event__wrapper">
@@ -12,14 +11,12 @@
       </div>
       <img src="./img/logo.svg" alt="" class="home__introduction__logo">
     </section>
-    
 
     <section class="home__presentation">
       <h2 class="home__presentation__title">C'est quoi ?</h2>
       <p class="home__presentation__paragraph">Pourquoi toujours se limiter à un seul restaurant pour déguster l’entièreté d’un menu ? RestoRallye offre la possibilité à ses « gastronomades » de faire la connaissance en une seule soirée de plusieurs restaurants d’une localité. Pour les participants, c’est aussi l’occasion de découvrir une nouvelle région de manière originale et ludique.</p>
       <img src="../img/presentation.jpg" alt="" class="home__presentation__image">
     </section>
-
 
     <section class="home__interview">
       <h2 class="visuallyhidden">Témoignages</h2>

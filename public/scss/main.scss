@@ -18,7 +18,9 @@
         "partials/_header.scss",
         "partials/_layout.scss",
         "partials/_footer.scss",
-        "partials/_typography.scss";
+        "partials/_typography.scss",
+        "partials/_notifications.scss";
+
 // objects
 @import "partials/objects/_btn.scss",
         "partials/objects/_forms.scss",
@@ -34,6 +36,7 @@
 @import "pages/_admin.scss";
 @import "pages/_showRallye.scss";
 @import "pages/_reserve.scss";
+@import "pages/_myreservation.scss";
 
 // vendor
     // @import "partials/vendor/_bxslider.scss";

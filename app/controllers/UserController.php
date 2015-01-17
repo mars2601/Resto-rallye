@@ -13,26 +13,30 @@ class UserController extends BaseController {
   }
   public function store()
   {
-    $input = Input::only('firstName', 'lastName', 'email', 'password');
+      $input = Input::only('firstName', 'lastName', 'email', 'password');
 
-    // try
-    // {
-    //   $this->registerForm->validate($input); //Gestion des erreurs via Validation
-    // }
-    // catch (FormValidationException $e)
-    // {
-    //     return Redirect::back()->withInput()->withErrors($e->getErrors());
-    // }
-    $user = new User;
+      if(Input::has('register')){
 
-    $user->firstName = ucfirst($input['firstName']);
-    $user->lastName = ucfirst($input['lastName']);
-    $user->email = $input['email'];
-    $user->password = Hash::make($input['password']);
+      //  Validation Form
+      try
+      {
+        $this->registerForm->validate($input); 
+      }
+      catch (FormValidationException $e)
+      {
+          return Redirect::back()->withInput()->withErrors($e->getErrors());
+      }
+      $user = new User;
 
-    $user->save();
+      $user->firstName = ucfirst($input['firstName']);
+      $user->lastName = ucfirst($input['lastName']);
+      $user->email = $input['email'];
+      $user->password = Hash::make($input['password']);
 
-    Auth::login($user);
-    return Redirect::back();
+      $user->save();
+
+      Auth::login($user);
+      return Redirect::back();
+    }
   }
 }

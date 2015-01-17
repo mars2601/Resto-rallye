@@ -25,22 +25,17 @@
         <span class="events__show__infos__header__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($rallye->date))}}</span>
       </div>
         <p class="events__show__infos__paragraph">{{$rallye->description}}</p>
-
-
-
-
     @if ((Auth::check()) && ($reserved_rallye == $rallye->id) && ($dateStatus == 'n'))
       <p class="events__show__infos__reserve">Vous avez réservé cet évenement.</p><a class="events__show__link" href="{{ URL::route('myReservation') }}">Voir mes réservation</a>
       <!-- <p>Vous avez réservé cet évenement.</p> -->
     @elseif($dateStatus == 'n')
       <a class="events__show__link" href="{{ URL::route('reserve', array($rallye->id, 'new')) }}">Réserver l'évenement</a>
     @else
-      <a class="events__show__link" href="{{ URL::route('album', array($rallye->id, 'new')) }}">Voir l'album</a>
+      <a class="events__show__link" href="{{ URL::route('album', array($album->slug)) }}">Voir l'album</a>
     @endif
   </div>
 
   </section>
-
   <script>
   var percentColors = [
     "#000000"

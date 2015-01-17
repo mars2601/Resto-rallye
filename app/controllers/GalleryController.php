@@ -48,7 +48,7 @@ class GalleryController extends BaseController {
 
 
         $album = Album::whereSlug($slug)->first();
-
+        $rallye = DB::table('rallyes')->where('album_id', '=', $album->id)->first();
         if($album){
             $photos = $album->photos()->get();
             foreach ($photos as $key => $photo){
@@ -62,7 +62,8 @@ class GalleryController extends BaseController {
                     'name'          => $album->name,
                     'description'   => $album->description,
                     'photos'        => $photos,
-                    'photo_path'    => $this->path
+                    'photo_path'    => $this->path,
+                    'rallye'        => $rallye
                 ]
             );
         }

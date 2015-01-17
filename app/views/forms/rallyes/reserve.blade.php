@@ -1,65 +1,90 @@
 @if($way == 'y')
-  {{Form::model($rallye, array('route' => 'confirm', 'class' => 'reserve'))}}
-  <p>ooo</p>
+  {{Form::model($eventuser, array('route' => 'confirm', 'class' => 'reserve reserve-first-step'))}}
 @else
-  {{ Form::open(['route'=>'confirm' , 'class' => 'reserve']) }}
+  {{ Form::open(['route'=>'confirm' , 'class' => 'reserve reserve-first-step']) }}
 @endif
-<fieldset>
+
+<div class="reserve-first-step__check-i">
   {{Form::label('gift', 'Ceci est un cadeau: ')}}
-    {{Form::checkbox('gift','' )}}
+    {{Form::checkbox('gift')}}
+</div>
+<fieldset class="reserve-first-step__contact-person">
+  <div class="contact-person">
+    <legend class="reserve-first-step__contact-legend">Désigner une personne de contact</legend>
+  </div>
+  <div class="reserve-first-step__check-i">
+    {{Form::label('me', 'Me désigner moi-même comme personne de contact: ')}}
+      {{Form::checkbox('me','' )}}
+  </div>
+  <div class="contact-person">
+    <legend class="reserve-first-step__other-person-legend">Veuillez à remplir les champs suivants.</legend>
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-office'></span>
+    {{Form::label('entreprise', '*Société: ')}}
+      {{Form::text('entreprise' )}}
+      {{$errors->first('entreprise', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-user'></span>
+    {{Form::label('contactFirstName', '*Nom: ')}}
+      {{Form::text('contactFirstName' )}}
+      {{$errors->first('contactFirstName', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-mouse'></span>
+    {{Form::label('contactLastName', '*Prénom: ')}}
+      {{Form::text('contactLastName' )}}
+      {{$errors->first('contactLastName', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-mouse'></span>
+    {{Form::label('email', '*Email: ')}}
+    {{Form::text('email' )}}
+    {{$errors->first('email', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-directions'></span>
+    {{Form::label('street', '*Rue: ')}}
+      {{Form::text('street' )}}
+      {{$errors->first('street', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-compass'></span>
+    {{Form::label('streetNumber', '*Numéro: ')}}
+      {{Form::text('streetNumber' )}}
+      {{$errors->first('streetNumber', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-pin-alt'></span>
+    {{Form::label('town', '*Ville: ')}}
+      {{Form::text('town' )}}
+      {{$errors->first('town', '<span class="error">:message</span>')}}
+  </div>
+  <div class="reserve-first-step__text-i">
+    <span class='icon-phone'></span>
+    {{Form::label('telephone', '*Numéro de téléphone: ')}}
+      {{Form::text('telephone' )}}
+      {{$errors->first('telephone', '<span class="error">:message</span>')}}
+  </div>
 </fieldset>
 
-<fieldset>
-  <span class='icon-office'></span>
-  {{Form::label('id', 'Société: ')}}
-    {{Form::text('id','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-user'></span>
-  {{Form::label('contactFirstName', 'Nom: ')}}
-    {{Form::text('contactFirstName','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-mouse'></span>
-  {{Form::label('contactLastName', 'Prénom: ')}}
-    {{Form::text('contactLastName','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-directions'></span>
-  {{Form::label('street', 'Rue: ')}}
-    {{Form::text('street','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-compass'></span>
-  {{Form::label('streetNumber', 'Numéro: ')}}
-    {{Form::text('streetNumber','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-pin-alt'></span>
-  {{Form::label('town', 'Ville: ')}}
-    {{Form::text('town','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-phone'></span>
-  {{Form::label('telephone', 'Numéro de téléphone: ')}}
-    {{Form::text('telephone','' )}}
-</fieldset>
-<fieldset>
-  <span class='icon-users'></span>
-  {{Form::label('placeReserved', 'Nombre de personnes attendue: ')}}
-    {{Form::number('placeReserved','', ['min' => '0', 'max' => '10'] )}}
-</fieldset>
+<div class="reserve-first-step__text-i placeReserved">
+  {{Form::label('placeReserved', '*Nombre de personnes attendue: ')}}
+    {{Form::number('placeReserved')}}
+    {{$errors->first('placeReserved', '<span class="error">:message</span>')}}
+</div>
+
 
 {{ Form::hidden('idRallye', $rallye->id) }}
 {{ Form::hidden('way', $way) }}
-
-<fieldset>
+<div>
   @if ($way == 'y')
     <!-- Modify reservation -->
-    {{Form::submit('Modifier la réservation')}}
+    {{Form::submit('Modifier la réservation', ['name' => 'reserve'])}}
   @else
     <!-- New reservation -->
-    {{Form::submit('Réserver le Rallye')}}
+    {{Form::submit('Réserver le Rallye', ['name' => 'reserve'])}}
   @endif
-</fieldset>
+</div>
 {{ Form::close() }}

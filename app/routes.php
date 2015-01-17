@@ -40,7 +40,7 @@ Route::get(     '/rallyes',
                 )
 );
 
-Route::get('/rallye/{id}{dateStatus}', array(
+Route::get(     '/rallye/{id}{dateStatus}', array(
   'as' => 'showEvent',
   'uses' => 'RallyeController@show'
 ), function ($id, $dateStatus){

@@ -6,10 +6,19 @@
   *  et
   *  Register
   */
+
   background-color: #F9F8F8;
   &__do{
     @extend .wrapper;
     @include rem-fix(margin-top, 3);
+    @include rem-fix(min-height, 20);
+    .no-reserve-button{
+      float:left;
+    }
+    .no-reserve-paragraph{
+      font-size:1.5em;
+      @include rem-fix(padding, 2, 0);
+    }
     /* Login */
     &__login{
       width: 44%;
@@ -67,17 +76,45 @@
       border-bottom:1px solid black;
     }
     &__infos{
-        @include span(12);
+        @include span(12 first);
       &__title{
         font-size:2em;
         @include rem-fix(margin-bottom, 3);
+      }
+      &__infoHeader{
+        font-size:1.3em;
+      }
+      &__infoName{
+        &__info{
+          @include rem-fix(padding-left, 0.5);
+        }
+      }
+      &__infoHeader, &__infoName{
+        @include span(12 first);
+      }
+      &__form{
+        @include span(6 first);
+        &__alert{
+          @include rem-fix(padding, 1);
+          @include rem-fix(margin, 3, 0);
+          color:#a94442;
+          background: #f2dede;
+          border:1px solid #ebccd1;
+        }
+        input{
+          @include span(2 first);
+        }
+        input[type='submit']{
+          @include span(7 first);
+        }
+        label[for='confirmationCode']{
+          width:auto;
+        }
       }
 
       &__list{
         @include rem-fix(margin-top, 4);
         li{
-          @include rem-fix(padding, 2, 0, 3, 0);
-          @include rem-fix(min-height, 16);
           [class^="icon-"], [class*=" icon-"]{
             @include rem-fix(padding, 0.3, 0.5);
           }
@@ -108,15 +145,18 @@
       &__count{
         @include span(last 4);
         text-align:right;
-        font-size:1.2em;
+        font-size:1.4em;
         @include rem-fix(margin-top, -3);
         z-index: 1001;
         position: relative;
+        strong{
+          font-size:1.1em;
+          @include rem-fix(padding, 0, 0.5);
+        }
       }
     }
     /* Suscribe */
     &__suscribe{
-      @include span(6);
       @include rem-fix(padding-top, 2);
       input[type="submit"]{
         @include span(6);

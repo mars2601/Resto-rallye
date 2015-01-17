@@ -568,63 +568,107 @@ fieldset {
   margin: 0;
   padding: 0; }
 
-/* line 23, ../scss/partials/objects/_forms.scss */
+/* line 20, ../scss/partials/objects/_forms.scss */
 .header .login {
   width: 82.90598%;
   float: left;
   margin-right: 2.5641%; }
-  /* line 25, ../scss/partials/objects/_forms.scss */
+  /* line 22, ../scss/partials/objects/_forms.scss */
   .header .login label {
     display: inline-block;
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%; }
-  /* line 29, ../scss/partials/objects/_forms.scss */
+  /* line 26, ../scss/partials/objects/_forms.scss */
   .header .login input {
     width: 31.62393%;
     float: left;
     margin-right: 2.5641%;
     border: 1px solid black; }
-  /* line 33, ../scss/partials/objects/_forms.scss */
+  /* line 30, ../scss/partials/objects/_forms.scss */
   .header .login fieldset > span:first-child {
     display: none; }
 
 /* pour les champs ayant un icone */
-/* line 39, ../scss/partials/objects/_forms.scss */
+/* line 36, ../scss/partials/objects/_forms.scss */
 span + label + input {
   padding-left: 28px;
   padding-left: 2.8rem; }
 
-/* line 47, ../scss/partials/objects/_forms.scss */
-form.reserve {
-  width: 100%;
+/* line 43, ../scss/partials/objects/_forms.scss */
+.reserve-first-step {
+  width: 48.71795%;
   float: left;
-  margin-right: 2.5641%;
-  /*   label[for="streetNumber"]{
-    @include span(first 2);
-  }
-  input[name="streetNumber"]{
-    @include span(first 2);
-  } */ }
+  margin-right: 2.5641%; }
+  /* line 45, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step__contact-legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-bottom: 1rem; }
   /* line 49, ../scss/partials/objects/_forms.scss */
-  form.reserve label[for="gift"] {
-    width: 48.71795%;
+  .reserve-first-step__other-person-legend {
+    font-size: 1em;
+    color: #a94442;
+    margin-bottom: 10px;
+    margin-bottom: 1rem; }
+  /* line 54, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step__text-i {
+    clear: both;
+    height: 60px;
+    height: 6rem; }
+    /* line 57, ../scss/partials/objects/_forms.scss */
+    .reserve-first-step__text-i label {
+      width: 82.90598%;
+      float: left;
+      margin-right: 2.5641%;
+      font-size: 1em; }
+  /* line 62, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step__check-i {
+    width: 100%;
     float: left;
     margin-right: 2.5641%;
     margin-bottom: 20px;
     margin-bottom: 2rem; }
-  /* line 54, ../scss/partials/objects/_forms.scss */
-  form.reserve input[type="checkbox"] {
-    background-color: none;
+    /* line 65, ../scss/partials/objects/_forms.scss */
+    .reserve-first-step__check-i input {
+      background-color: none;
+      width: 14.52991%;
+      float: left;
+      margin-right: 2.5641%;
+      padding: 8px;
+      padding: 0.8rem;
+      margin-bottom: 0px;
+      margin-bottom: 0rem;
+      margin-top: 8px;
+      margin-top: 0.8rem; }
+    /* line 72, ../scss/partials/objects/_forms.scss */
+    .reserve-first-step__check-i label {
+      font-size: 1.1em;
+      width: auto;
+      display: inline-block; }
+  /* line 78, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step__contact-person {
+    background: #edeaea;
+    padding: 0px 10px;
+    padding: 0rem 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 10px 0px 30px 0px;
+    margin: 1rem 0rem 3rem 0rem;
+    padding-top: 10px;
+    padding-top: 1rem; }
+  /* line 87, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step .placeReserved label[for="placeReserved"] {
+    width: auto;
+    display: inline-block;
+    font-size: 1.2em; }
+  /* line 92, ../scss/partials/objects/_forms.scss */
+  .reserve-first-step .placeReserved input[name="placeReserved"] {
     width: 14.52991%;
     float: left;
-    margin-right: 2.5641%;
-    padding: 8px;
-    padding: 0.8rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem; }
+    margin-right: 2.5641%; }
 
-/* line 73, ../scss/partials/objects/_forms.scss */
+/* line 99, ../scss/partials/objects/_forms.scss */
 label {
   display: inline-block;
   width: 48.71795%;
@@ -632,9 +676,9 @@ label {
   margin-right: 2.5641%;
   font-size: 1.2em; }
 
-/* line 78, ../scss/partials/objects/_forms.scss */
+/* line 104, ../scss/partials/objects/_forms.scss */
 input {
-  width: 82.90598%;
+  width: 91.45299%;
   float: left;
   margin-right: 2.5641%;
   border-radius: 2px;
@@ -642,19 +686,19 @@ input {
   padding: 4px 8px;
   padding: 0.4rem 0.8rem;
   font-size: 1em;
-  margin-bottom: 15px;
-  margin-bottom: 1.5rem; }
-  /* line 85, ../scss/partials/objects/_forms.scss */
+  margin-bottom: 10px;
+  margin-bottom: 1rem; }
+  /* line 111, ../scss/partials/objects/_forms.scss */
   input:focus {
     outline: none;
     border: 1px solid black; }
 
-/* line 90, ../scss/partials/objects/_forms.scss */
+/* line 116, ../scss/partials/objects/_forms.scss */
 input[type="submit"] {
   font-size: 1em;
   border-radius: 2px; }
 
-/* line 94, ../scss/partials/objects/_forms.scss */
+/* line 120, ../scss/partials/objects/_forms.scss */
 input[type="submit"], .button, .events__show__link {
   background-color: none;
   width: 31.62393%;
@@ -685,7 +729,7 @@ input[type="submit"], .button, .events__show__link {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 );
   /* IE6-9 */ }
-  /* line 113, ../scss/partials/objects/_forms.scss */
+  /* line 139, ../scss/partials/objects/_forms.scss */
   input[type="submit"]:hover, .button:hover, .events__show__link:hover {
     background: #000000;
     /* Old browsers */
@@ -702,35 +746,35 @@ input[type="submit"], .button, .events__show__link {
     background: linear-gradient(to bottom, #000000 0%, #333333 100%);
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 );
-    /* IE6-9 */ }
+    /* IE6-9 */
+    cursor: pointer; }
 
-/* line 127, ../scss/partials/objects/_forms.scss */
+/* line 153, ../scss/partials/objects/_forms.scss */
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: #666; }
 
-/* line 130, ../scss/partials/objects/_forms.scss */
+/* line 156, ../scss/partials/objects/_forms.scss */
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #666;
   opacity: 1; }
 
-/* line 134, ../scss/partials/objects/_forms.scss */
+/* line 160, ../scss/partials/objects/_forms.scss */
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #666;
   opacity: 1; }
 
-/* line 138, ../scss/partials/objects/_forms.scss */
+/* line 164, ../scss/partials/objects/_forms.scss */
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #666; }
 
-/* line 142, ../scss/partials/objects/_forms.scss */
+/* line 168, ../scss/partials/objects/_forms.scss */
 span.error {
-  position: absolute;
-  top: 55px;
-  top: 5.5rem;
+  position: relative;
+  float: left;
   color: white;
   font-size: 0.8em;
   background: #ca3c3c;
@@ -860,8 +904,8 @@ span.error {
 /* line 103, ../scss/partials/objects/_icons.scss */
 form [class^="icon-"], form [class*=" icon-"] {
   position: absolute;
-  margin-top: 36px;
-  margin-top: 3.6rem;
+  margin-top: 31px;
+  margin-top: 3.1rem;
   margin-left: 7px;
   margin-left: 0.7rem;
   color: #555; }
@@ -1295,6 +1339,11 @@ form [class^="icon-"], form [class*=" icon-"] {
       bottom: 0;
       overflow: hidden; }
 
+/* line 207, ../scss/pages/_gallery.scss */
+.album {
+  min-height: 700px;
+  min-height: 70rem; }
+
 /* line 1, ../scss/pages/_events.scss */
 .events {
   background-color: #F9F8F8; }
@@ -1716,10 +1765,12 @@ form [class^="icon-"], form [class*=" icon-"] {
   *  Register
   */
   background-color: #F9F8F8; }
-  /* line 10, ../scss/pages/_reserve.scss */
+  /* line 11, ../scss/pages/_reserve.scss */
   .reserve__do {
     margin-top: 30px;
     margin-top: 3rem;
+    min-height: 200px;
+    min-height: 20rem;
     /* Login */
     /* Register */
     /* Si le user est logué, affichage des formulaires de réservation
@@ -1730,7 +1781,15 @@ form [class^="icon-"], form [class*=" icon-"] {
     */
     /* Infos */
     /* Suscribe */ }
-    /* line 14, ../scss/pages/_reserve.scss */
+    /* line 15, ../scss/pages/_reserve.scss */
+    .reserve__do .no-reserve-button {
+      float: left; }
+    /* line 18, ../scss/pages/_reserve.scss */
+    .reserve__do .no-reserve-paragraph {
+      font-size: 1.5em;
+      padding: 20px 0px;
+      padding: 2rem 0rem; }
+    /* line 23, ../scss/pages/_reserve.scss */
     .reserve__do__login {
       width: 44%;
       float: left;
@@ -1738,86 +1797,118 @@ form [class^="icon-"], form [class*=" icon-"] {
       height: 450px;
       height: 45rem;
       border-right: 1px solid black; }
-      /* line 20, ../scss/pages/_reserve.scss */
+      /* line 29, ../scss/pages/_reserve.scss */
       .reserve__do__login__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 26, ../scss/pages/_reserve.scss */
+    /* line 35, ../scss/pages/_reserve.scss */
     .reserve__do__register {
       width: 48.71795%;
       float: right;
       margin-right: 0; }
-      /* line 28, ../scss/pages/_reserve.scss */
+      /* line 37, ../scss/pages/_reserve.scss */
       .reserve__do__register__title {
         padding: 20px 0px;
         padding: 2rem 0rem; }
-    /* line 41, ../scss/pages/_reserve.scss */
+    /* line 50, ../scss/pages/_reserve.scss */
     .reserve__do__reserveHeader {
       width: 40.17094%;
       float: right;
       margin-right: 0; }
-      /* line 43, ../scss/pages/_reserve.scss */
+      /* line 52, ../scss/pages/_reserve.scss */
       .reserve__do__reserveHeader__place {
         width: 100%;
         float: left;
         margin-right: 2.5641%;
         font-size: 1.2em; }
-        /* line 46, ../scss/pages/_reserve.scss */
+        /* line 55, ../scss/pages/_reserve.scss */
         .reserve__do__reserveHeader__place span {
           padding: 10px 10px 10px 0px;
           padding: 1rem 1rem 1rem 0rem; }
-      /* line 50, ../scss/pages/_reserve.scss */
+      /* line 59, ../scss/pages/_reserve.scss */
       .reserve__do__reserveHeader__date {
         width: 100%;
         float: left;
         margin-left: 0;
         margin-right: 0;
         font-size: 1.2em; }
-        /* line 53, ../scss/pages/_reserve.scss */
+        /* line 62, ../scss/pages/_reserve.scss */
         .reserve__do__reserveHeader__date span {
           padding: 10px 10px 10px 0px;
           padding: 1rem 1rem 1rem 0rem; }
-    /* line 58, ../scss/pages/_reserve.scss */
+    /* line 67, ../scss/pages/_reserve.scss */
     .reserve__do p {
       padding: 2px 0px;
       padding: 0.2rem 0rem; }
-      /* line 60, ../scss/pages/_reserve.scss */
+      /* line 69, ../scss/pages/_reserve.scss */
       .reserve__do p [class^="icon-"], .reserve__do p [class*=" icon-"] {
         margin-right: 8px;
         margin-right: 0.8rem; }
-    /* line 64, ../scss/pages/_reserve.scss */
+    /* line 73, ../scss/pages/_reserve.scss */
     .reserve__do h4 {
       margin-bottom: 10px;
       margin-bottom: 1rem;
       padding: 5px;
       padding: 0.5rem;
       border-bottom: 1px solid black; }
-    /* line 69, ../scss/pages/_reserve.scss */
+    /* line 78, ../scss/pages/_reserve.scss */
     .reserve__do__infos {
       width: 100%;
       float: left;
-      margin-left: 0;
-      margin-right: 0; }
-      /* line 71, ../scss/pages/_reserve.scss */
+      margin-right: 2.5641%; }
+      /* line 80, ../scss/pages/_reserve.scss */
       .reserve__do__infos__title {
         font-size: 2em;
         margin-bottom: 30px;
         margin-bottom: 3rem; }
-      /* line 76, ../scss/pages/_reserve.scss */
+      /* line 84, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__infoHeader {
+        font-size: 1.3em; }
+      /* line 88, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__infoName__info {
+        padding-left: 5px;
+        padding-left: 0.5rem; }
+      /* line 92, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__infoHeader, .reserve__do__infos__infoName {
+        width: 100%;
+        float: left;
+        margin-right: 2.5641%; }
+      /* line 95, ../scss/pages/_reserve.scss */
+      .reserve__do__infos__form {
+        width: 48.71795%;
+        float: left;
+        margin-right: 2.5641%; }
+        /* line 97, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__form__alert {
+          padding: 10px;
+          padding: 1rem;
+          margin: 30px 0px;
+          margin: 3rem 0rem;
+          color: #a94442;
+          background: #f2dede;
+          border: 1px solid #ebccd1; }
+        /* line 104, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__form input {
+          width: 14.52991%;
+          float: left;
+          margin-right: 2.5641%; }
+        /* line 107, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__form input[type='submit'] {
+          width: 57.26496%;
+          float: left;
+          margin-right: 2.5641%; }
+        /* line 110, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__form label[for='confirmationCode'] {
+          width: auto; }
+      /* line 115, ../scss/pages/_reserve.scss */
       .reserve__do__infos__list {
         margin-top: 40px;
         margin-top: 4rem; }
-        /* line 78, ../scss/pages/_reserve.scss */
-        .reserve__do__infos__list li {
-          padding: 20px 0px 30px 0px;
-          padding: 2rem 0rem 3rem 0rem;
-          min-height: 160px;
-          min-height: 16rem; }
-          /* line 81, ../scss/pages/_reserve.scss */
-          .reserve__do__infos__list li [class^="icon-"], .reserve__do__infos__list li [class*=" icon-"] {
-            padding: 3px 5px;
-            padding: 0.3rem 0.5rem; }
-        /* line 85, ../scss/pages/_reserve.scss */
+        /* line 118, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__list li [class^="icon-"], .reserve__do__infos__list li [class*=" icon-"] {
+          padding: 3px 5px;
+          padding: 0.3rem 0.5rem; }
+        /* line 122, ../scss/pages/_reserve.scss */
         .reserve__do__infos__list a {
           width: 14.52991%;
           float: right;
@@ -1827,15 +1918,15 @@ form [class^="icon-"], form [class*=" icon-"] {
           margin-top: 0rem;
           margin-bottom: 10px;
           margin-bottom: 1rem; }
-        /* line 91, ../scss/pages/_reserve.scss */
+        /* line 128, ../scss/pages/_reserve.scss */
         .reserve__do__infos__list li + li {
           border-top: 1px solid black; }
-      /* line 95, ../scss/pages/_reserve.scss */
+      /* line 132, ../scss/pages/_reserve.scss */
       .reserve__do__infos__rallye {
         width: 31.62393%;
         float: left;
         margin-right: 2.5641%; }
-      /* line 98, ../scss/pages/_reserve.scss */
+      /* line 135, ../scss/pages/_reserve.scss */
       .reserve__do__infos__contact {
         width: 14.52991%;
         float: left;
@@ -1845,29 +1936,73 @@ form [class^="icon-"], form [class*=" icon-"] {
         left: 30%;
         padding: 10px;
         padding: 1rem; }
-        /* line 104, ../scss/pages/_reserve.scss */
+        /* line 141, ../scss/pages/_reserve.scss */
         .reserve__do__infos__contact p {
           display: block; }
-      /* line 108, ../scss/pages/_reserve.scss */
+      /* line 145, ../scss/pages/_reserve.scss */
       .reserve__do__infos__count {
         width: 31.62393%;
         float: right;
         margin-right: 0;
         text-align: right;
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin-top: -30px;
         margin-top: -3rem;
         z-index: 1001;
         position: relative; }
-    /* line 118, ../scss/pages/_reserve.scss */
+        /* line 152, ../scss/pages/_reserve.scss */
+        .reserve__do__infos__count strong {
+          font-size: 1.1em;
+          padding: 0px 5px;
+          padding: 0rem 0.5rem; }
+    /* line 159, ../scss/pages/_reserve.scss */
     .reserve__do__suscribe {
-      width: 48.71795%;
-      float: left;
-      margin-right: 2.5641%;
       padding-top: 20px;
       padding-top: 2rem; }
-      /* line 121, ../scss/pages/_reserve.scss */
+      /* line 161, ../scss/pages/_reserve.scss */
       .reserve__do__suscribe input[type="submit"] {
         width: 48.71795%;
         float: left;
         margin-right: 2.5641%; }
+
+/* line 1, ../scss/pages/_myreservation.scss */
+.myreservation {
+  display: block;
+  border-bottom: 1px solid black;
+  overflow: auto;
+  margin-bottom: 10px;
+  margin-bottom: 1rem; }
+  /* line 6, ../scss/pages/_myreservation.scss */
+  .myreservation__header {
+    width: 100%;
+    float: left;
+    margin-right: 2.5641%;
+    background-color: black;
+    color: white;
+    padding: 0px 10px;
+    padding: 0rem 1rem;
+    font-size: 1.2em; }
+  /* line 13, ../scss/pages/_myreservation.scss */
+  .myreservation__contact {
+    padding: 0px 10px;
+    padding: 0rem 1rem;
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-top: 1rem; }
+  /* line 19, ../scss/pages/_myreservation.scss */
+  .myreservation__adress {
+    padding: 0px 10px;
+    padding: 0rem 1rem;
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    margin-bottom: 1rem; }
+  /* line 25, ../scss/pages/_myreservation.scss */
+  .myreservation__info {
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.8); }

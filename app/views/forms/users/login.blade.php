@@ -13,7 +13,7 @@
         {{$errors->first('password', '<span class="error">:message</span>')}}
     </fieldset>
     <fieldset>
-      {{Form::submit('Se connecter')}}
+      {{Form::submit('Se connecter', ['name' => 'login'])}}
     </fieldset>
 </form>
 {{ Form::close() }}

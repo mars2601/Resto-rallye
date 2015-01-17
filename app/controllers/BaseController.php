@@ -18,4 +18,14 @@ class BaseController extends Controller {
 		}
 	}
 
+	public function sendMail($mail, $data, $receiverMail, $receiverName, $subject)
+	{
+		// send Email
+		// call the function with this method -> App::make('BaseController')->sendMail($mail, $data, $receiverMail, $receiverName, $subject);
+		Mail::send($mail, $data, function($message) use ($receiverMail, $receiverName, $subject) {
+			$message->to($receiverMail, $receiverName)
+			->subject($subject);
+		});
+	}
+
 }

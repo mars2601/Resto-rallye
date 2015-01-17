@@ -14,25 +14,29 @@ class AuthController extends BaseController {
   public function login()
   {
     $user = Input::only('email', 'password');
-    try
-    {
-      $this->loginForm->validate($user); //Gestion des erreurs via Validation
-    }
-    catch (FormValidationException $e)
-    {
-        return Redirect::back()->withInput()->withErrors($e->getErrors());
-    }
 
-    $user = array(
-      'email' => Input::get('email'),
-      'password' => Input::get('password')
-        );
+    if(Input::has('login')){
 
-    if (Auth::attempt($user)) {
-      return Redirect::back();
-    }else{
-      dd('aie');
-      // log not found -> redirect
+      try
+      {
+        $this->loginForm->validate($user); //Gestion des erreurs via Validation
+      }
+      catch (FormValidationException $e)
+      {
+          return Redirect::back()->withInput()->withErrors($e->getErrors());
+      }
+
+      $user = array(
+        'email' => Input::get('email'),
+        'password' => Input::get('password')
+          );
+
+      if (Auth::attempt($user)) {
+        return Redirect::back();
+      }else{
+        dd('aie');
+        // log not found -> redirect
+      }
     }
   }
   public function logout(){

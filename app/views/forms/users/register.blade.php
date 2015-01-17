@@ -4,27 +4,27 @@
     <span class='icon-user'></span>
     {{Form::label('firstName', 'Nom: ')}}
     {{Form::text('firstName','' )}}
-      <!-- {{$errors->first('firstName', '<span class="error">:message</span>')}} -->
+      {{$errors->first('firstName', '<span class="error">:message</span>')}}
   </fieldset>
   <fieldset>
     <span class='icon-mouse'></span>
     {{Form::label('lastName', 'Prénom: ')}}
     {{Form::text('lastName','' )}}
-      <!-- {{$errors->first('lastName', '<span class="error">:message</span>')}} -->
+      {{$errors->first('lastName', '<span class="error">:message</span>')}}
   </fieldset>
   <fieldset>
     <span class='icon-mail'></span>
     {{Form::label('email', 'Email: ')}}
     {{Form::email('email','' )}}
-      <!-- {{$errors->first('email', '<span class="error">:message</span>')}} -->
+      {{$errors->first('emailRegister', '<span class="error">:message</span>')}}
   </fieldset>
   <fieldset>
     <span class='icon-lock'></span>
     {{Form::label('password', 'Mot de passe: ')}}
     {{Form::password('password','' )}}
-      <!-- {{$errors->first('password', '<span class="error">:message</span>')}} -->
+      {{$errors->first('passwordRegister', '<span class="error">:message</span>')}}
   </fieldset>
   <fieldset>
-    {{Form::submit('S\'enregistrer')}}
+    {{Form::submit('S\'enregistrer', ['name' => 'register'])}}
   </fieldset>
 {{ Form::close() }}

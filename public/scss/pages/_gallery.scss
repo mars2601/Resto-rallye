@@ -13,7 +13,7 @@
 					content: "";
 					position: absolute;
 					@include rem-fix(bottom, -2);
-				
+
 					left: 0.7em;
 					right: 0.7em;
 					height: 1px;
@@ -31,7 +31,7 @@
 				&:before{
 					content: "|";
 					padding: 1em;
-			
+
 				}
 				&:first-child{
 					&:before{
@@ -44,7 +44,7 @@
 		}
 
 		&__album{
-			
+
 			&__link{
 				position: relative;
 				@include rem-fix(margin-top, 3);
@@ -63,22 +63,22 @@
 
 					@include transition(transform 0.35s);
 					@include transform(scale3d(1,1,1));;
-	
+
 				}
-				
+
 				&__text{
 					position: absolute;
 					top: 0;
 					right: 0;
 					left: 0;
 					bottom: 0;
-					@include transition(background-color .3s);	
-					
+					@include transition(background-color .3s);
+
 					padding: 2rem;
 					overflow: hidden;
 
 					&__container{
-						
+
 						overflow: hidden;
 						z-index: 50;
 						position: relative;
@@ -86,7 +86,7 @@
 					}
 
 					&__title{
-											
+
 
 						@include rem-fix(font-size, 2.2);
 						color: #FFF;
@@ -136,9 +136,9 @@
 					}
 				}
 
-				&:hover &__text {				
+				&:hover &__text {
 					background-color: #000;
-					background-color: rgba(0,0,0,.75);	
+					background-color: rgba(0,0,0,.75);
 
 					&:after{
 						@include transform(rotate(-10deg) translate3d(0,-10%,0));
@@ -147,7 +147,7 @@
 					&__title:after{ @include transform(translate3d(0,0,0)); }
 
 					&__date{ @include transform(translate3d(0,0,0)); }
-					
+
 				}
 
 				&:hover &__image{
@@ -190,7 +190,7 @@
 			position: relative;
 			img{
 				width : 100%;
-				height : auto;	
+				height : auto;
 			}
 
 			figcaption{
@@ -201,10 +201,9 @@
 				bottom: 0;
 				overflow: hidden;
 			}
-
-
-
 		}
-		
 	}
+}
+.album{
+	@include rem-fix(min-height, 70);
 }

@@ -16,16 +16,18 @@ class EventUserTableSeeder extends Seeder {
         'place'              => '4',
         'entreprise'         => 'Electrabel',
 
-
         // contact person infos
 
         'contactFirstName'   => 'Jean',
         'contactLastName'    => 'Bon',
+        'email'              => 'jb@hotmail.com',
         'street'             => 'De la croix',
         'streetNumber'       => '239',
         'town'               => 'Ensival',
-        'telephone'          => '0479934297'
+        'telephone'          => '0479934297',
 
+        'confirmationCode'   => '2',
+        'confirmation'       =>  true
         ]);
   }
 }

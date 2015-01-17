@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('content')
 <section class="reserve">
   <div class="reserve__title big-title">

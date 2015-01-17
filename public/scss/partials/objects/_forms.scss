@@ -17,9 +17,6 @@ fieldset {
     padding: 0;
 }
 
-fieldset{
-}
-
 .header .login{
   @include span(10);
   label{
@@ -40,33 +37,62 @@ span+label+input{
  @include rem-fix(padding-left, 2.8);
 }
 
-form.register{
 
-}
 
-form.reserve{
-  @include span(first 12);
-    label[for="gift"]{
-      @include span(first 6);
+
+.reserve-first-step{
+  @include span(first 6);
+  &__contact-legend{
+    font-size:1.5em;
+    @include rem-fix(margin-bottom, 1);
+  }
+  &__other-person-legend{
+    font-size:1em;
+    color:#a94442;
+    @include rem-fix(margin-bottom, 1);
+  }
+  &__text-i{
+    clear:both;
+    @include rem-fix(height, 6);
+    label{
+      @include span(first 10);
+      font-size:1em;
+    }
+  }
+  &__check-i{
+    @include span(first 12);
     @include rem-fix(margin-bottom, 2);
-
+    input{
+      background-color:none;
+      @include span(first 2);
+      @include rem-fix(padding, 0.8);
+      @include rem-fix(margin-bottom, 0);
+      @include rem-fix(margin-top, 0.8);
+    }
+    label{
+      font-size:1.1em;
+      width:auto;
+      display:inline-block;
+    }
   }
-  input[type="checkbox"]{
-    background-color:none;
-    @include span(2);
-    @include rem-fix(padding, 0.8);
-    @include rem-fix(margin-bottom, 0);
+  &__contact-person{
+    background:#edeaea;
+    @include rem-fix(padding, 0, 1);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    @include rem-fix(margin, 1, 0, 3, 0);
+    @include rem-fix(padding-top, 1);
   }
-/*   label[for="streetNumber"]{
-  @include span(first 2);
-}
-input[name="streetNumber"]{
-  @include span(first 2);
-} */
-
-}
-
-form.confirm{
+  .placeReserved{
+    label[for="placeReserved"]{
+      width:auto;
+      display:inline-block;
+      font-size:1.2em;
+    }
+    input[name="placeReserved"]{
+      @include span(first 2);
+    }
+  }
 
 }
 
@@ -76,12 +102,12 @@ label{
   font-size:1.2em;
 }
 input{
-  @include span(first 10);
+  @include span(first 11);
   border-radius:2px;
   border:1px solid #666;
   @include rem-fix(padding, 0.4, 0.8);
   font-size:1em;
-  @include rem-fix(margin-bottom, 1.5);
+  @include rem-fix(margin-bottom, 1);
   &:focus{
     outline:none;
     border:1px solid black;
@@ -119,7 +145,7 @@ input[type="submit"], .button{
     background: -ms-linear-gradient(top,  #000000 0%,#333333 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #000000 0%,#333333 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
-
+    cursor:pointer;
   }
 }
 
@@ -140,8 +166,8 @@ input[type="submit"], .button{
 }
 
 span.error{
-  position: absolute;
-  @include rem-fix(top, 5.5);
+  position: relative;
+  float:left;
   color:white;
   font-size:0.8em;
   background: rgb(202, 60, 60);
