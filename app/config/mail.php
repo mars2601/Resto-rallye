@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'host' => 'smtp.gmail.com',
+	'host' => 'smtp-mail.outlook.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'pirnay.m@gmail.com', 'name' => 'mars'),
+	'from' => array('address' => 'marcel-test@hotmail.com', 'name' => 'mars'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'pirnay.m@gmail.com',
+	'username' => 'marcel-test@hotmail.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'mars26011993',
+	'password' => 'test12123',
 
 	/*
 	|--------------------------------------------------------------------------

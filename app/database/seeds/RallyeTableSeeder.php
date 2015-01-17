@@ -12,7 +12,7 @@ class RallyeTableSeeder extends Seeder {
     DB::table('rallyes')->delete();
     Rallye::create([
         'title'           => 'Découverte de la cuisine moléculaire',
-        'album_id'        =>  '',
+        'album_id'        =>  '2',
         'town'            => 'Bruxelles',
         'street'          => 'Rue de la loi',
         'streetNumber'    => '16',
