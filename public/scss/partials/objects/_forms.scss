@@ -101,7 +101,7 @@ label{
   @include span(first 6);
   font-size:1.2em;
 }
-input{
+input, textarea{
   @include span(first 11);
   border-radius:2px;
   border:1px solid #666;

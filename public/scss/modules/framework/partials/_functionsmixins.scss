@@ -105,7 +105,7 @@
 // Génération de triangle SVG
 ////////////////////////////////////////////////////////////////////////////////////
 
-@mixin triangle-svg( $color: FFF, $height: 10, $direction: bottom-left,$position: top, $pseudoElement: after ){
+@mixin triangle-svg( $color: F9F9F9, $height: 10, $direction: bottom-left,$position: top, $pseudoElement: after ){
   &:#{$pseudoElement}{
   content: '';
   position:absolute;

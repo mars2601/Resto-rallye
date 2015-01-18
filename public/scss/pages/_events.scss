@@ -103,7 +103,7 @@
   &__past{
     background-color:rgba(0, 0, 0, .2);
     position:relative;
-    @include triangle-svg(  $color: FFF,
+    @include triangle-svg(  $color: F9F9F9,
                             $height: 10,
                             $direction: top-left,
                             $position: top,

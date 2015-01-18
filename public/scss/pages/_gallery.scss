@@ -15,19 +15,6 @@
 
 			@extend .center-title;
 
-			span{
-				position: relative;
-				&:after{
-					content: "";
-					position: absolute;
-					@include rem-fix(bottom, -2);
-
-					left: 0.7em;
-					right: 0.7em;
-					height: 1px;
-					background-color: #000;
-				}
-			}
 		}
 
 
@@ -174,7 +161,7 @@
 
 		@include rem-fix(margin-top, 6);
 		@include rem-fix(padding-top, 10);
-        @include triangle-svg(  $color: FFF,
+        @include triangle-svg(  $color: F9F9F9,
                                 $height: 10,
                                 $direction: bottom-center,
                                 $position: top,

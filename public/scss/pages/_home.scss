@@ -1,6 +1,6 @@
 .home{
 	&__introduction{
-		
+
 		background-image: url('../img/head.jpg');
 		background-size:cover;
 		position:relative;
@@ -56,7 +56,7 @@
 			height: auto;
 			position:absolute;
 			@include rem-fix(bottom, (10/2)-($logo-width/2));
-			
+
 			z-index:999;
 			left:50%;
 			@include rem-fix(margin-left, -($logo-width/2));
@@ -65,7 +65,7 @@
 			@include rem-fix(padding, 1);
 
 		}
-        @include triangle-svg(  $color: FFF,
+        @include triangle-svg(  $color: F9F9F9,
                                 $height: 10,
                                 $direction: bottom-left,
                                 $position: bottom,
@@ -101,15 +101,15 @@
 		background-image: url('../img/interview.png');
 		background-size: cover;
 		background-position: 0 -100px;
-		
+
 		position:relative;
-        @include triangle-svg(  $color: FFF,
+        @include triangle-svg(  $color: F9F9F9,
                                 $height: 10,
                                 $direction: top-right,
                                 $position: top,
                                 $pseudoElement: before );
 
-        @include triangle-svg(  $color: FFF,
+        @include triangle-svg(  $color: F9F9F9,
                                 $height: 10,
                                 $direction: bottom-left,
                                 $position: bottom,
@@ -147,7 +147,7 @@
 					left: 0;
 					content: "«";
 				}
-				&:after{					
+				&:after{
 					@include rem-fix(bottom, -2);
 					right: 0;
 					content: "»";

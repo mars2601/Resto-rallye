@@ -1,0 +1,52 @@
+.contact{
+  &--wrapper{
+    @extend .wrapper;
+  }
+  &__subtitle{
+    @extend .center-title;
+    span{
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        @include rem-fix(bottom, -2);
+        left: 0.7em;
+        right: 0.7em;
+        height: 1px;
+        background-color: #000;
+      }
+    }
+  }
+}
+
+
+#map-canvas{
+  display:block;
+  height:500px;
+  width:100%;
+  @include triangle-svg(  $color: F9F9F9,
+                          $height: 10,
+                          $direction: top-left,
+                          $position: top,
+                          $pseudoElement: before );
+
+  @include triangle-svg(  $color: F9F9F9,
+                          $height: 10,
+                          $direction: bottom-right,
+                          $position: bottom,
+                          $pseudoElement: after );
+  &:after{
+    z-index:1000;
+  }
+  &:before{
+    z-index:1000;
+  }
+}
+
+.contact-form{
+  @include span(first 8);
+  display:block;
+  float:none;
+  margin: 0 auto;
+  @include rem-fix(padding, 4, 0, 1, 0);
+}
