@@ -18,11 +18,11 @@
 
     	<section class="gallery__photos">
     			<h3 class="gallery__photos__title"><span>Photos</span></h3>
-    			<div class="gallery__photos__sort">
+    			<!-- <div class="gallery__photos__sort">
     				<a href="#">Tout</a>
     				<a href="#">évenements</a>
     				<a href="#">Thèmes</a>
-    			</div>
+    			</div> -->
 
 
        	@foreach($albums as $album)
@@ -30,7 +30,7 @@
 	    			<a href="galerie/{{$album['slug']}}" class="gallery__photos__album__link">
 
 	    				<img src="{{ $album['file']  }}" alt="" class="gallery__photos__album__link__image">
-	    				
+
 	    				<div class="gallery__photos__album__link__text">
 	    					<div class="gallery__photos__album__link__text__container">
 

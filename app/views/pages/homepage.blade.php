@@ -3,12 +3,17 @@
 @section('content')
     <section class="home__introduction">
       <div class="home__introduction__event">
+        @foreach($nextRallyes as $next)
           <div class="home__introduction__event__wrapper">
-            <h2 class="home__introduction__event__wrapper__title">Prochain évenement au centre de Liège</h2>
-            <time datetime="2014-10-22" class="home__introduction__event__wrapper__date">Vendredi 22 octobre 2014</time>
-            <a href="" class="home__introduction__event__wrapper__link">Voir l'événement</a>
+            <h2 class="home__introduction__event__wrapper__title">{{$next->title}}</h2>
+            <time datetime="2014-10-22" class="home__introduction__event__wrapper__date"><?php $data = new Date($next->date); ?>{{$data->format('l j F Y');}}</time>
+            <a href="{{ URL::route('showEvent', array($next->id, 'n')) }}" class="home__introduction__event__wrapper__link">Voir l'événement</a>
           </div>
+
+          @endforeach
+
       </div>
+
       <img src="./img/logo.svg" alt="" class="home__introduction__logo">
     </section>
 
@@ -29,7 +34,27 @@
 
 
     <section class="home__last-events">
-      <h2 class="home__last-events">Nos derniers événements</h2>
+      <h2 class="home__last-events"></h2>
 
+    </section>
+    <section class="events__past events__past--homepage">
+      <div class="events__past__wrapper">
+        <h2 class="home__presentation__title">Nos derniers événements</h2>
+        <ol class="events__past__wrapper__list">
+          @foreach($rallyes as $last)
+          <li class="events__past__wrapper__list__item">
+            <a class="events__past__wrapper__list__item__link events__past--homepage--item" href="{{ URL::route('showEvent', array($last->id, 'p')) }}">
+              <span class="events__past__wrapper__list__item__link__goto"><span class="icon-plus"></span></span>
+              <img src="../img/gal_1.png" alt="alt" class="events__past__wrapper__list__item__link__image"/>
+              <div class="events__past__wrapper__list__item__link__infos">
+                <h4 class="events__past__wrapper__list__item__link__infos__title">{{$last->title}}</h4>
+                <span class="events__past__wrapper__list__item__link__infos__place"><span class="icon-pin"></span>{{$last->town}}</span>
+                <span class="events__past__wrapper__list__item__link__infos__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($last->date))}}</span>
+              </div>
+            </a>
+          </li>
+          @endforeach
+        </ol>
+      </div>
     </section>
 @stop

@@ -13,9 +13,13 @@ class RallyeController extends BaseController {
   {
     $date = date('Y-m-d H:i:s');
 
-    // Create two different variables with the next Rallyes, and with the previous ones.
+    // Create two different variables with the next Rallyes and with the previous ones.
     $nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
     $lastRallyes = DB::table('rallyes')->where( 'date', '<', $date )->get();
+
+    foreach($nextRallyes as $next){
+      $dateNext = new Date($next->date);
+    }
 
     return View::make('pages.rallyes', array( 'nextRallyes' => $nextRallyes, 'lastRallyes' => $lastRallyes ));
   }
@@ -166,12 +170,10 @@ class RallyeController extends BaseController {
               'rallyeStreetNumber' => $rallye->streetNumber,
               'reservationPrice'  => $rallyePricesReservation
             ];
-
+            // Ask the send mail method og basController
             App::make('BaseController')->sendMail('emails.rallye.gift', $mailData,  $receiverMail, $receiverName, 'Cadeau: Resto-Rallye ');
 
           }
-
-
 
           // Return the correct view
           return View::make('pages.confirm', array(    'way'                 => $way,

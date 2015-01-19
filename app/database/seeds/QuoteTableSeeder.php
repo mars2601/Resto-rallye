@@ -12,7 +12,8 @@ class QuoteTableSeeder extends Seeder {
     DB::table('quotes')->delete();
     Quote::create([
         'author'            => 'Le soir',
-        'content'          => 'L\'article',
+        'content'          => 'Le Resto Rallye vous propose un concept original permettant la rencontre de grands moments gastronomiques et conviviaux.
+        Chaque mois, il vous est possible de découvir une ville de Belgique en faisant étape dans 3 de ses restaurants.',
       ]);
   }
 }

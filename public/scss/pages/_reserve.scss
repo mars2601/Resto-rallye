@@ -49,9 +49,11 @@
     /* Infos */
     &__reserveHeader{
       @include span(last 5);
+      @include rem-fix(margin-top, 1);
       &__place{
         @include span(12 first);
         font-size:1.2em;
+        @include rem-fix(padding, 1, 0);
         span{
           @include rem-fix(padding, 1, 1, 1, 0);
         }

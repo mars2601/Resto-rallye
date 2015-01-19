@@ -38,7 +38,7 @@
           </div>
           <div class="header__menu">
             <div class="wrapper">
-              <h1 class="header__menu__title"><a class="header__menu__title__link" href=""><span>Resto</span> <span>rallye</span></a></h1>
+              <h1 class="header__menu__title"><a class="header__menu__title__link" href="{{ URL::route('homepage') }}"><span>Resto</span> <span>rallye</span></a></h1>
               <nav class="header__menu__nav">
                 <h2 class="visuallyhidden">Navigation principale</h2>
                 <ul class="js-menu">
@@ -57,23 +57,24 @@
         @yield('content')
 
         <footer class="footer">
+          <div class="footer__content">
             <div class="footer__social-network">
-                <a href="#" class="footer__social-network__link footer__social-network__link--facebook">Notre page Facebook</a>
-                <a href="#" class="footer__social-network__link footer__social-network__link--twitter">Notre profil Twitter</a>
-                <a href="#" class="footer__social-network__link footer__social-network__link--rss">Flux RSS</a>
+              <a href="#" class="footer__social-network__link footer__social-network__link--facebook"><span class='icon-facebook'></span> Notre page Facebook</a>
+              | <a href="#" class="footer__social-network__link footer__social-network__link--twitter"><span class='icon-twitter'></span> Notre profil Twitter</a>
             </div>
 
 
             <div class="footer__end-line">
-                <span class="footer__end-line__copyright">
-                    ® 2014 Resto-Rallye
-                </span>
-                <span class="footer__end-line__separation"> - </span>
-                <span class="footer__end-line__credits">
-                    Fait par <a href="http://www.marcel-pirnay.be">Marcel Pirnay</a> et <a href="http://www.maxime-lefebvre.be">Maxime Lefèbvre</a>
-                </span>
+              <span class="footer__end-line__copyright">
+                ® 2014 Resto-Rallye
+              </span>
+              <span class="footer__end-line__separation"> - </span>
+              <span class="footer__end-line__credits">
+                Site créé par <a href="http://www.marcel-pirnay.be">Marcel Pirnay</a> et <a href="http://www.maxime-lefebvre.be">Maxime Lefèbvre</a>
+              </span>
 
             </div>
+          </div>
         </footer>
 
 

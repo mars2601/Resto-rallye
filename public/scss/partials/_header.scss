@@ -70,6 +70,7 @@
     }
     &__menu{
       background-color:rgba(0, 0, 0, 0.7);
+      overflow:hidden;
       @include span(12);
       &__title{
         @include span(first 4);
@@ -117,14 +118,21 @@
             text-transform:uppercase;
             text-decoration:none;
             line-height:60px;
+            @include transition(.35s);
+            &:hover{
+              background: rgba(0, 0, 0, 0.6);
+            }
           }
         }
         li.log{
           span{
             color:white;
-            @include rem-fix(padding, 2, 1);
+            @include rem-fix(padding, 2.5, 1);
+            @include transition(.35s);
             &:hover{
               cursor: pointer;
+              background: rgba(0, 0, 0, 0.6);
+
             }
           }
         }

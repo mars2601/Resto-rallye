@@ -1,3 +1,6 @@
 <?php
 
+App::setLocale('fr');
+
+
 //

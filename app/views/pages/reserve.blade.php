@@ -21,7 +21,7 @@
       </div>
       <div class="reserve__do__reserveHeader">
         <span class="reserve__do__reserveHeader__place"><span class="icon-pin"></span>{{$rallye->street}}&nbsp;{{$rallye->streetNumber}}, {{$rallye->town}}</span>
-        <span class="reserve__do__reserveHeader__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($rallye->date))}}</span>
+        <span class="reserve__do__reserveHeader__date"><span class="icon-calendar"></span><?php $data = new Date($rallye->date); ?>{{$data->format('l j F Y');}}</span>
       </div>
       <div class="reserve__do__suscribe">
         @include('forms.rallyes.reserve')
@@ -37,6 +37,8 @@
       <!-- L'utilsateur a déja réervé cet évenement -->
     @endif
   </section>
+
+
 
 
 

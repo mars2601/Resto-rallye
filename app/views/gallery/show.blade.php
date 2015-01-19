@@ -23,7 +23,7 @@
          	    </a>
       	@endforeach
         </section>
-      <a class="button" href="{{ URL::route('showEvent', array($rallye->id, 'p')) }}">Voir l'évenement'</a>
+      <a class="button" href="{{ URL::route('showEvent', array($rallye->id, 'p')) }}">Voir l'évenement</a>
     	</section>
     </section>
 

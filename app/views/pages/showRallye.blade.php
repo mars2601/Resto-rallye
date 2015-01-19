@@ -22,7 +22,7 @@
         <h4 class="events__show__infos__header__title">{{$rallye->title}}</h4>
         <div id="gauge" style="width:280px; height:200px"><p class="ifNoJs">{{$rallye->placeAvailable}} places restantes</p></div>
         <span class="events__show__infos__header__place"><span class="icon-pin"></span>{{$rallye->street}}&nbsp;{{$rallye->streetNumber}}, {{$rallye->town}}</span>
-        <span class="events__show__infos__header__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($rallye->date))}}</span>
+        <span class="events__show__infos__header__date"><span class="icon-calendar"></span><?php $data = new Date($rallye->date); ?>{{$data->format('l j F Y');}}</span>
       </div>
         <p class="events__show__infos__paragraph">{{$rallye->description}}</p>
     @if ((Auth::check()) && ($reserved_rallye == $rallye->id) && ($dateStatus == 'n'))

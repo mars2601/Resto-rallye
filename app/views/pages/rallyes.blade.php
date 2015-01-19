@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <section class="events">
+    <section class="events event-index">
       <div class="events__title big-title">
         <h2>Evénements</h2>
       </div>
@@ -18,7 +18,7 @@
                 <div class="events__next__list__item__link__infos">
                   <h4 class="events__next__list__item__link__infos__title">{{$next->title}}</h4>
                   <span class="events__next__list__item__link__infos__place"><span class="icon-pin"></span>{{$next->town}}</span>
-                  <span class="events__next__list__item__link__infos__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($next->date))}}</span>
+                  <span class="events__next__list__item__link__infos__date"><span class="icon-calendar"></span><?php $data = new Date($next->date); ?>{{$data->format('l j F Y');}}</span>
                 </div>
               </a>
             </li>
@@ -39,7 +39,7 @@
                   <div class="events__past__wrapper__list__item__link__infos">
                     <h4 class="events__past__wrapper__list__item__link__infos__title">{{$last->title}}</h4>
                     <span class="events__past__wrapper__list__item__link__infos__place"><span class="icon-pin"></span>{{$last->town}}</span>
-                    <span class="events__past__wrapper__list__item__link__infos__date"><span class="icon-calendar"></span>{{strftime("%A %d %B %G", strtotime($last->date))}}</span>
+                    <span class="events__past__wrapper__list__item__link__infos__date"><span class="icon-calendar"></span><?php $data = new Date($last->date); ?>{{$data->format('l j F Y');}}</span>
                   </div>
                 </a>
               </li>

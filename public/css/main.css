@@ -261,14 +261,14 @@ body {
     box-sizing: border-box; }
 
 /* line 32, ../scss/partials/_bases.scss */
-.wrapper, .big-title h2, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .album__photos, .events__next, .events__past__wrapper, .events__show, .reserve__do, .contact--wrapper {
+.wrapper, .big-title h2, .footer__content, .home__introduction__event, .home__presentation, .home__interview__wrapper, .home__gallery__title, .gallery__photos, .album__photos, .events__next, .events__past__wrapper, .events__show, .reserve__do, .contact--wrapper {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
   max-width: 117rem; }
   /* line 12, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/susy/sass/susy/output/support/_clearfix.scss */
-  .wrapper:after, .big-title h2:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .album__photos:after, .events__next:after, .events__past__wrapper:after, .events__show:after, .reserve__do:after, .contact--wrapper:after {
+  .wrapper:after, .big-title h2:after, .footer__content:after, .home__introduction__event:after, .home__presentation:after, .home__interview__wrapper:after, .home__gallery__title:after, .gallery__photos:after, .album__photos:after, .events__next:after, .events__past__wrapper:after, .events__show:after, .reserve__do:after, .contact--wrapper:after {
     content: " ";
     display: block;
     clear: both; }
@@ -445,11 +445,12 @@ code {
   /* line 71, ../scss/partials/_header.scss */
   .header__menu {
     background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
     width: 100%;
     float: left;
     margin-left: 0;
     margin-right: 0; }
-    /* line 74, ../scss/partials/_header.scss */
+    /* line 75, ../scss/partials/_header.scss */
     .header__menu__title {
       width: 31.62393%;
       float: left;
@@ -458,7 +459,7 @@ code {
       line-height: 6rem;
       font-size: 30px;
       font-size: 3rem; }
-      /* line 80, ../scss/partials/_header.scss */
+      /* line 81, ../scss/partials/_header.scss */
       .header__menu__title a {
         display: block;
         padding-left: 120px;
@@ -470,16 +471,16 @@ code {
         color: white;
         text-transform: uppercase;
         text-decoration: none; }
-        /* line 85, ../scss/partials/_header.scss */
+        /* line 86, ../scss/partials/_header.scss */
         .svg .header__menu__title a {
           background-image: url("../img/logo-header.svg"); }
-        /* line 95, ../scss/partials/_header.scss */
+        /* line 96, ../scss/partials/_header.scss */
         .header__menu__title a span {
           font-weight: 100; }
-        /* line 99, ../scss/partials/_header.scss */
+        /* line 100, ../scss/partials/_header.scss */
         .header__menu__title a span + span {
           font-weight: 500; }
-    /* line 105, ../scss/partials/_header.scss */
+    /* line 106, ../scss/partials/_header.scss */
     .header__menu__nav {
       width: 65.81197%;
       float: right;
@@ -493,10 +494,10 @@ code {
         content: " ";
         display: block;
         clear: both; }
-      /* line 109, ../scss/partials/_header.scss */
+      /* line 110, ../scss/partials/_header.scss */
       .header__menu__nav li {
         display: inline-block; }
-        /* line 111, ../scss/partials/_header.scss */
+        /* line 112, ../scss/partials/_header.scss */
         .header__menu__nav li a {
           padding: 0px 20px;
           padding: 0rem 2rem;
@@ -506,19 +507,31 @@ code {
           color: #FFF;
           text-transform: uppercase;
           text-decoration: none;
-          line-height: 60px; }
-      /* line 123, ../scss/partials/_header.scss */
+          line-height: 60px;
+          -moz-transition: 0.35s;
+          -o-transition: 0.35s;
+          -webkit-transition: 0.35s;
+          transition: 0.35s; }
+          /* line 122, ../scss/partials/_header.scss */
+          .header__menu__nav li a:hover {
+            background: rgba(0, 0, 0, 0.6); }
+      /* line 128, ../scss/partials/_header.scss */
       .header__menu__nav li.log span {
         color: white;
-        padding: 20px 10px;
-        padding: 2rem 1rem; }
-        /* line 126, ../scss/partials/_header.scss */
+        padding: 25px 10px;
+        padding: 2.5rem 1rem;
+        -moz-transition: 0.35s;
+        -o-transition: 0.35s;
+        -webkit-transition: 0.35s;
+        transition: 0.35s; }
+        /* line 132, ../scss/partials/_header.scss */
         .header__menu__nav li.log span:hover {
-          cursor: pointer; }
-  /* line 134, ../scss/partials/_header.scss */
+          cursor: pointer;
+          background: rgba(0, 0, 0, 0.6); }
+  /* line 142, ../scss/partials/_header.scss */
   .js .header {
     position: fixed; }
-  /* line 138, ../scss/partials/_header.scss */
+  /* line 146, ../scss/partials/_header.scss */
   .js .header__auth {
     display: none; }
 
@@ -541,6 +554,54 @@ code {
     background-size: 100% 100%;
     display: block;
     background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23F9F8F8'></path></svg>"); }
+  /* line 11, ../scss/partials/_footer.scss */
+  .footer__content {
+    padding: 40px 0px;
+    padding: 4rem 0rem; }
+  /* line 15, ../scss/partials/_footer.scss */
+  .footer__social-network {
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%; }
+    /* line 17, ../scss/partials/_footer.scss */
+    .footer__social-network a {
+      color: white;
+      text-indent: -101%; }
+      /* line 20, ../scss/partials/_footer.scss */
+      .footer__social-network ahover {
+        text-decoration: underline; }
+      /* line 23, ../scss/partials/_footer.scss */
+      .footer__social-network a span {
+        font-size: 1.2em;
+        position: relative;
+        top: 2px;
+        top: 0.2rem; }
+  /* line 30, ../scss/partials/_footer.scss */
+  .footer__end-line {
+    width: 48.71795%;
+    float: right;
+    margin-right: 0; }
+    /* line 33, ../scss/partials/_footer.scss */
+    .footer__end-line__credits span {
+      color: #F9F9F9; }
+    /* line 36, ../scss/partials/_footer.scss */
+    .footer__end-line__credits a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold; }
+
+/* line 109, ../scss/modules/framework/partials/_functionsmixins.scss */
+.event-index + footer:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  height: 10rem;
+  background-size: 100% 100%;
+  display: block;
+  background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23C6C5C5'></path></svg>"); }
 
 /* line 1, ../scss/partials/objects/_btn.scss */
 .logout {
@@ -784,8 +845,8 @@ span.error {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?-wozcuc");
-  src: url("../fonts/icomoon.eot?#iefix-wozcuc") format("embedded-opentype"), url("../fonts/icomoon.woff?-wozcuc") format("woff"), url("../fonts/icomoon.ttf?-wozcuc") format("truetype"), url("../fonts/icomoon.svg?-wozcuc#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?fk4naw");
+  src: url("../fonts/icomoon.eot?#iefixfk4naw") format("embedded-opentype"), url("../fonts/icomoon.woff?fk4naw") format("woff"), url("../fonts/icomoon.ttf?fk4naw") format("truetype"), url("../fonts/icomoon.svg?fk4naw#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 /* line 12, ../scss/partials/objects/_icons.scss */
@@ -802,106 +863,94 @@ span.error {
   -moz-osx-font-smoothing: grayscale; }
 
 /* line 26, ../scss/partials/objects/_icons.scss */
+.icon-calendar:before {
+  content: "\e604"; }
+
+/* line 30, ../scss/partials/objects/_icons.scss */
 .icon-office:before {
   content: "\e600"; }
 
-/* line 29, ../scss/partials/objects/_icons.scss */
-.icon-pencil:before {
-  content: "\e601"; }
-
-/* line 32, ../scss/partials/objects/_icons.scss */
-.icon-tag:before {
-  content: "\e602"; }
-
-/* line 35, ../scss/partials/objects/_icons.scss */
-.icon-tags:before {
-  content: "\e603"; }
+/* line 34, ../scss/partials/objects/_icons.scss */
+.icon-home:before {
+  content: "\e900"; }
 
 /* line 38, ../scss/partials/objects/_icons.scss */
-.icon-plus:before {
-  content: "\e604"; }
+.icon-pencil:before {
+  content: "\e905"; }
 
-/* line 41, ../scss/partials/objects/_icons.scss */
-.icon-close:before {
-  content: "\e605"; }
+/* line 42, ../scss/partials/objects/_icons.scss */
+.icon-phone:before {
+  content: "\e942"; }
 
-/* line 44, ../scss/partials/objects/_icons.scss */
-.icon-compose:before {
-  content: "\e606"; }
-
-/* line 47, ../scss/partials/objects/_icons.scss */
-.icon-portfolio:before {
-  content: "\e607"; }
+/* line 46, ../scss/partials/objects/_icons.scss */
+.icon-phone-hang-up:before {
+  content: "\e943"; }
 
 /* line 50, ../scss/partials/objects/_icons.scss */
 .icon-pin:before {
-  content: "\e608"; }
+  content: "\e947"; }
 
-/* line 53, ../scss/partials/objects/_icons.scss */
-.icon-pin-alt:before {
-  content: "\e609"; }
+/* line 54, ../scss/partials/objects/_icons.scss */
+.icon-location2:before {
+  content: "\e948"; }
 
-/* line 56, ../scss/partials/objects/_icons.scss */
-.icon-phone:before {
-  content: "\e60a"; }
-
-/* line 59, ../scss/partials/objects/_icons.scss */
-.icon-mouse:before {
-  content: "\e60b"; }
+/* line 58, ../scss/partials/objects/_icons.scss */
+.icon-compass:before {
+  content: "\e94a"; }
 
 /* line 62, ../scss/partials/objects/_icons.scss */
-.icon-directions:before {
-  content: "\e60c"; }
-
-/* line 65, ../scss/partials/objects/_icons.scss */
-.icon-mail:before {
-  content: "\e60d"; }
-
-/* line 68, ../scss/partials/objects/_icons.scss */
-.icon-pencil2:before {
-  content: "\e60e"; }
-
-/* line 71, ../scss/partials/objects/_icons.scss */
 .icon-user:before {
-  content: "\e60f"; }
+  content: "\e971"; }
+
+/* line 66, ../scss/partials/objects/_icons.scss */
+.icon-users:before {
+  content: "\e972"; }
+
+/* line 70, ../scss/partials/objects/_icons.scss */
+.icon-user-plus:before {
+  content: "\e973"; }
 
 /* line 74, ../scss/partials/objects/_icons.scss */
-.icon-users:before {
-  content: "\e610"; }
+.icon-user-minus:before {
+  content: "\e974"; }
 
-/* line 77, ../scss/partials/objects/_icons.scss */
-.icon-user-add:before {
-  content: "\e611"; }
+/* line 78, ../scss/partials/objects/_icons.scss */
+.icon-lock:before {
+  content: "\e98d"; }
 
-/* line 80, ../scss/partials/objects/_icons.scss */
-.icon-map:before {
-  content: "\e612"; }
-
-/* line 83, ../scss/partials/objects/_icons.scss */
-.icon-compass:before {
-  content: "\e613"; }
+/* line 82, ../scss/partials/objects/_icons.scss */
+.icon-key2:before {
+  content: "\e98e"; }
 
 /* line 86, ../scss/partials/objects/_icons.scss */
-.icon-location:before {
-  content: "\e614"; }
+.icon-lock4:before {
+  content: "\e98f"; }
 
-/* line 89, ../scss/partials/objects/_icons.scss */
-.icon-calendar:before {
-  content: "\e615"; }
+/* line 90, ../scss/partials/objects/_icons.scss */
+.icon-plus:before {
+  content: "\ea0a"; }
 
-/* line 92, ../scss/partials/objects/_icons.scss */
-.icon-cross:before {
-  content: "\e616"; }
-
-/* line 95, ../scss/partials/objects/_icons.scss */
-.icon-cross2:before {
-  content: "\e617"; }
+/* line 94, ../scss/partials/objects/_icons.scss */
+.icon-facebook:before {
+  content: "\ea8e"; }
 
 /* line 98, ../scss/partials/objects/_icons.scss */
-.icon-cross3:before {
-  content: "\e618"; }
+.icon-twitter:before {
+  content: "\ea93"; }
 
-/* line 103, ../scss/partials/objects/_icons.scss */
+/* line 102, ../scss/partials/objects/_icons.scss */
+.icon-mail:before {
+  content: "\e601"; }
+
+/* line 106, ../scss/partials/objects/_icons.scss */
+.icon-mouse:before {
+  content: "\e602"; }
+
+/* line 110, ../scss/partials/objects/_icons.scss */
+.icon-directions:before {
+  content: "\e603"; }
+
+/* line 115, ../scss/partials/objects/_icons.scss */
 form [class^="icon-"], form [class*=" icon-"] {
   position: absolute;
   margin-top: 31px;
@@ -946,6 +995,8 @@ form [class^="icon-"], form [class*=" icon-"] {
         font-style: italic; }
       /* line 34, ../scss/pages/_home.scss */
       .home__introduction__event__wrapper__link {
+        border-radius: 2px;
+        text-transform: uppercase;
         font-size: 20px;
         font-size: 2rem;
         margin-top: 20px;
@@ -956,14 +1007,14 @@ form [class^="icon-"], form [class*=" icon-"] {
         font-family: "chaparral-pro", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
         font-weight: 400;
         border: 4px solid white;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.8);
         color: #FFF;
         text-decoration: none; }
-        /* line 45, ../scss/pages/_home.scss */
+        /* line 47, ../scss/pages/_home.scss */
         .home__introduction__event__wrapper__link:hover {
           color: black;
           background-color: #FFFFFF; }
-  /* line 53, ../scss/pages/_home.scss */
+  /* line 55, ../scss/pages/_home.scss */
   .home__introduction__logo {
     width: 150px;
     width: 15rem;
@@ -991,7 +1042,7 @@ form [class^="icon-"], form [class*=" icon-"] {
     background-size: 100% 100%;
     display: block;
     background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L0 100 L100 100' fill='%23F9F9F9'></path></svg>"); }
-/* line 79, ../scss/pages/_home.scss */
+/* line 81, ../scss/pages/_home.scss */
 .home__presentation__title {
   display: block;
   width: 100%;
@@ -1004,7 +1055,7 @@ form [class^="icon-"], form [class*=" icon-"] {
   margin-bottom: 4rem;
   line-height: 60px;
   line-height: 6rem; }
-/* line 87, ../scss/pages/_home.scss */
+/* line 89, ../scss/pages/_home.scss */
 .home__presentation__paragraph {
   display: block;
   width: 48.71795%;
@@ -1013,12 +1064,12 @@ form [class^="icon-"], form [class*=" icon-"] {
   font-size: 20px;
   font-size: 2rem;
   line-height: 1.5em; }
-/* line 93, ../scss/pages/_home.scss */
+/* line 95, ../scss/pages/_home.scss */
 .home__presentation__image {
   width: 48.71795%;
   float: right;
   margin-right: 0; }
-/* line 98, ../scss/pages/_home.scss */
+/* line 100, ../scss/pages/_home.scss */
 .home__interview {
   margin-top: 20px;
   margin-top: 2rem;
@@ -1052,7 +1103,7 @@ form [class^="icon-"], form [class*=" icon-"] {
     background-size: 100% 100%;
     display: block;
     background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 0 L0 100 L100 100' fill='%23F9F9F9'></path></svg>"); }
-  /* line 121, ../scss/pages/_home.scss */
+  /* line 123, ../scss/pages/_home.scss */
   .home__interview__wrapper__image {
     width: 16.23932%;
     float: left;
@@ -1060,7 +1111,7 @@ form [class^="icon-"], form [class*=" icon-"] {
     border-radius: 100%;
     height: auto;
     border: 3px solid #FFF; }
-  /* line 128, ../scss/pages/_home.scss */
+  /* line 130, ../scss/pages/_home.scss */
   .home__interview__wrapper__paragraph {
     color: #FFF;
     font-size: 20px;
@@ -1075,7 +1126,7 @@ form [class^="icon-"], form [class*=" icon-"] {
     margin-top: 40px;
     margin-top: 4rem;
     position: relative; }
-    /* line 137, ../scss/pages/_home.scss */
+    /* line 139, ../scss/pages/_home.scss */
     .home__interview__wrapper__paragraph:before, .home__interview__wrapper__paragraph:after {
       position: absolute;
       display: block;
@@ -1083,19 +1134,19 @@ form [class^="icon-"], form [class*=" icon-"] {
       font-size: 4rem;
       font-weight: 300;
       font-family: "chaparral-pro", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
-    /* line 145, ../scss/pages/_home.scss */
+    /* line 147, ../scss/pages/_home.scss */
     .home__interview__wrapper__paragraph:before {
       top: -20px;
       top: -2rem;
       left: 0;
       content: "«"; }
-    /* line 150, ../scss/pages/_home.scss */
+    /* line 152, ../scss/pages/_home.scss */
     .home__interview__wrapper__paragraph:after {
       bottom: -20px;
       bottom: -2rem;
       right: 0;
       content: "»"; }
-  /* line 156, ../scss/pages/_home.scss */
+  /* line 158, ../scss/pages/_home.scss */
   .home__interview__wrapper__author {
     width: 48.71795%;
     float: right;
@@ -1112,11 +1163,11 @@ form [class^="icon-"], form [class*=" icon-"] {
     text-transform: uppercase;
     border-top: 1px solid white;
     font-family: "chaparral-pro", "Libre Baskerville", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
-  /* line 169, ../scss/pages/_home.scss */
+  /* line 171, ../scss/pages/_home.scss */
   .home__interview__logo {
     bottom: -20px;
     bottom: -2rem; }
-/* line 175, ../scss/pages/_home.scss */
+/* line 177, ../scss/pages/_home.scss */
 .home__gallery__title {
   font-size: 38px;
   font-size: 3.8rem;
@@ -1341,7 +1392,7 @@ form [class^="icon-"], form [class*=" icon-"] {
   min-height: 700px;
   min-height: 70rem; }
 
-/* line 206, ../scss/pages/_gallery.scss */
+/* line 207, ../scss/pages/_gallery.scss */
 .thumbnail {
   display: inline-block;
   width: 23.07692%;
@@ -1356,8 +1407,12 @@ form [class^="icon-"], form [class*=" icon-"] {
   box-shadow: 0px 0px 1px #666;
   background-position: center center;
   background-repeat: no-repeat; }
+  /* line 217, ../scss/pages/_gallery.scss */
+  .thumbnail:hover {
+    -webkit-box-shadow: 1px -1px 1px #666;
+    box-shadow: 1px -1px 1px #666; }
 
-/* line 217, ../scss/pages/_gallery.scss */
+/* line 222, ../scss/pages/_gallery.scss */
 .thumbnail:nth-child(4n+4) {
   width: 23.07692%;
   float: right;
@@ -1367,7 +1422,7 @@ form [class^="icon-"], form [class*=" icon-"] {
 Colorbox Core Style:
 The following CSS is consistent between example themes and should not be altered.
 */
-/* line 225, ../scss/pages/_gallery.scss */
+/* line 230, ../scss/pages/_gallery.scss */
 #colorbox, #cboxOverlay, #cboxWrapper {
   position: absolute;
   top: 0;
@@ -1375,34 +1430,34 @@ The following CSS is consistent between example themes and should not be altered
   z-index: 9999;
   overflow: hidden; }
 
-/* line 226, ../scss/pages/_gallery.scss */
+/* line 231, ../scss/pages/_gallery.scss */
 #cboxWrapper {
   max-width: none; }
 
-/* line 227, ../scss/pages/_gallery.scss */
+/* line 232, ../scss/pages/_gallery.scss */
 #cboxOverlay {
   position: fixed;
   width: 100%;
   height: 100%; }
 
-/* line 228, ../scss/pages/_gallery.scss */
+/* line 233, ../scss/pages/_gallery.scss */
 #cboxMiddleLeft, #cboxBottomLeft {
   clear: left; }
 
-/* line 229, ../scss/pages/_gallery.scss */
+/* line 234, ../scss/pages/_gallery.scss */
 #cboxContent {
   position: relative; }
 
-/* line 230, ../scss/pages/_gallery.scss */
+/* line 235, ../scss/pages/_gallery.scss */
 #cboxLoadedContent {
   overflow: auto;
   -webkit-overflow-scrolling: touch; }
 
-/* line 231, ../scss/pages/_gallery.scss */
+/* line 236, ../scss/pages/_gallery.scss */
 #cboxTitle {
   margin: 0; }
 
-/* line 232, ../scss/pages/_gallery.scss */
+/* line 237, ../scss/pages/_gallery.scss */
 #cboxLoadingOverlay, #cboxLoadingGraphic {
   position: absolute;
   top: 0;
@@ -1410,11 +1465,11 @@ The following CSS is consistent between example themes and should not be altered
   width: 100%;
   height: 100%; }
 
-/* line 233, ../scss/pages/_gallery.scss */
+/* line 238, ../scss/pages/_gallery.scss */
 #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
   cursor: pointer; }
 
-/* line 234, ../scss/pages/_gallery.scss */
+/* line 239, ../scss/pages/_gallery.scss */
 .cboxPhoto {
   float: left;
   margin: auto;
@@ -1423,7 +1478,7 @@ The following CSS is consistent between example themes and should not be altered
   max-width: none;
   -ms-interpolation-mode: bicubic; }
 
-/* line 235, ../scss/pages/_gallery.scss */
+/* line 240, ../scss/pages/_gallery.scss */
 .cboxIframe {
   width: 100%;
   height: 100%;
@@ -1432,7 +1487,7 @@ The following CSS is consistent between example themes and should not be altered
   padding: 0;
   margin: 0; }
 
-/* line 236, ../scss/pages/_gallery.scss */
+/* line 241, ../scss/pages/_gallery.scss */
 #colorbox, #cboxContent, #cboxLoadedContent {
   box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -1443,55 +1498,55 @@ User Style:
 Change the following styles to modify the appearance of Colorbox.  They are
 ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
-/* line 243, ../scss/pages/_gallery.scss */
+/* line 248, ../scss/pages/_gallery.scss */
 #cboxOverlay {
   background: #000;
   opacity: 0.9;
   filter: alpha(opacity=90); }
 
-/* line 244, ../scss/pages/_gallery.scss */
+/* line 249, ../scss/pages/_gallery.scss */
 #colorbox {
   outline: 0; }
 
-/* line 245, ../scss/pages/_gallery.scss */
+/* line 250, ../scss/pages/_gallery.scss */
 #cboxContent {
   margin-top: 20px;
   background: #000; }
 
-/* line 246, ../scss/pages/_gallery.scss */
+/* line 251, ../scss/pages/_gallery.scss */
 .cboxIframe {
   background: #fff; }
 
-/* line 247, ../scss/pages/_gallery.scss */
+/* line 252, ../scss/pages/_gallery.scss */
 #cboxError {
   padding: 50px;
   border: 1px solid #ccc; }
 
-/* line 248, ../scss/pages/_gallery.scss */
+/* line 253, ../scss/pages/_gallery.scss */
 #cboxLoadedContent {
   border: 5px solid #000;
   background: #fff; }
 
-/* line 249, ../scss/pages/_gallery.scss */
+/* line 254, ../scss/pages/_gallery.scss */
 #cboxTitle {
   position: absolute;
   top: -20px;
   left: 0;
   color: #ccc; }
 
-/* line 250, ../scss/pages/_gallery.scss */
+/* line 255, ../scss/pages/_gallery.scss */
 #cboxCurrent {
   position: absolute;
   top: -20px;
   right: 0px;
   color: #ccc; }
 
-/* line 251, ../scss/pages/_gallery.scss */
+/* line 256, ../scss/pages/_gallery.scss */
 #cboxLoadingGraphic {
   background: url(images/loading.gif) no-repeat center center; }
 
 /* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-/* line 254, ../scss/pages/_gallery.scss */
+/* line 259, ../scss/pages/_gallery.scss */
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
   border: 0;
   padding: 0;
@@ -1501,18 +1556,18 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
   background: none; }
 
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-/* line 257, ../scss/pages/_gallery.scss */
+/* line 262, ../scss/pages/_gallery.scss */
 #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
   outline: 0; }
 
-/* line 259, ../scss/pages/_gallery.scss */
+/* line 264, ../scss/pages/_gallery.scss */
 #cboxSlideshow {
   position: absolute;
   top: -20px;
   right: 90px;
   color: #fff; }
 
-/* line 260, ../scss/pages/_gallery.scss */
+/* line 265, ../scss/pages/_gallery.scss */
 #cboxPrevious {
   position: absolute;
   top: 50%;
@@ -1523,11 +1578,11 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
   height: 65px;
   text-indent: -9999px; }
 
-/* line 261, ../scss/pages/_gallery.scss */
+/* line 266, ../scss/pages/_gallery.scss */
 #cboxPrevious:hover {
   background-position: bottom left; }
 
-/* line 262, ../scss/pages/_gallery.scss */
+/* line 267, ../scss/pages/_gallery.scss */
 #cboxNext {
   position: absolute;
   top: 50%;
@@ -1538,11 +1593,11 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
   height: 65px;
   text-indent: -9999px; }
 
-/* line 263, ../scss/pages/_gallery.scss */
+/* line 268, ../scss/pages/_gallery.scss */
 #cboxNext:hover {
   background-position: bottom right; }
 
-/* line 264, ../scss/pages/_gallery.scss */
+/* line 269, ../scss/pages/_gallery.scss */
 #cboxClose {
   position: absolute;
   top: 5px;
@@ -1553,7 +1608,7 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
   height: 19px;
   text-indent: -9999px; }
 
-/* line 265, ../scss/pages/_gallery.scss */
+/* line 270, ../scss/pages/_gallery.scss */
 #cboxClose:hover {
   background-position: bottom center; }
 
@@ -1695,15 +1750,15 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
       background-size: 100% 100%;
       display: block;
       background-image: url("data:image/svg+xml;utf8,<svg preserveAspectRatio='none' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><path d='M0 100 L0 0 L100 0' fill='%23F9F9F9'></path></svg>"); }
-    /* line 114, ../scss/pages/_events.scss */
+    /* line 113, ../scss/pages/_events.scss */
     .events__past__wrapper__title {
       padding-top: 100px;
       padding-top: 10rem; }
-    /* line 118, ../scss/pages/_events.scss */
+    /* line 117, ../scss/pages/_events.scss */
     .events__past__wrapper__date {
       font-size: 1.5em;
       color: #FFF; }
-    /* line 124, ../scss/pages/_events.scss */
+    /* line 123, ../scss/pages/_events.scss */
     .events__past__wrapper__list__item__link {
       width: 31.62393%;
       float: left;
@@ -1721,7 +1776,7 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
       transition: 0.35s;
       margin-top: 50px;
       margin-top: 5rem; }
-      /* line 132, ../scss/pages/_events.scss */
+      /* line 131, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__goto {
         color: #FFF;
         content: "";
@@ -1742,41 +1797,41 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
         margin-left: -30px;
         margin-left: -3rem;
         top: 32%; }
-        /* line 148, ../scss/pages/_events.scss */
+        /* line 147, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__goto span {
           line-height: 60px;
           line-height: 6rem;
           font-size: 2em; }
-      /* line 153, ../scss/pages/_events.scss */
+      /* line 152, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__image {
         width: 100%;
         background-color: black; }
-      /* line 157, ../scss/pages/_events.scss */
+      /* line 156, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link__infos {
         min-height: 150px;
         min-height: 15rem;
         padding: 0px 5px;
         padding: 0rem 0.5rem; }
-        /* line 160, ../scss/pages/_events.scss */
+        /* line 159, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__title {
           margin: 10px 0px;
           margin: 1rem 0rem;
           border-bottom: 1px solid black;
           margin-bottom: 10px;
           margin-bottom: 1rem; }
-        /* line 166, ../scss/pages/_events.scss */
+        /* line 165, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__date {
           display: block; }
-          /* line 168, ../scss/pages/_events.scss */
+          /* line 167, ../scss/pages/_events.scss */
           .events__past__wrapper__list__item__link__infos__date span {
             padding: 0 10px 0 0; }
-        /* line 172, ../scss/pages/_events.scss */
+        /* line 171, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link__infos__place {
           display: block; }
-          /* line 174, ../scss/pages/_events.scss */
+          /* line 173, ../scss/pages/_events.scss */
           .events__past__wrapper__list__item__link__infos__place span {
             padding: 0 10px 0 0; }
-      /* line 182, ../scss/pages/_events.scss */
+      /* line 181, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link--last {
         width: 31.62393%;
         float: right;
@@ -1789,7 +1844,7 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
         transition: 0.35s;
         margin-top: 50px;
         margin-top: 5rem; }
-        /* line 188, ../scss/pages/_events.scss */
+        /* line 187, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover {
           -moz-transform: scale(1.18);
           -ms-transform: scale(1.18);
@@ -1798,16 +1853,16 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
           background-color: #494949;
           color: #FFF;
           z-index: 100; }
-        /* line 194, ../scss/pages/_events.scss */
+        /* line 193, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__image {
           opacity: .5; }
-        /* line 197, ../scss/pages/_events.scss */
+        /* line 196, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__infos__title {
           border-bottom: 1px solid #FFF; }
-        /* line 200, ../scss/pages/_events.scss */
+        /* line 199, ../scss/pages/_events.scss */
         .events__past__wrapper__list__item__link--last:hover .events__past__wrapper__list__item__link--last__goto {
           opacity: 1; }
-      /* line 204, ../scss/pages/_events.scss */
+      /* line 203, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover {
         -moz-transform: scale(1.18);
         -ms-transform: scale(1.18);
@@ -1816,15 +1871,25 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
         background-color: #494949;
         color: #FFF;
         z-index: 100; }
-      /* line 210, ../scss/pages/_events.scss */
+      /* line 209, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__image {
         opacity: .5; }
-      /* line 213, ../scss/pages/_events.scss */
+      /* line 212, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__infos__title {
         border-bottom: 1px solid #FFF; }
-      /* line 216, ../scss/pages/_events.scss */
+      /* line 215, ../scss/pages/_events.scss */
       .events__past__wrapper__list__item__link:hover .events__past__wrapper__list__item__link__goto {
         opacity: 1; }
+    /* line 222, ../scss/pages/_events.scss */
+    .events__past--homepage {
+      background-color: transparent; }
+      /* line 224, ../scss/pages/_events.scss */
+      .events__past--homepage:before {
+        display: none; }
+      /* line 227, ../scss/pages/_events.scss */
+      .events__past--homepage--item {
+        margin-top: 10px;
+        margin-top: 1rem; }
 
 /* line 1, ../scss/pages/_admin.scss */
 .admin {
@@ -2027,71 +2092,75 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
     .reserve__do__reserveHeader {
       width: 40.17094%;
       float: right;
-      margin-right: 0; }
-      /* line 52, ../scss/pages/_reserve.scss */
+      margin-right: 0;
+      margin-top: 10px;
+      margin-top: 1rem; }
+      /* line 53, ../scss/pages/_reserve.scss */
       .reserve__do__reserveHeader__place {
         width: 100%;
         float: left;
         margin-right: 2.5641%;
-        font-size: 1.2em; }
-        /* line 55, ../scss/pages/_reserve.scss */
+        font-size: 1.2em;
+        padding: 10px 0px;
+        padding: 1rem 0rem; }
+        /* line 57, ../scss/pages/_reserve.scss */
         .reserve__do__reserveHeader__place span {
           padding: 10px 10px 10px 0px;
           padding: 1rem 1rem 1rem 0rem; }
-      /* line 59, ../scss/pages/_reserve.scss */
+      /* line 61, ../scss/pages/_reserve.scss */
       .reserve__do__reserveHeader__date {
         width: 100%;
         float: left;
         margin-left: 0;
         margin-right: 0;
         font-size: 1.2em; }
-        /* line 62, ../scss/pages/_reserve.scss */
+        /* line 64, ../scss/pages/_reserve.scss */
         .reserve__do__reserveHeader__date span {
           padding: 10px 10px 10px 0px;
           padding: 1rem 1rem 1rem 0rem; }
-    /* line 67, ../scss/pages/_reserve.scss */
+    /* line 69, ../scss/pages/_reserve.scss */
     .reserve__do p {
       padding: 2px 0px;
       padding: 0.2rem 0rem; }
-      /* line 69, ../scss/pages/_reserve.scss */
+      /* line 71, ../scss/pages/_reserve.scss */
       .reserve__do p [class^="icon-"], .reserve__do p [class*=" icon-"] {
         margin-right: 8px;
         margin-right: 0.8rem; }
-    /* line 73, ../scss/pages/_reserve.scss */
+    /* line 75, ../scss/pages/_reserve.scss */
     .reserve__do h4 {
       margin-bottom: 10px;
       margin-bottom: 1rem;
       padding: 5px;
       padding: 0.5rem;
       border-bottom: 1px solid black; }
-    /* line 78, ../scss/pages/_reserve.scss */
+    /* line 80, ../scss/pages/_reserve.scss */
     .reserve__do__infos {
       width: 100%;
       float: left;
       margin-right: 2.5641%; }
-      /* line 80, ../scss/pages/_reserve.scss */
+      /* line 82, ../scss/pages/_reserve.scss */
       .reserve__do__infos__title {
         font-size: 2em;
         margin-bottom: 30px;
         margin-bottom: 3rem; }
-      /* line 84, ../scss/pages/_reserve.scss */
+      /* line 86, ../scss/pages/_reserve.scss */
       .reserve__do__infos__infoHeader {
         font-size: 1.3em; }
-      /* line 88, ../scss/pages/_reserve.scss */
+      /* line 90, ../scss/pages/_reserve.scss */
       .reserve__do__infos__infoName__info {
         padding-left: 5px;
         padding-left: 0.5rem; }
-      /* line 92, ../scss/pages/_reserve.scss */
+      /* line 94, ../scss/pages/_reserve.scss */
       .reserve__do__infos__infoHeader, .reserve__do__infos__infoName {
         width: 100%;
         float: left;
         margin-right: 2.5641%; }
-      /* line 95, ../scss/pages/_reserve.scss */
+      /* line 97, ../scss/pages/_reserve.scss */
       .reserve__do__infos__form {
         width: 48.71795%;
         float: left;
         margin-right: 2.5641%; }
-        /* line 97, ../scss/pages/_reserve.scss */
+        /* line 99, ../scss/pages/_reserve.scss */
         .reserve__do__infos__form__alert {
           padding: 10px;
           padding: 1rem;
@@ -2100,28 +2169,28 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
           color: #a94442;
           background: #f2dede;
           border: 1px solid #ebccd1; }
-        /* line 104, ../scss/pages/_reserve.scss */
+        /* line 106, ../scss/pages/_reserve.scss */
         .reserve__do__infos__form input {
           width: 14.52991%;
           float: left;
           margin-right: 2.5641%; }
-        /* line 107, ../scss/pages/_reserve.scss */
+        /* line 109, ../scss/pages/_reserve.scss */
         .reserve__do__infos__form input[type='submit'] {
           width: 57.26496%;
           float: left;
           margin-right: 2.5641%; }
-        /* line 110, ../scss/pages/_reserve.scss */
+        /* line 112, ../scss/pages/_reserve.scss */
         .reserve__do__infos__form label[for='confirmationCode'] {
           width: auto; }
-      /* line 115, ../scss/pages/_reserve.scss */
+      /* line 117, ../scss/pages/_reserve.scss */
       .reserve__do__infos__list {
         margin-top: 40px;
         margin-top: 4rem; }
-        /* line 118, ../scss/pages/_reserve.scss */
+        /* line 120, ../scss/pages/_reserve.scss */
         .reserve__do__infos__list li [class^="icon-"], .reserve__do__infos__list li [class*=" icon-"] {
           padding: 3px 5px;
           padding: 0.3rem 0.5rem; }
-        /* line 122, ../scss/pages/_reserve.scss */
+        /* line 124, ../scss/pages/_reserve.scss */
         .reserve__do__infos__list a {
           width: 14.52991%;
           float: right;
@@ -2131,15 +2200,15 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
           margin-top: 0rem;
           margin-bottom: 10px;
           margin-bottom: 1rem; }
-        /* line 128, ../scss/pages/_reserve.scss */
+        /* line 130, ../scss/pages/_reserve.scss */
         .reserve__do__infos__list li + li {
           border-top: 1px solid black; }
-      /* line 132, ../scss/pages/_reserve.scss */
+      /* line 134, ../scss/pages/_reserve.scss */
       .reserve__do__infos__rallye {
         width: 31.62393%;
         float: left;
         margin-right: 2.5641%; }
-      /* line 135, ../scss/pages/_reserve.scss */
+      /* line 137, ../scss/pages/_reserve.scss */
       .reserve__do__infos__contact {
         width: 14.52991%;
         float: left;
@@ -2149,10 +2218,10 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
         left: 30%;
         padding: 10px;
         padding: 1rem; }
-        /* line 141, ../scss/pages/_reserve.scss */
+        /* line 143, ../scss/pages/_reserve.scss */
         .reserve__do__infos__contact p {
           display: block; }
-      /* line 145, ../scss/pages/_reserve.scss */
+      /* line 147, ../scss/pages/_reserve.scss */
       .reserve__do__infos__count {
         width: 31.62393%;
         float: right;
@@ -2163,16 +2232,16 @@ ordered & tabbed in a way that represents the nesting of the generated HTML.
         margin-top: -3rem;
         z-index: 1001;
         position: relative; }
-        /* line 152, ../scss/pages/_reserve.scss */
+        /* line 154, ../scss/pages/_reserve.scss */
         .reserve__do__infos__count strong {
           font-size: 1.1em;
           padding: 0px 5px;
           padding: 0rem 0.5rem; }
-    /* line 159, ../scss/pages/_reserve.scss */
+    /* line 161, ../scss/pages/_reserve.scss */
     .reserve__do__suscribe {
       padding-top: 20px;
       padding-top: 2rem; }
-      /* line 161, ../scss/pages/_reserve.scss */
+      /* line 163, ../scss/pages/_reserve.scss */
       .reserve__do__suscribe input[type="submit"] {
         width: 48.71795%;
         float: left;

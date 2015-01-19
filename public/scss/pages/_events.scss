@@ -108,7 +108,6 @@
                             $direction: top-left,
                             $position: top,
                             $pseudoElement: before );
-
     &__wrapper{
       @extend .wrapper;
       &__title{
@@ -218,6 +217,15 @@
             }
           }
         }
+      }
+    }
+    &--homepage{
+      background-color:transparent;
+      &:before{
+        display:none;
+      }
+      &--item{
+        @include rem-fix(margin-top, 1);
       }
     }
   }

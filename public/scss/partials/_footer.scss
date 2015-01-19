@@ -3,10 +3,51 @@
   color: #FFFFFF;
   @include rem-fix(padding-top,10) ;
   position: relative;
-
   @include triangle-svg(  $color: F9F8F8,
                           $height: 10,
                           $direction: top-left,
                           $position: top,
                           $pseudoElement: before );
+  &__content{
+    @extend .wrapper;
+    @include rem-fix(padding, 4, 0);
+  }
+  &__social-network{
+    @include span(6 first);
+    a{
+      color:white;
+      text-indent:-101%;
+      &hover{
+        text-decoration:underline;
+      }
+      span{
+        font-size:1.2em;
+        position:relative;
+        @include rem-fix(top, 0.2);
+      }
+    }
+  }
+  &__end-line{
+    @include span(6 last);
+    &__credits{
+      span{
+        color: #F9F9F9;
+      }
+      a{
+        color:white;
+        text-decoration:underline;
+        font-weight:bold;
+        &:hover{
+        }
+      }
+    }
+  }
+}
+
+.event-index+footer{
+    @include triangle-svg(  $color: C6C5C5,
+    $height: 10,
+    $direction: top-left,
+    $position: top,
+    $pseudoElement: before );
 }

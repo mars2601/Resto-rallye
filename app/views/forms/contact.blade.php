@@ -4,7 +4,7 @@
 <fieldset>
   <span class='icon-user'></span>
   {{Form::label('name', 'Nom: ', ['for' => 'name'])}}
-  {{Form::text('name','' , ['class' => 'aform-control', 'id' => 'name', 'placeholder' => 'Jacques'])}}
+  {{Form::text('name','' , ['class' => 'aform-control', 'id' => 'name', 'placeholder' => 'Votre nom et vore prénom'])}}
   {{$errors->first('name', '<span class="error">:message</span>')}}
 </fieldset>
 <fieldset>
@@ -20,7 +20,6 @@
   {{$errors->first('subject', '<span class="error">:message</span>')}}
 </fieldset>
 <fieldset>
-  <span class='icon-lock'></span>
   {{ Form::label('message', 'Message:', ['size' => '30x5']) }}
   {{Form::textarea('message','' , ['size' => '30x5'])}}
   {{$errors->first('message', '<span class="error">:message</span>')}}

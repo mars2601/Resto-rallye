@@ -17,7 +17,15 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+		$date = date('Y-m-d');
+
 		$quote = Quote::first();
-		return View::make('pages.homepage', array( 'quote' => $quote ));
+		$rallyes = DB::table('rallyes')->take(3)->where( 'date', '<', $date )->get();
+		$nextRallyes = DB::table('rallyes')->where( 'date', '>', $date )->get();
+
+		return View::make('pages.homepage', array( 'quote' => $quote,
+																							 'rallyes' => $rallyes,
+																							 'nextRallyes' => $nextRallyes
+																							));
 	}
 }

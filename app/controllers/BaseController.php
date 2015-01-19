@@ -1,4 +1,6 @@
 <?php
+use Jenssegers\Date\Date;
+
 
 class BaseController extends Controller {
 
@@ -11,7 +13,7 @@ class BaseController extends Controller {
 
 	protected function setupLayout()
 	{
-		//setlocale(LC_TIME,'fr_FR');
+		Date::setLocale('fr');
 		if ( ! is_null($this->layout))
 		{
 			$this->layout = View::make($this->layout);

@@ -200,6 +200,7 @@
 }
 .album{
 	@include rem-fix(min-height, 70);
+
 }
 
 // square thumb // Jquery for the crop
@@ -213,6 +214,10 @@
 	box-shadow: 0px 0px 1px #666;
 	background-position: center center;
 	background-repeat: no-repeat;
+	&:hover{
+		-webkit-box-shadow: 1px -1px 1px #666;
+		box-shadow: 1px -1px 1px #666;
+	}
 }
 .thumbnail:nth-child(4n+4){
 	@include span(last 3);
